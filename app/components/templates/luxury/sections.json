@@ -1,0 +1,47 @@
+[
+  {
+    "id": "hero",
+    "name": "Hero",
+    "componentName": "Hero"
+  },
+  {
+    "id": "services",
+    "name": "Services",
+    "componentName": "Services"
+  },
+  {
+    "id": "image-break",
+    "name": "Image Break",
+    "componentName": "ImageBreak"
+  },
+  {
+    "id": "pricing",
+    "name": "Pricing",
+    "componentName": "PricingSection"
+  },
+  {
+    "id": "scheduling",
+    "name": "Book a Consultation",
+    "componentName": "SchedulingSection"
+  },
+  {
+    "id": "reviews",
+    "name": "Reviews",
+    "componentName": "ReviewsSection"
+  },
+  {
+    "id": "divider",
+    "name": "Divider",
+    "componentName": "DividerSection"
+  },
+  {
+    "id": "gallery",
+    "name": "Gallery",
+    "componentName": "Gallery"
+  },
+  {
+    "id": "contact",
+    "name": "Contact",
+    "componentName": "Contact"
+  }
+]

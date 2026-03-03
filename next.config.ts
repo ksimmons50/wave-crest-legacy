@@ -159,7 +159,7 @@ let exportedConfig: NextConfig = nextConfig;
 
 if (isDev) {
   try {
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
+     
     const { withSentryConfig } = require('@sentry/nextjs');
     exportedConfig = withSentryConfig(nextConfig, {
       org: "socratic-systems",

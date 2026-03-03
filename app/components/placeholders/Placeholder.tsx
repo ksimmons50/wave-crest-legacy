@@ -17,7 +17,7 @@ interface PlaceholderProps {
  */
 export default function Placeholder({ 
   children,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   agent_prompt,
 }: PlaceholderProps) {
   return (

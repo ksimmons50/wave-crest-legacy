@@ -15,8 +15,7 @@ export default function HeroSection() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               {PROFESSIONAL_NAME}
             </h1>
-            {/* TODO(CODING_AGENT): Generate hero copy based on what you know about the professional */}
-            <p className="mb-8">Professional services you can trust. Contact us today for a free consultation.</p>
+            <p className="mb-8">Strategic real estate investments that build lasting wealth. Partner with us to grow your portfolio and secure your financial future.</p>
             <a
               href={`tel:${PROFESSIONAL_PHONE}`}
               target="_blank"

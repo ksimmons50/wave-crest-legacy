@@ -21,10 +21,8 @@ export const PROFESSIONAL_PHONE = "(555) 123-4567";
 export const PROFESSIONAL_EMAIL = "contact@example.com";
 export const PROFESSIONAL_ADDRESS = "Houston, TX, USA";
 
-// TODO(CODING_AGENT): Update tagline based on the business
-export const PROFESSIONAL_TAGLINE = "Quality service you can trust";
+export const PROFESSIONAL_TAGLINE = "Building wealth through strategic property investment";
 
-// TODO(CODING_AGENT): Populate social media links if you know them for this business
 export const PROFESSIONAL_SOCIAL_LINKS = {
   facebook: '',
   instagram: '',
@@ -55,9 +53,8 @@ export const PROFESSIONAL_IMAGES: ProfessionalImage[] = [
   },
 ];
 
-// TODO(CODING_AGENT): Update services based on what this business offers
 export const PROFESSIONAL_SERVICES: ProfessionalService[] = [
-  { name: "Consultation", description: "Expert advice tailored to your needs" },
-  { name: "Full Service", description: "End-to-end professional solutions" },
-  { name: "Support", description: "Dedicated customer support" },
+  { name: "Property Acquisition", description: "Strategic identification and purchase of investment properties" },
+  { name: "Portfolio Management", description: "Professional management of your real estate investments" },
+  { name: "Market Analysis", description: "In-depth analysis to maximize returns on your investments" },
 ];

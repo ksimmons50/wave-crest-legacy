@@ -3,126 +3,66 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Light blue and white color palette */
-  --background: oklch(0.98 0.01 240);
-  --foreground: oklch(0.30 0.04 240);
-  --card: oklch(0.96 0.015 240);
-  --card-foreground: oklch(0.30 0.04 240);
-  --popover: oklch(0.97 0.015 240);
-  --popover-foreground: oklch(0.30 0.04 240);
+  /* Luxury template - Elegant, high-end palette with champagne and charcoal */
+  --background: oklch(0.99 0.005 60);
+  --foreground: oklch(0.15 0.02 60);
+  --card: oklch(0.98 0.01 60);
+  --card-foreground: oklch(0.15 0.02 60);
+  --popover: oklch(0.99 0.005 60);
+  --popover-foreground: oklch(0.15 0.02 60);
 
-  /* Stronger blue for buttons/primary */
-  --primary: oklch(0.50 0.15 240);
-  --primary-foreground: oklch(0.99 0.005 240);
+  /* Rich champagne gold primary */
+  --primary: oklch(0.65 0.12 70);
+  --primary-foreground: oklch(0.15 0.02 60);
 
-  /* Light blue secondary */
-  --secondary: oklch(0.92 0.03 240);
-  --secondary-foreground: oklch(0.35 0.05 240);
+  /* Warm ivory secondary */
+  --secondary: oklch(0.96 0.015 60);
+  --secondary-foreground: oklch(0.30 0.02 60);
 
-  /* Soft blue muted tones */
-  --muted: oklch(0.94 0.02 240);
-  --muted-foreground: oklch(0.55 0.06 240);
+  /* Elegant muted tones */
+  --muted: oklch(0.94 0.01 60);
+  --muted-foreground: oklch(0.45 0.02 60);
 
-  /* Medium blue accent */
-  --accent: oklch(0.80 0.08 240);
-  --accent-foreground: oklch(0.25 0.04 240);
+  /* Deep bronze accent */
+  --accent: oklch(0.55 0.10 50);
+  --accent-foreground: oklch(0.99 0.005 60);
 
-  /* Red destructive (keep red for warnings) */
-  --destructive: oklch(0.55 0.20 25);
-  --destructive-foreground: oklch(0.99 0.005 240);
+  /* Muted rose destructive */
+  --destructive: oklch(0.50 0.15 15);
+  --destructive-foreground: oklch(0.99 0.005 60);
 
-  /* Light blue borders */
-  --border: oklch(0.88 0.03 240);
-  --input: oklch(0.88 0.03 240);
-  --ring: oklch(0.50 0.15 240);
+  /* Refined borders */
+  --border: oklch(0.88 0.02 60);
+  --input: oklch(0.88 0.02 60);
+  --ring: oklch(0.65 0.12 70);
 
-  /* Blue-toned chart colors */
-  --chart-1: oklch(0.55 0.12 240);
-  --chart-2: oklch(0.65 0.10 220);
-  --chart-3: oklch(0.60 0.11 260);
-  --chart-4: oklch(0.70 0.09 230);
-  --chart-5: oklch(0.50 0.13 250);
+  /* Chart colors */
+  --chart-1: oklch(0.65 0.12 70);
+  --chart-2: oklch(0.55 0.10 50);
+  --chart-3: oklch(0.60 0.08 90);
+  --chart-4: oklch(0.50 0.06 30);
+  --chart-5: oklch(0.70 0.10 80);
 
-  /* Increased border radius for modern look */
-  --radius: 0.75rem;
+  /* Elegant radius */
+  --radius: 0.375rem;
 
-  /* Sidebar styling - light blue finish */
-  --sidebar: oklch(0.95 0.02 240);
-  --sidebar-foreground: oklch(0.30 0.04 240);
-  --sidebar-primary: oklch(0.50 0.15 240);
-  --sidebar-primary-foreground: oklch(0.99 0.005 240);
-  --sidebar-accent: oklch(0.92 0.03 240);
-  --sidebar-accent-foreground: oklch(0.35 0.05 240);
-  --sidebar-border: oklch(0.88 0.03 240);
-  --sidebar-ring: oklch(0.50 0.15 240);
+  /* Sidebar styling */
+  --sidebar: oklch(0.97 0.01 60);
+  --sidebar-foreground: oklch(0.15 0.02 60);
+  --sidebar-primary: oklch(0.65 0.12 70);
+  --sidebar-primary-foreground: oklch(0.15 0.02 60);
+  --sidebar-accent: oklch(0.94 0.015 60);
+  --sidebar-accent-foreground: oklch(0.30 0.02 60);
+  --sidebar-border: oklch(0.88 0.02 60);
+  --sidebar-ring: oklch(0.65 0.12 70);
 
-  /* Blue shadows */
+  /* Luxury soft shadows */
   --shadow-x: 0px;
-  --shadow-y: 2px;
+  --shadow-y: 3px;
   --shadow-blur: 8px;
   --shadow-spread: 0px;
-  --shadow-opacity: 0.10;
-  --shadow-color: #7aa3cc;
-}
-
-.dark {
-  /* Dark blue mode palette */
-  --background: oklch(0.20 0.04 240);
-  --foreground: oklch(0.92 0.02 240);
-  --card: oklch(0.25 0.05 240);
-  --card-foreground: oklch(0.92 0.02 240);
-  --popover: oklch(0.23 0.05 240);
-  --popover-foreground: oklch(0.92 0.02 240);
-
-  /* Brighter blue primary for dark mode */
-  --primary: oklch(0.60 0.15 240);
-  --primary-foreground: oklch(0.98 0.01 240);
-
-  /* Dark blue secondary */
-  --secondary: oklch(0.30 0.06 240);
-  --secondary-foreground: oklch(0.90 0.02 240);
-
-  /* Muted dark blue tones */
-  --muted: oklch(0.35 0.05 240);
-  --muted-foreground: oklch(0.70 0.08 240);
-
-  /* Medium blue dark accent */
-  --accent: oklch(0.50 0.10 240);
-  --accent-foreground: oklch(0.95 0.02 240);
-
-  /* Red destructive for dark mode */
-  --destructive: oklch(0.55 0.20 25);
-  --destructive-foreground: oklch(0.95 0.02 240);
-
-  /* Dark blue borders */
-  --border: oklch(0.40 0.06 240);
-  --input: oklch(0.40 0.06 240);
-  --ring: oklch(0.60 0.15 240);
-
-  /* Blue-toned chart colors for dark mode */
-  --chart-1: oklch(0.60 0.12 240);
-  --chart-2: oklch(0.65 0.11 220);
-  --chart-3: oklch(0.62 0.12 260);
-  --chart-4: oklch(0.70 0.10 230);
-  --chart-5: oklch(0.58 0.13 250);
-
-  /* Dark blue sidebar */
-  --sidebar: oklch(0.22 0.05 240);
-  --sidebar-foreground: oklch(0.90 0.02 240);
-  --sidebar-primary: oklch(0.60 0.15 240);
-  --sidebar-primary-foreground: oklch(0.98 0.01 240);
-  --sidebar-accent: oklch(0.35 0.06 240);
-  --sidebar-accent-foreground: oklch(0.92 0.02 240);
-  --sidebar-border: oklch(0.38 0.06 240);
-  --sidebar-ring: oklch(0.60 0.15 240);
-
-  /* Dark blue shadows */
-  --shadow-x: 0px;
-  --shadow-y: 4px;
-  --shadow-blur: 16px;
-  --shadow-spread: 0px;
-  --shadow-opacity: 0.25;
-  --shadow-color: #1a2940;
+  --shadow-opacity: 0.06;
+  --shadow-color: #a08060;
 }
 
 @theme inline {
@@ -248,6 +188,36 @@
   /* Glass morphism effect */
   .glass {
     @apply bg-background/80 backdrop-blur-xl border border-border/50;
+  }
+
+  /* Float animation */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Slow pulse animation */
+  .animate-pulse-slow {
+    animation: pulse-slow 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+
+  /* Ken Burns effect for luxury template hero */
+  .animate-ken-burns {
+    animation: ken-burns 25s ease-out infinite alternate;
+  }
+
+  @keyframes ken-burns {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.1) translate(-2%, -1%); }
   }
 }
 
