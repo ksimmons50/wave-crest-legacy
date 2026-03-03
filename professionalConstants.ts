@@ -21,7 +21,7 @@ export const PROFESSIONAL_PHONE = "+18176893869";
 export const PROFESSIONAL_EMAIL = "ksimmons@wavecrestlegacy.com";
 export const PROFESSIONAL_ADDRESS = "8708 Technology Forest Place #175, Houston, TX";
 
-export const PROFESSIONAL_TAGLINE = "Building wealth through strategic property investment";
+export const PROFESSIONAL_TAGLINE = "We buy houses for cash in Houston - fast, fair, and hassle-free";
 
 export const PROFESSIONAL_SOCIAL_LINKS = {
   facebook: '',
@@ -54,7 +54,7 @@ export const PROFESSIONAL_IMAGES: ProfessionalImage[] = [
 ];
 
 export const PROFESSIONAL_SERVICES: ProfessionalService[] = [
-  { name: "Property Acquisition", description: "Strategic identification and purchase of investment properties" },
-  { name: "Portfolio Management", description: "Professional management of your real estate investments" },
-  { name: "Market Analysis", description: "In-depth analysis to maximize returns on your investments" },
+  { name: "We Buy Houses", description: "Fast, fair cash offers for your property in any condition" },
+  { name: "Quick Closings", description: "Close on your timeline - as fast as 7 days or on your schedule" },
+  { name: "No Repairs Needed", description: "Sell your house as-is - no cleaning, repairs, or renovations required" },
 ];
