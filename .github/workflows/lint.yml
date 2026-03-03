@@ -1,0 +1,41 @@
+name: Lint
+
+on:
+  push:
+    branches: ['*']
+  pull_request:
+    branches: ['*']
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Check if this is the template repo
+        id: check-template
+        run: |
+          if [ "${{ github.event.repository.name }}" != "breezy_sites_base" ]; then
+            echo "This is a cloned repository - skipping linting"
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "This is the template repository - running linting"
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+        
+      - name: Setup Node.js
+        if: steps.check-template.outputs.skip != 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        if: steps.check-template.outputs.skip != 'true'
+        run: npm ci
+        
+      - name: Run ESLint
+        if: steps.check-template.outputs.skip != 'true'
+        run: npm run lint

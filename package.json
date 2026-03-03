@@ -1,0 +1,41 @@
+{
+  "name": "breezy_sites_base",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_OPTIONS='--max-old-space-size=8192' next dev -H 0.0.0.0 -p 3007",
+    "build": "next build",
+    "build:export": "bash scripts/s3-export-build.sh",
+    "start": "next start",
+    "lint": "eslint . --ext .ts,.tsx",
+    "type-check": "tsc --noEmit",
+    "check-css": "node scripts/check-css-syntax.mjs",
+    "restart": "bash scripts/restart-server.sh",
+    "clean": "rm -rf .next node_modules/.cache && echo 'Cleaned Next.js cache files'"
+  },
+  "dependencies": {
+    "@fingerprintjs/fingerprintjs": "^5.0.1",
+    "framer-motion": "^12.23.22",
+    "lucide-react": "^0.545.0",
+    "next": "16.1.1",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@babel/generator": "^7.25.9",
+    "@babel/parser": "^7.25.9",
+    "@babel/traverse": "^7.25.9",
+    "@babel/types": "^7.25.9",
+    "@sentry/nextjs": "^10.32.0",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.1",
+    "posthog-js": "^1.332.0",
+    "posthog-node": "^5.24.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

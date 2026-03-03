@@ -1,0 +1,114 @@
+name: Deploy to S3
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+      - 'docs/**'
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '20'
+  AWS_REGION: us-east-1
+  S3_BUCKET: breezy-sites-production
+  # For base repo this defaults to 'base', child repos should set S3_SITE_PATH variable in GitHub repo settings
+  S3_PATH: ${{ vars.S3_SITE_PATH || 'base' }}
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      id-token: write
+      contents: read
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+        
+    - name: Configure npm to use legacy peer deps
+      run: npm config set legacy-peer-deps true
+      
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build static export
+      run: npm run build:export
+      env:
+        NODE_ENV: production
+        NEXT_PUBLIC_BUILD_TIME: ${{ github.run_id }}
+        
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+        aws-region: ${{ env.AWS_REGION }}
+        role-session-name: GitHubActions-S3Deploy-${{ github.run_id }}
+        
+    - name: Verify AWS credentials
+      run: |
+        aws sts get-caller-identity
+        echo "Bucket: $S3_BUCKET"
+        echo "Path: $S3_PATH"
+        
+    - name: Sync to S3
+      run: |
+        echo "Uploading to: s3://$S3_BUCKET/$S3_PATH/"
+        
+        # Sync the out directory to S3 with appropriate cache headers
+        aws s3 sync out/ "s3://$S3_BUCKET/$S3_PATH/" \
+          --delete \
+          --cache-control "public, max-age=31536000, immutable" \
+          --exclude "*.html" \
+          --exclude "*.json"
+        
+        # Upload HTML files with CDN-friendly cache headers
+        # Browsers cache 1 hour, CDN caches 24 hours (invalidated on each deploy)
+        aws s3 sync out/ "s3://$S3_BUCKET/$S3_PATH/" \
+          --exclude "*" \
+          --include "*.html" \
+          --cache-control "public, max-age=3600, s-maxage=86400" \
+          --content-type "text/html; charset=utf-8"
+        
+        # Upload JSON files with correct content-type
+        aws s3 sync out/ "s3://$S3_BUCKET/$S3_PATH/" \
+          --exclude "*" \
+          --include "*.json" \
+          --cache-control "public, max-age=3600, s-maxage=86400" \
+          --content-type "application/json; charset=utf-8"
+        
+    - name: Output deployment info
+      run: |
+        echo "✓ Static site deployed successfully to S3!"
+        echo ""
+        echo "S3 Bucket: $S3_BUCKET"
+        echo "S3 Path: $S3_PATH"
+        echo "Direct URL: https://$S3_BUCKET.s3.$AWS_REGION.amazonaws.com/$S3_PATH/index.html"
+
+    - name: Notify deploy success
+      if: success()
+      continue-on-error: true
+      env:
+        BREEZY_SITES_PIPELINE_DEPLOY_SECRET: ${{ secrets.BREEZY_SITES_PIPELINE_DEPLOY_SECRET }}
+        BREEZY_API_URL: ${{ vars.BREEZY_API_URL }}
+      run: |
+        chmod +x scripts/notify-deploy.sh
+        ./scripts/notify-deploy.sh success "${{ github.event.repository.name }}" "${{ github.sha }}"
+
+    - name: Notify deploy failure
+      if: failure()
+      continue-on-error: true
+      env:
+        BREEZY_SITES_PIPELINE_DEPLOY_SECRET: ${{ secrets.BREEZY_SITES_PIPELINE_DEPLOY_SECRET }}
+        BREEZY_API_URL: ${{ vars.BREEZY_API_URL }}
+      run: |
+        chmod +x scripts/notify-deploy.sh
+        ./scripts/notify-deploy.sh failed "${{ github.event.repository.name }}" "${{ github.sha }}" "S3 deploy failed - see run ${{ github.run_id }}"

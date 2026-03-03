@@ -1,0 +1,7 @@
+# CODEOWNERS file
+# This file defines code ownership for the repository
+# Changes to files owned by specific users will require their approval
+
+# Only Saul can approve changes to GitHub workflows and configuration
+/.github/ @saulfuhrmann
+

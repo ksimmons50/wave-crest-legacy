@@ -1,0 +1,109 @@
+name: Build and Push Application
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+      - 'docs/**'
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+      - 'docs/**'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag for the Docker image'
+        required: false
+        default: 'latest'
+      region:
+        description: 'AWS region'
+        required: false
+        default: 'us-east-1'
+
+env:
+  AWS_REGION: us-east-1
+  ECR_REPOSITORY: ${{ vars.ECR_REPOSITORY_NAME || github.event.repository.name }}
+  IMAGE_TAG: ${{ github.event.inputs.tag || 'latest' }}
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      id-token: write
+      contents: read
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+        aws-region: ${{ env.AWS_REGION }}
+        role-session-name: GitHubActions-${{ github.event.repository.name }}-${{ github.run_id }}
+        
+    - name: Verify AWS credentials
+      run: |
+        aws sts get-caller-identity
+        echo "Testing ECR access..."
+        aws ecr describe-repositories --region $AWS_REGION --max-items 1 || echo "ECR access test failed"
+        
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v2
+      
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+      with:
+        platforms: linux/amd64
+      
+    - name: Create ECR repository if it doesn't exist
+      run: |
+        aws ecr describe-repositories --repository-names $ECR_REPOSITORY --region $AWS_REGION || \
+        aws ecr create-repository --repository-name $ECR_REPOSITORY --region $AWS_REGION --image-scanning-configuration scanOnPush=true
+        
+    - name: Build and push application
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        file: ./Dockerfile
+        push: ${{ github.event_name != 'pull_request' }}
+        tags: |
+          ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}
+          ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }}
+        load: ${{ github.event_name == 'pull_request' }}
+        platforms: linux/amd64
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+        
+    - name: Test application
+      if: github.event_name == 'pull_request'
+      run: |
+        # Run basic tests on the built image
+        docker run --rm -d --name test-app -p 3007:3007 \
+          ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }}
+        
+        # Wait for app to start
+        sleep 10
+        
+        # Basic health check
+        curl -f http://localhost:3007 || (docker logs test-app && exit 1)
+        
+        # Cleanup
+        docker stop test-app
+
+    - name: Output image URI
+      if: github.event_name != 'pull_request'
+      run: |
+        echo "Application pushed successfully!"
+        echo "Image URI: ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}"
+        echo "SHA tag: ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }}"
+        echo ""
+        echo "To run this image:"
+        echo "docker run -p 3007:3007 ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}"
