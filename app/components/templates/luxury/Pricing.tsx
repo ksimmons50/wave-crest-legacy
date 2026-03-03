@@ -6,7 +6,7 @@ import { PRICING } from "./content/home";
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-32 bg-foreground">
+    <section id="pricing" className="py-32 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
           <span className="text-xs tracking-[0.4em] uppercase text-primary/60">
@@ -47,19 +47,19 @@ export default function Pricing() {
                 <div className="mb-8">
                   <h3
                     className={`text-xl font-extralight tracking-[0.1em] uppercase mb-3 transition-colors duration-500 ${
-                      tier.featured ? "text-primary" : "text-foreground group-hover:text-primary/90"
+                      tier.featured ? "text-primary" : "text-background group-hover:text-primary"
                     }`}
                   >
                     {tier.name}
                   </h3>
-                  <p className="text-muted-foreground text-sm tracking-wide">{tier.description}</p>
+                  <p className={`text-sm tracking-wide ${tier.featured ? "text-muted-foreground" : "text-background/70"}`}>{tier.description}</p>
                 </div>
 
                 <div className="mb-8">
-                  <p className="text-xs text-muted-foreground uppercase tracking-widest mb-2">{tier.unit}</p>
+                  <p className={`text-xs uppercase tracking-widest mb-2 ${tier.featured ? "text-muted-foreground" : "text-background/60"}`}>{tier.unit}</p>
                   <span
                     className={`text-4xl font-extralight ${
-                      tier.featured ? "text-primary" : "text-foreground"
+                      tier.featured ? "text-primary" : "text-background"
                     }`}
                   >
                     {tier.price}
@@ -74,7 +74,7 @@ export default function Pricing() {
                           tier.featured ? "text-primary" : "text-primary/60"
                         }`}
                       />
-                      <span className="text-muted-foreground text-sm tracking-wide">{feature}</span>
+                      <span className={`text-sm tracking-wide ${tier.featured ? "text-muted-foreground" : "text-background/70"}`}>{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -84,7 +84,7 @@ export default function Pricing() {
                   className={`block w-full text-center py-4 text-xs tracking-[0.2em] uppercase transition-all duration-500 mt-auto ${
                     tier.featured
                       ? "bg-primary text-foreground hover:bg-primary"
-                      : "border border-border text-muted-foreground hover:border-primary/50 hover:text-primary"
+                      : "border border-border text-background hover:border-primary/50 hover:text-primary"
                   }`}
                 >
                   {PRICING.ctaText}

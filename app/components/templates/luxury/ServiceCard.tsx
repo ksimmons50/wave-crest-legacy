@@ -14,7 +14,7 @@ export default function ServiceCard({
   return (
     <div className="group relative p-8 md:p-12 border border-border hover:border-primary/30 transition-all duration-500 bg-foreground/50 hover:bg-foreground/80">
       {/* Number accent */}
-      <span className="absolute top-6 right-6 text-6xl font-extralight text-muted-foreground group-hover:text-primary/10 transition-colors duration-500">
+      <span className="absolute top-6 right-6 text-6xl font-extralight text-background/20 group-hover:text-primary/30 transition-colors duration-500">
         {number}
       </span>
 
@@ -22,11 +22,11 @@ export default function ServiceCard({
         {/* Subtle line accent */}
         <div className="w-8 h-px bg-primary/40 mb-6 group-hover:w-12 transition-all duration-500" />
 
-        <h3 className="text-xl font-extralight text-foreground tracking-[0.1em] uppercase mb-4 group-hover:text-primary/90 transition-colors duration-500">
+        <h3 className="text-xl font-extralight text-background tracking-[0.1em] uppercase mb-4 group-hover:text-primary transition-colors duration-500">
           {name}
         </h3>
 
-        <p className="text-muted-foreground leading-relaxed text-sm tracking-wide">
+        <p className="text-background/70 leading-relaxed text-sm tracking-wide">
           {description}
         </p>
       </div>

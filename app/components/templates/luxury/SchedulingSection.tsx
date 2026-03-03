@@ -4,7 +4,7 @@ import RealScheduling from "@/app/components/RealScheduling";
 
 export default function SchedulingSection() {
   return (
-    <section id="scheduling" className="py-32 bg-foreground">
+    <section id="scheduling" className="py-32 bg-background">
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
           <span className="text-xs tracking-[0.4em] uppercase text-primary/60">

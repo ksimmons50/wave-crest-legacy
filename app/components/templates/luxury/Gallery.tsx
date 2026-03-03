@@ -5,7 +5,7 @@ import { GALLERY } from "./content/home";
 
 export default function Gallery() {
   return (
-    <section className="py-20 bg-foreground">
+    <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12">
           <span className="text-xs tracking-[0.4em] uppercase text-primary/60">

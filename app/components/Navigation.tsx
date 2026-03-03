@@ -51,7 +51,7 @@ export default function Navigation() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="group relative text-[11px] font-light text-muted-foreground hover:text-foreground transition-colors duration-300 uppercase tracking-[0.2em] py-2"
+                className="group relative text-[11px] font-light text-background/70 hover:text-background transition-colors duration-300 uppercase tracking-[0.2em] py-2"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-px bg-primary/60 group-hover:w-full transition-all duration-300" />
@@ -63,7 +63,7 @@ export default function Navigation() {
           {PROFESSIONAL_PHONE && (
             <a
               href={`tel:${PROFESSIONAL_PHONE}`}
-              className="hidden md:flex items-center gap-2 text-[11px] text-foreground tracking-[0.1em] bg-gradient-to-r from-primary/20 to-primary/20 hover:from-primary/30 hover:to-primary/30 border border-primary/30 hover:border-primary/50 px-5 py-2.5 transition-all duration-300"
+              className="hidden md:flex items-center gap-2 text-[11px] text-background tracking-[0.1em] bg-gradient-to-r from-primary/20 to-primary/20 hover:from-primary/30 hover:to-primary/30 border border-primary/30 hover:border-primary/50 px-5 py-2.5 transition-all duration-300"
             >
               <Phone className="w-3.5 h-3.5 text-primary" />
               <span>{formatPhoneNumber(PROFESSIONAL_PHONE)}</span>
@@ -72,7 +72,7 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-foreground"
+            className="lg:hidden p-2 text-background"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -109,7 +109,7 @@ export default function Navigation() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="block py-3 text-sm font-light text-muted-foreground hover:text-primary uppercase tracking-[0.15em] text-center transition-colors duration-300"
+                className="block py-3 text-sm font-light text-background/70 hover:text-primary uppercase tracking-[0.15em] text-center transition-colors duration-300"
                 onClick={() => setMobileMenuOpen(false)}
                 style={{ animationDelay: `${index * 50}ms` }}
               >
@@ -117,11 +117,11 @@ export default function Navigation() {
               </Link>
             ))}
           </div>
-          
+
           {PROFESSIONAL_PHONE && (
             <a
               href={`tel:${PROFESSIONAL_PHONE}`}
-              className="flex items-center justify-center gap-2 mt-6 text-sm text-foreground tracking-[0.1em] bg-gradient-to-r from-primary/20 to-primary/20 border border-primary/30 py-4 rounded transition-all duration-300"
+              className="flex items-center justify-center gap-2 mt-6 text-sm text-background tracking-[0.1em] bg-gradient-to-r from-primary/20 to-primary/20 border border-primary/30 py-4 rounded transition-all duration-300"
             >
               <Phone className="w-4 h-4 text-primary" />
               <span>{formatPhoneNumber(PROFESSIONAL_PHONE)}</span>

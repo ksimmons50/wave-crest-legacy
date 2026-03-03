@@ -5,7 +5,7 @@ import { SERVICES } from "./content/home";
 
 export default function Services() {
   return (
-    <section id="services" className="py-32 bg-foreground">
+    <section id="services" className="py-32 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-20">

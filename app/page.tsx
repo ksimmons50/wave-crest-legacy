@@ -24,7 +24,7 @@ const sections = [
 
 export default function LuxuryTemplate() {
   return (
-    <div className="min-h-screen bg-foreground">
+    <div className="min-h-screen bg-background">
       {sections.map(({ id, Component }) => (
         <Component key={id} />
       ))}
