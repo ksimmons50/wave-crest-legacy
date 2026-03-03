@@ -23,7 +23,7 @@ export default function Footer() {
             </h3>
             <div className="w-12 h-px bg-gradient-to-r from-primary/60 to-transparent mb-8" />
               <p className="text-muted-foreground text-sm tracking-wider mb-6 max-w-md leading-relaxed">
-                A legacy of excellence and refined craftsmanship. We bring decades of expertise to every client we serve.
+                Strategic real estate investment in Houston, TX. Building lasting wealth through smart property acquisitions and portfolio management.
               </p>
             {PROFESSIONAL_ADDRESS && (
               <p className="text-muted-foreground text-sm tracking-wider mb-2">
@@ -48,8 +48,7 @@ export default function Footer() {
             )}
             <div className="mt-6">
               <p className="text-muted-foreground text-xs tracking-[0.2em] uppercase mb-2">Hours</p>
-                <p className="text-muted-foreground text-sm tracking-wider">Mon-Fri: 9am - 6pm</p>
-                <p className="text-muted-foreground text-sm tracking-wider">Sat: By Appointment</p>
+                <p className="text-muted-foreground text-sm tracking-wider">Mon-Fri: 8am - 5pm</p>
             </div>
           </div>
           <div>
