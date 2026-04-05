@@ -12,11 +12,9 @@ import { NAVIGATION } from "./templates/luxury/content/home";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/#services" },
-  { label: "Reviews", href: "/#reviews" },
+  { label: "Acquisitions", href: "/acquisitions" },
+  { label: "Holding", href: "/holding" },
   { label: "Credit App", href: "/credit-questionnaire" },
-  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navigation() {
