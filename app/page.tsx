@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Lightbulb, Code, Home, Mic, Users, Building2, ArrowRight } from "lucide-react";
+import { Lightbulb, Code, Home, Mic, Users, Building2, ArrowRight, Sparkles, TrendingUp } from "lucide-react";
 import { PROFESSIONAL_IMAGES } from "@/professionalConstants";
 
 export default function LandingPage() {
@@ -10,32 +10,32 @@ export default function LandingPage() {
     {
       icon: Users,
       title: "Mentoring",
-      description: "One-on-one guidance to help you achieve your personal and professional goals",
-      color: "blue"
+      description: "One-on-one guidance to achieve personal and professional excellence",
+      color: "accent1"
     },
     {
       icon: Code,
       title: "IT Consulting",
-      description: "Technology solutions and strategic IT planning for your business needs",
-      color: "purple"
+      description: "Technology solutions and strategic IT planning for modern businesses",
+      color: "accent2"
     },
     {
       icon: Home,
       title: "Real Estate Consulting",
-      description: "Strategic planning, business continuity, and smart home planning expertise",
-      color: "green"
+      description: "Strategic planning, business continuity, and smart home expertise",
+      color: "accent3"
     },
     {
       icon: Mic,
       title: "Public Speaking",
-      description: "Engaging presentations and keynote speeches for your events",
-      color: "orange"
+      description: "Engaging presentations and keynote speeches that inspire action",
+      color: "accent4"
     },
     {
       icon: Lightbulb,
       title: "Brainstorming Sessions",
-      description: "Collaborative sessions to unlock creative solutions and innovative strategies",
-      color: "pink"
+      description: "Collaborative innovation to unlock breakthrough solutions",
+      color: "accent5"
     }
   ];
 
@@ -59,142 +59,330 @@ export default function LandingPage() {
   ];
 
   const colorClasses = {
-    blue: "bg-blue-100 text-blue-600",
-    purple: "bg-purple-100 text-purple-600",
-    green: "bg-green-100 text-green-600",
-    orange: "bg-orange-100 text-orange-600",
-    pink: "bg-pink-100 text-pink-600"
+    accent1: "bg-amber-50 text-amber-900 border-amber-200",
+    accent2: "bg-emerald-50 text-emerald-900 border-emerald-200",
+    accent3: "bg-sky-50 text-sky-900 border-sky-200",
+    accent4: "bg-rose-50 text-rose-900 border-rose-200",
+    accent5: "bg-violet-50 text-violet-900 border-violet-200"
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
+    <div className="min-h-screen bg-[#0a0e27]">
+      <style jsx global>{`
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@400;500;700&display=swap');
+
+        :root {
+          --primary: #0a0e27;
+          --secondary: #1a1f3a;
+          --accent-gold: #d4af37;
+          --accent-warm: #e8d4b0;
+          --text-light: #f5f5f0;
+          --text-muted: #a8a29e;
+        }
+
+        .hero-title {
+          font-family: 'Playfair Display', serif;
+          letter-spacing: -0.02em;
+          line-height: 1.1;
+        }
+
+        .body-text {
+          font-family: 'DM Sans', sans-serif;
+        }
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes shimmer {
+          0% { background-position: -100% 0; }
+          100% { background-position: 200% 0; }
+        }
+
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+
+        .animate-fade-in-up {
+          animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-shimmer {
+          background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+          background-size: 200% 100%;
+          animation: shimmer 3s infinite;
+        }
+
+        .grain-overlay {
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+      `}</style>
+
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-            <div>
-              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
-                Wave Crest Legacy Group, LLC
+      <section className="relative min-h-screen flex items-center px-6 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 grain-overlay"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0e27] via-[#1a1f3a] to-[#0a0e27]"></div>
+
+        {/* Decorative geometric shapes */}
+        <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-amber-500/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-tr from-sky-500/10 to-transparent rounded-full blur-3xl"></div>
+
+        <div className="max-w-7xl mx-auto relative z-10 py-20">
+          <div className="grid lg:grid-cols-12 gap-12 items-center">
+            {/* Left Content - 7 columns */}
+            <div className="lg:col-span-7 space-y-8">
+              {/* Label */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm animate-fade-in-up" style={{animationDelay: '0.1s', opacity: 0}}>
+                <Sparkles className="w-4 h-4 text-amber-400" />
+                <span className="text-sm font-medium text-amber-300 body-text tracking-wide">Strategic Business Consulting</span>
+              </div>
+
+              {/* Main Heading */}
+              <h1 className="hero-title text-6xl md:text-7xl lg:text-8xl font-black text-[#f5f5f0] animate-fade-in-up" style={{animationDelay: '0.2s', opacity: 0}}>
+                Wave Crest
+                <br />
+                <span className="relative inline-block">
+                  <span className="relative z-10 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 bg-clip-text text-transparent">
+                    Legacy Group
+                  </span>
+                  <span className="absolute inset-0 animate-shimmer"></span>
+                </span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-600 mb-8">
-                Empowering success through consulting, mentoring, and strategic guidance
+
+              {/* Subheading */}
+              <p className="text-xl md:text-2xl text-[#a8a29e] body-text leading-relaxed max-w-xl animate-fade-in-up" style={{animationDelay: '0.3s', opacity: 0}}>
+                Empowering visionary leaders through strategic consulting, transformative mentoring, and innovative solutions
               </p>
-              <div className="flex flex-wrap gap-4">
+
+              {/* CTAs */}
+              <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{animationDelay: '0.4s', opacity: 0}}>
                 <a
                   href="#services"
-                  className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                  className="group relative px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-[#0a0e27] font-bold body-text overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/50 hover:scale-105"
                 >
-                  Explore Services
+                  <span className="relative z-10 flex items-center gap-2">
+                    Explore Services
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </a>
                 <a
                   href="#entities"
-                  className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-50 transition-colors shadow-lg hover:shadow-xl border-2 border-blue-600"
+                  className="px-8 py-4 border-2 border-[#a8a29e]/30 text-[#f5f5f0] font-bold body-text hover:border-amber-500/50 hover:bg-amber-500/5 transition-all duration-300"
                 >
                   Our Companies
                 </a>
               </div>
-            </div>
-            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src={PROFESSIONAL_IMAGES[2]?.url || ''}
-                alt={PROFESSIONAL_IMAGES[2]?.description || 'Professional consulting'}
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-          </div>
 
-          {/* Services Section */}
-          <div id="services" className="mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
-              Consulting Services
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => {
-                const Icon = service.icon;
-                return (
-                  <div
-                    key={index}
-                    className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-                  >
-                    <div className={`w-14 h-14 ${colorClasses[service.color as keyof typeof colorClasses]} rounded-xl flex items-center justify-center mb-6`}>
-                      <Icon className="w-7 h-7" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{service.description}</p>
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-[#a8a29e]/20 animate-fade-in-up" style={{animationDelay: '0.5s', opacity: 0}}>
+                <div>
+                  <div className="text-3xl font-bold text-amber-400 hero-title">5+</div>
+                  <div className="text-sm text-[#a8a29e] body-text">Service Areas</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-amber-400 hero-title">2</div>
+                  <div className="text-sm text-[#a8a29e] body-text">Business Entities</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-amber-400 hero-title flex items-center gap-1">
+                    <TrendingUp className="w-6 h-6" />
                   </div>
-                );
-              })}
+                  <div className="text-sm text-[#a8a29e] body-text">Growth Focused</div>
+                </div>
+              </div>
             </div>
-          </div>
 
-          {/* Entities Section */}
-          <div id="entities" className="mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
-              Our Companies
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {entities.map((entity, index) => {
-                const Icon = entity.icon;
-                return (
-                  <Link
-                    key={index}
-                    href={entity.link}
-                    className="group"
-                  >
-                    <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden">
-                      <div className="relative h-64">
-                        <Image
-                          src={entity.image}
-                          alt={entity.name}
-                          fill
-                          className="object-cover"
-                        />
-                        <div className={`absolute inset-0 bg-gradient-to-br ${entity.color} opacity-80`}></div>
-                        <div className="absolute top-6 right-6">
-                          <ArrowRight className="w-8 h-8 text-white transform group-hover:translate-x-2 transition-transform" />
-                        </div>
-                      </div>
-                      <div className="p-8">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-4">{entity.name}</h3>
-                        <p className="text-gray-600 leading-relaxed">{entity.description}</p>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
+            {/* Right Content - 5 columns */}
+            <div className="lg:col-span-5 relative animate-fade-in-up" style={{animationDelay: '0.6s', opacity: 0}}>
+              <div className="relative">
+                {/* Decorative frame */}
+                <div className="absolute -inset-4 bg-gradient-to-br from-amber-500/20 to-sky-500/20 rounded-2xl blur-xl"></div>
 
-          {/* Contact CTA */}
-          <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-12 text-center text-white shadow-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Let's Work Together
-            </h2>
-            <p className="text-xl mb-8 text-gray-300">
-              Ready to transform your vision into reality? Get in touch today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="mailto:ksimmons@wavecrestlegacy.com"
-                className="inline-block bg-white text-gray-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
-              >
-                Email Us
-              </a>
-              <a
-                href="tel:+18176463927"
-                className="inline-block bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg"
-              >
-                Call (817) 646-3927
-              </a>
+                {/* Image container */}
+                <div className="relative h-[600px] rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl">
+                  <Image
+                    src={PROFESSIONAL_IMAGES[2]?.url || ''}
+                    alt={PROFESSIONAL_IMAGES[2]?.description || 'Professional consulting'}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0e27]/80 via-transparent to-transparent"></div>
+
+                  {/* Floating accent */}
+                  <div className="absolute bottom-8 left-8 right-8 p-6 bg-[#1a1f3a]/80 backdrop-blur-md border border-amber-500/30 rounded-xl">
+                    <div className="text-sm text-amber-400 font-semibold body-text mb-1">Excellence in Action</div>
+                    <div className="text-lg text-[#f5f5f0] body-text">Strategic solutions for modern challenges</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <p className="mt-8 text-gray-400">
-              8708 Technology Forest Place #175, Houston, TX
-            </p>
           </div>
         </div>
       </section>
+
+          {/* Services Section */}
+          <section id="services" className="relative py-32 px-6 bg-gradient-to-b from-[#0a0e27] to-[#1a1f3a]">
+            <div className="absolute inset-0 grain-overlay"></div>
+            <div className="max-w-7xl mx-auto relative z-10">
+              <div className="text-center mb-16">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm mb-6">
+                  <span className="text-sm font-medium text-amber-300 body-text tracking-wide">Our Expertise</span>
+                </div>
+                <h2 className="hero-title text-5xl md:text-6xl font-black text-[#f5f5f0] mb-6">
+                  Consulting Services
+                </h2>
+                <p className="text-xl text-[#a8a29e] body-text max-w-2xl mx-auto">
+                  Comprehensive solutions tailored to elevate your business
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {services.map((service, index) => {
+                  const Icon = service.icon;
+                  return (
+                    <div
+                      key={index}
+                      className={`group relative p-8 bg-[#1a1f3a]/50 backdrop-blur-sm border ${colorClasses[service.color as keyof typeof colorClasses].split(' ')[2]} hover:bg-[#1a1f3a] transition-all duration-500 hover:scale-105 overflow-hidden`}
+                      style={{animationDelay: `${index * 0.1}s`}}
+                    >
+                      {/* Hover gradient effect */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-amber-500/0 to-amber-500/0 group-hover:from-amber-500/5 group-hover:to-transparent transition-all duration-500"></div>
+
+                      <div className="relative z-10">
+                        <div className={`w-14 h-14 ${colorClasses[service.color as keyof typeof colorClasses]} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border`}>
+                          <Icon className="w-7 h-7" />
+                        </div>
+                        <h3 className="hero-title text-2xl font-bold text-[#f5f5f0] mb-4">{service.title}</h3>
+                        <p className="body-text text-[#a8a29e] leading-relaxed">{service.description}</p>
+
+                        {/* Decorative corner */}
+                        <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-amber-500/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+
+          {/* Entities Section */}
+          <section id="entities" className="relative py-32 px-6 bg-[#0a0e27]">
+            <div className="absolute inset-0 grain-overlay"></div>
+            <div className="max-w-7xl mx-auto relative z-10">
+              <div className="text-center mb-16">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm mb-6">
+                  <Building2 className="w-4 h-4 text-amber-400" />
+                  <span className="text-sm font-medium text-amber-300 body-text tracking-wide">Our Portfolio</span>
+                </div>
+                <h2 className="hero-title text-5xl md:text-6xl font-black text-[#f5f5f0] mb-6">
+                  Our Companies
+                </h2>
+                <p className="text-xl text-[#a8a29e] body-text max-w-2xl mx-auto">
+                  Specialized entities delivering excellence in their domains
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                {entities.map((entity, index) => {
+                  const Icon = entity.icon;
+                  return (
+                    <Link
+                      key={index}
+                      href={entity.link}
+                      className="group"
+                    >
+                      <div className="relative bg-[#1a1f3a]/50 backdrop-blur-sm border border-amber-500/20 overflow-hidden hover:border-amber-500/40 transition-all duration-500 hover:scale-102">
+                        {/* Image */}
+                        <div className="relative h-80 overflow-hidden">
+                          <Image
+                            src={entity.image}
+                            alt={entity.name}
+                            fill
+                            className="object-cover group-hover:scale-110 transition-transform duration-700"
+                          />
+                          <div className={`absolute inset-0 bg-gradient-to-br ${entity.color} opacity-70 group-hover:opacity-60 transition-opacity duration-500`}></div>
+
+                          {/* Arrow icon */}
+                          <div className="absolute top-6 right-6 w-12 h-12 bg-[#f5f5f0]/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:bg-amber-500 group-hover:border-amber-500 transition-all duration-300">
+                            <ArrowRight className="w-6 h-6 text-white transform group-hover:translate-x-1 transition-transform duration-300" />
+                          </div>
+                        </div>
+
+                        {/* Content */}
+                        <div className="p-8 bg-gradient-to-b from-[#1a1f3a]/80 to-[#1a1f3a]">
+                          <h3 className="hero-title text-2xl md:text-3xl font-bold text-[#f5f5f0] mb-4 group-hover:text-amber-300 transition-colors duration-300">
+                            {entity.name}
+                          </h3>
+                          <p className="body-text text-[#a8a29e] leading-relaxed">
+                            {entity.description}
+                          </p>
+                        </div>
+
+                        {/* Decorative line */}
+                        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                      </div>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+
+          {/* Contact CTA */}
+          <section className="relative py-32 px-6 bg-gradient-to-b from-[#1a1f3a] to-[#0a0e27]">
+            <div className="absolute inset-0 grain-overlay"></div>
+            <div className="max-w-4xl mx-auto relative z-10">
+              <div className="relative overflow-hidden bg-gradient-to-br from-amber-500/10 via-[#1a1f3a]/50 to-sky-500/10 backdrop-blur-sm border border-amber-500/30 p-12 md:p-16 text-center">
+                {/* Decorative corner elements */}
+                <div className="absolute top-0 left-0 w-32 h-32 border-l-2 border-t-2 border-amber-500/30"></div>
+                <div className="absolute bottom-0 right-0 w-32 h-32 border-r-2 border-b-2 border-amber-500/30"></div>
+
+                <div className="relative z-10">
+                  <h2 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0] mb-6">
+                    Let's Work Together
+                  </h2>
+                  <p className="text-xl body-text text-[#a8a29e] mb-10 max-w-2xl mx-auto">
+                    Ready to transform your vision into reality? Connect with us today.
+                  </p>
+
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                    <a
+                      href="mailto:ksimmons@wavecrestlegacy.com"
+                      className="group px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-[#0a0e27] font-bold body-text hover:shadow-2xl hover:shadow-amber-500/50 hover:scale-105 transition-all duration-300"
+                    >
+                      <span className="flex items-center gap-2">
+                        Email Us
+                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      </span>
+                    </a>
+                    <a
+                      href="tel:+18176463927"
+                      className="px-8 py-4 border-2 border-amber-500/50 text-[#f5f5f0] font-bold body-text hover:bg-amber-500/10 hover:border-amber-500 transition-all duration-300"
+                    >
+                      Call (817) 646-3927
+                    </a>
+                  </div>
+
+                  <div className="pt-8 border-t border-amber-500/20">
+                    <p className="body-text text-[#a8a29e]">
+                      8708 Technology Forest Place #175, Houston, TX
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
     </div>
   );
 }
