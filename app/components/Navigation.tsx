@@ -15,6 +15,7 @@ const NAV_LINKS = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/#services" },
   { label: "Reviews", href: "/#reviews" },
+  { label: "Credit App", href: "/credit-questionnaire" },
   { label: "Contact", href: "/#contact" },
 ];
 
