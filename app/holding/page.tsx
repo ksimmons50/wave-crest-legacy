@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FileText, Calculator, TrendingUp, Shield } from "lucide-react";
-import { PROFESSIONAL_IMAGES } from "@/professionalConstants";
+import { PROFESSIONAL_IMAGES, LOGO_HOLDING } from "@/professionalConstants";
 
 export default function HoldingPage() {
   return (
@@ -13,11 +13,21 @@ export default function HoldingPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                Wave Crest Legacy Holding, LLC
+              <div className="mb-8">
+                <Image
+                  src={LOGO_HOLDING}
+                  alt="Wave Crest Legacy Holding, LLC"
+                  width={300}
+                  height={100}
+                  className="h-20 w-auto"
+                  priority
+                />
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Professional Mortgage Note Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-600">
-                Professional mortgage note holding and management services
+                Secure holding and management of mortgage notes with flexible terms
               </p>
             </div>
             <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">

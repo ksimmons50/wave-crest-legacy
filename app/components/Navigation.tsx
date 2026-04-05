@@ -7,8 +7,8 @@ import { Phone } from "lucide-react";
 import { formatPhoneNumber } from "@/app/utils/phoneUtils";
 import {
   PROFESSIONAL_PHONE,
+  LOGO_LEGACY_GROUP,
 } from "@/professionalConstants";
-import { NAVIGATION } from "./templates/luxury/content/home";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
@@ -41,7 +41,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
-            <Image src={NAVIGATION.logo.url} alt={NAVIGATION.logo.description} width={120} height={40} className="h-10 w-auto object-contain" />
+            <Image src={LOGO_LEGACY_GROUP} alt="Wave Crest Legacy Group" width={180} height={60} className="h-10 w-auto object-contain" />
           </Link>
 
           {/* Desktop Links */}

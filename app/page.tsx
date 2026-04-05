@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Lightbulb, Code, Home, Mic, Users, Building2, ArrowRight, Sparkles, TrendingUp } from "lucide-react";
-import { PROFESSIONAL_IMAGES } from "@/professionalConstants";
+import { PROFESSIONAL_IMAGES, LOGO_LEGACY_GROUP } from "@/professionalConstants";
 
 export default function LandingPage() {
   const services = [
@@ -140,31 +140,43 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             {/* Left Content - 7 columns */}
             <div className="lg:col-span-7 space-y-8">
+              {/* Logo */}
+              <div className="animate-fade-in-up" style={{animationDelay: '0.1s', opacity: 0}}>
+                <Image
+                  src={LOGO_LEGACY_GROUP}
+                  alt="Wave Crest Legacy Group"
+                  width={300}
+                  height={100}
+                  className="h-24 w-auto"
+                  priority
+                />
+              </div>
+
               {/* Label */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm animate-fade-in-up" style={{animationDelay: '0.1s', opacity: 0}}>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm animate-fade-in-up" style={{animationDelay: '0.2s', opacity: 0}}>
                 <Sparkles className="w-4 h-4 text-amber-400" />
                 <span className="text-sm font-medium text-amber-300 body-text tracking-wide">Strategic Business Consulting</span>
               </div>
 
               {/* Main Heading */}
-              <h1 className="hero-title text-6xl md:text-7xl lg:text-8xl font-black text-[#f5f5f0] animate-fade-in-up" style={{animationDelay: '0.2s', opacity: 0}}>
-                Wave Crest
+              <h1 className="hero-title text-5xl md:text-6xl lg:text-7xl font-black text-[#f5f5f0] animate-fade-in-up" style={{animationDelay: '0.3s', opacity: 0}}>
+                Empowering Excellence
                 <br />
                 <span className="relative inline-block">
                   <span className="relative z-10 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 bg-clip-text text-transparent">
-                    Legacy Group
+                    Through Strategy
                   </span>
                   <span className="absolute inset-0 animate-shimmer"></span>
                 </span>
               </h1>
 
               {/* Subheading */}
-              <p className="text-xl md:text-2xl text-[#a8a29e] body-text leading-relaxed max-w-xl animate-fade-in-up" style={{animationDelay: '0.3s', opacity: 0}}>
+              <p className="text-xl md:text-2xl text-[#a8a29e] body-text leading-relaxed max-w-xl animate-fade-in-up" style={{animationDelay: '0.4s', opacity: 0}}>
                 Empowering visionary leaders through strategic consulting, transformative mentoring, and innovative solutions
               </p>
 
               {/* CTAs */}
-              <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{animationDelay: '0.4s', opacity: 0}}>
+              <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{animationDelay: '0.5s', opacity: 0}}>
                 <a
                   href="#services"
                   className="group relative px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-[#0a0e27] font-bold body-text overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/50 hover:scale-105"
@@ -184,7 +196,7 @@ export default function LandingPage() {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-[#a8a29e]/20 animate-fade-in-up" style={{animationDelay: '0.5s', opacity: 0}}>
+              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-[#a8a29e]/20 animate-fade-in-up" style={{animationDelay: '0.6s', opacity: 0}}>
                 <div>
                   <div className="text-3xl font-bold text-amber-400 hero-title">5+</div>
                   <div className="text-sm text-[#a8a29e] body-text">Service Areas</div>
@@ -203,7 +215,7 @@ export default function LandingPage() {
             </div>
 
             {/* Right Content - 5 columns */}
-            <div className="lg:col-span-5 relative animate-fade-in-up" style={{animationDelay: '0.6s', opacity: 0}}>
+            <div className="lg:col-span-5 relative animate-fade-in-up" style={{animationDelay: '0.7s', opacity: 0}}>
               <div className="relative">
                 {/* Decorative frame */}
                 <div className="absolute -inset-4 bg-gradient-to-br from-amber-500/20 to-sky-500/20 rounded-2xl blur-xl"></div>

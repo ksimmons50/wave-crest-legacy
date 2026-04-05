@@ -21,6 +21,11 @@ export const PROFESSIONAL_PHONE = "+18176463927";
 export const PROFESSIONAL_EMAIL = "ksimmons@wavecrestlegacy.com";
 export const PROFESSIONAL_ADDRESS = "8708 Technology Forest Place #175, Houston, TX";
 
+// Company Logos
+export const LOGO_LEGACY_GROUP = "https://breezy-sites.s3.amazonaws.com/site_images/caf098fe22e8bbcbee5cfd56e06f4978f9d72fe18807cdff77cfb925fb50/7b54a4f3e20880d8bc10c2ba3fa0bf28b5178757814a12406297a60b03cd.png";
+export const LOGO_ACQUISITIONS = "https://breezy-sites.s3.amazonaws.com/site_images/caf098fe22e8bbcbee5cfd56e06f4978f9d72fe18807cdff77cfb925fb50/7f46065e03ba672e12c613037b093de508c4301b9139575e11d42b945852.png";
+export const LOGO_HOLDING = "https://breezy-sites.s3.amazonaws.com/site_images/caf098fe22e8bbcbee5cfd56e06f4978f9d72fe18807cdff77cfb925fb50/e811d23589f1a76d3c0400022d93b345d4d84b3e93c82fa1ac3c7637a34c.png";
+
 export const PROFESSIONAL_TAGLINE = "We buy houses for cash in Houston - fast, fair, and hassle-free";
 
 export const PROFESSIONAL_SOCIAL_LINKS = {

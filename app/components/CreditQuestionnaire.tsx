@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { CheckCircle, XCircle, AlertCircle, Loader2, Plus, Trash2 } from 'lucide-react';
-import { BREEZY_PROFESSIONAL_TOKEN } from '../../professionalConstants';
+import { BREEZY_PROFESSIONAL_TOKEN, LOGO_HOLDING } from '../../professionalConstants';
 import Image from 'next/image';
 
 interface Creditor {
@@ -376,17 +376,19 @@ Date: ${formData.signatureDate}
   return (
     <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl p-8 my-8">
       {/* Header with Logo */}
-      <div className="flex justify-between items-start mb-8 pb-6 border-b-2 border-gray-200">
-        <div>
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 pb-6 border-b-2 border-gray-200 gap-6">
+        <div className="flex-1">
+          <Image
+            src={LOGO_HOLDING}
+            alt="Wave Crest Legacy Holding, LLC"
+            width={250}
+            height={80}
+            className="h-16 w-auto mb-4"
+          />
           <h2 className="text-3xl font-bold text-gray-900 mb-2">Credit Questionnaire</h2>
-          <p className="text-gray-600">Wave Crest Holding, LLC</p>
           <p className="text-sm text-gray-500">info@wavecrestlegacy.com</p>
-          <p className="text-sm text-gray-500">(346)314-0852</p>
+          <p className="text-sm text-gray-500">(817) 646-3927</p>
           <p className="text-sm text-gray-500">www.wavecrestlegacy.com</p>
-        </div>
-        <div className="text-right">
-          <div className="text-2xl font-bold text-blue-600">WAVE CREST</div>
-          <div className="text-sm text-gray-600">LEGACY HOLDING, LLC</div>
         </div>
       </div>
 
