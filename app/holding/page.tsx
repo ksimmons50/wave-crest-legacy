@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { FileText, Calculator, TrendingUp, Shield } from "lucide-react";
+import { PROFESSIONAL_IMAGES } from "@/professionalConstants";
 
 export default function HoldingPage() {
   return (
@@ -9,13 +11,24 @@ export default function HoldingPage() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Wave Crest Legacy Holding, LLC
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-              Professional mortgage note holding and management services
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                Wave Crest Legacy Holding, LLC
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-600">
+                Professional mortgage note holding and management services
+              </p>
+            </div>
+            <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src={PROFESSIONAL_IMAGES[0]?.url || ''}
+                alt={PROFESSIONAL_IMAGES[0]?.description || 'Mortgage holding services'}
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
 
           {/* Services Grid */}

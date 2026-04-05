@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Lightbulb, Code, Home, Mic, Users, Building2, ArrowRight } from "lucide-react";
+import { PROFESSIONAL_IMAGES } from "@/professionalConstants";
 
 export default function LandingPage() {
   const services = [
@@ -43,14 +45,16 @@ export default function LandingPage() {
       description: "We buy houses for cash in Houston - fast, fair, and hassle-free",
       link: "/acquisitions",
       icon: Building2,
-      color: "from-blue-600 to-blue-700"
+      color: "from-blue-600 to-blue-700",
+      image: PROFESSIONAL_IMAGES[1]?.url || ''
     },
     {
       name: "Wave Crest Legacy Holding, LLC",
       description: "Professional mortgage note holding and management services",
       link: "/holding",
       icon: Building2,
-      color: "from-purple-600 to-purple-700"
+      color: "from-purple-600 to-purple-700",
+      image: PROFESSIONAL_IMAGES[0]?.url || ''
     }
   ];
 
@@ -67,26 +71,37 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
-              Wave Crest Legacy Group, LLC
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
-              Empowering success through consulting, mentoring, and strategic guidance
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href="#services"
-                className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-              >
-                Explore Services
-              </a>
-              <a
-                href="#entities"
-                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-50 transition-colors shadow-lg hover:shadow-xl border-2 border-blue-600"
-              >
-                Our Companies
-              </a>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+            <div>
+              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
+                Wave Crest Legacy Group, LLC
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-600 mb-8">
+                Empowering success through consulting, mentoring, and strategic guidance
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="#services"
+                  className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                >
+                  Explore Services
+                </a>
+                <a
+                  href="#entities"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-50 transition-colors shadow-lg hover:shadow-xl border-2 border-blue-600"
+                >
+                  Our Companies
+                </a>
+              </div>
+            </div>
+            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src={PROFESSIONAL_IMAGES[2]?.url || ''}
+                alt={PROFESSIONAL_IMAGES[2]?.description || 'Professional consulting'}
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
 
@@ -119,7 +134,7 @@ export default function LandingPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
               Our Companies
             </h2>
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {entities.map((entity, index) => {
                 const Icon = entity.icon;
                 return (
@@ -128,15 +143,23 @@ export default function LandingPage() {
                     href={entity.link}
                     className="group"
                   >
-                    <div className={`bg-gradient-to-br ${entity.color} p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-white`}>
-                      <div className="flex items-start justify-between mb-6">
-                        <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center">
-                          <Icon className="w-7 h-7" />
+                    <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden">
+                      <div className="relative h-64">
+                        <Image
+                          src={entity.image}
+                          alt={entity.name}
+                          fill
+                          className="object-cover"
+                        />
+                        <div className={`absolute inset-0 bg-gradient-to-br ${entity.color} opacity-80`}></div>
+                        <div className="absolute top-6 right-6">
+                          <ArrowRight className="w-8 h-8 text-white transform group-hover:translate-x-2 transition-transform" />
                         </div>
-                        <ArrowRight className="w-6 h-6 transform group-hover:translate-x-2 transition-transform" />
                       </div>
-                      <h3 className="text-2xl font-bold mb-4">{entity.name}</h3>
-                      <p className="text-white/90 leading-relaxed">{entity.description}</p>
+                      <div className="p-8">
+                        <h3 className="text-2xl font-bold text-gray-900 mb-4">{entity.name}</h3>
+                        <p className="text-gray-600 leading-relaxed">{entity.description}</p>
+                      </div>
                     </div>
                   </Link>
                 );

@@ -51,6 +51,12 @@ export const PROFESSIONAL_IMAGES: ProfessionalImage[] = [
     height: 1282,
     description: "Architects inspecting building",
   },
+  {
+    url: "https://breezy-sites.s3.amazonaws.com/site_images/caf098fe22e8bbcbee5cfd56e06f4978f9d72fe18807cdff77cfb925fb50/9c35510d3e881067f95522213375daeea35ddc26008e4e5d31bd1d114744.png",
+    width: 422,
+    height: 422,
+    description: "Processing description…",
+  },
 ];
 
 export const PROFESSIONAL_SERVICES: ProfessionalService[] = [
