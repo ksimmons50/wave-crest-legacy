@@ -89,9 +89,7 @@ export default function CreditQuestionnaire() {
 
     // Personal History
     criminalConviction: '',
-    bankruptcyCase: '',
     currentlySeek: '',
-    pastBankruptcy: '',
     petitionForDivorce: '',
     reasonForBuying: '',
 
@@ -265,9 +263,7 @@ Total Balances: $${totalCreditorBalances.toFixed(2)}
 
 === PERSONAL HISTORY ===
 Criminal Conviction: ${formData.criminalConviction}
-Bankruptcy Case #: ${formData.bankruptcyCase}
 Currently Seek: ${formData.currentlySeek}
-Past Bankruptcy: ${formData.pastBankruptcy}
 Petition for Divorce: ${formData.petitionForDivorce}
 Reason for Buying: ${formData.reasonForBuying}
 
@@ -329,8 +325,7 @@ Date: ${formData.signatureDate}
         childSupport: '', rent: '', groceries: '', phoneTv: '', electricity: '', insurance: '',
         gas: '', water: '', daycare: '', sewer: '', cableInternet: '', cellPhoneExpense: '', misc: '',
         foodExpense: '', creditCards: '', schoolLoans: '', carPayment: '', visa: '',
-        criminalConviction: '', bankruptcyCase: '', currentlySeek: '', pastBankruptcy: '',
-        petitionForDivorce: '', reasonForBuying: '', bankName: '', directPayment: '',
+        criminalConviction: '', currentlySeek: '', petitionForDivorce: '', reasonForBuying: '', bankName: '', directPayment: '',
         emailName: '', currentAnnualHousehold: '', loanOfficer: '', estimatedMonthlyPayment: '',
         applicantSignature: '', signatureDate: '',
       });
@@ -637,9 +632,7 @@ Date: ${formData.signatureDate}
           <h3 className="text-xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">Personal History</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <InputField label="Criminal Conviction?" name="criminalConviction" />
-            <InputField label="Bankruptcy Case #" name="bankruptcyCase" />
             <InputField label="Currently Seek" name="currentlySeek" />
-            <InputField label="Past Bankruptcy?" name="pastBankruptcy" />
             <InputField label="Petition for Divorce?" name="petitionForDivorce" />
             <div className="md:col-span-2">
               <label htmlFor="reasonForBuying" className="block text-sm font-medium text-gray-700 mb-1">
