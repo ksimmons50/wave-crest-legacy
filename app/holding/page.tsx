@@ -27,7 +27,7 @@ export default function HoldingPage() {
                 Professional Mortgage Note Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-600">
-                Secure holding and management of mortgage notes with flexible terms
+                30-year fixed-rate mortgages with no balloon payments and competitive rates
               </p>
             </div>
             <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
@@ -55,8 +55,8 @@ export default function HoldingPage() {
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                 <Calculator className="w-6 h-6 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Flexible Terms</h3>
-              <p className="text-gray-600">Customized payment plans tailored to your needs</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Rate Advantages</h3>
+              <p className="text-gray-600">Lower interest rates with higher down payments - from 8.5% to 10%</p>
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -73,6 +73,69 @@ export default function HoldingPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Secure Process</h3>
               <p className="text-gray-600">Professional and confidential service</p>
+            </div>
+          </div>
+
+          {/* Down Payment & Interest Rate Tiers */}
+          <div className="bg-white rounded-2xl p-10 shadow-xl mb-16">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Competitive Interest Rates
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Save thousands with a higher down payment. All loans are 30-year fixed rates with no balloon payments.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              <div className="relative bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border-2 border-green-300 shadow-lg">
+                <div className="absolute -top-3 -right-3 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  BEST RATE
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-green-700 mb-2">8.5%</div>
+                  <div className="text-sm text-gray-600 mb-4">Interest Rate</div>
+                  <div className="text-2xl font-semibold text-gray-900 mb-1">25%</div>
+                  <div className="text-sm text-gray-600">Down Payment</div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border-2 border-blue-200 shadow-lg">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-blue-700 mb-2">8.9%</div>
+                  <div className="text-sm text-gray-600 mb-4">Interest Rate</div>
+                  <div className="text-2xl font-semibold text-gray-900 mb-1">20%</div>
+                  <div className="text-sm text-gray-600">Down Payment</div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border-2 border-purple-200 shadow-lg">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-purple-700 mb-2">9.5%</div>
+                  <div className="text-sm text-gray-600 mb-4">Interest Rate</div>
+                  <div className="text-2xl font-semibold text-gray-900 mb-1">15%</div>
+                  <div className="text-sm text-gray-600">Down Payment</div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl border-2 border-orange-200 shadow-lg">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-orange-700 mb-2">10%</div>
+                  <div className="text-sm text-gray-600 mb-4">Interest Rate</div>
+                  <div className="text-2xl font-semibold text-gray-900 mb-1">10%</div>
+                  <div className="text-sm text-gray-600">Down Payment</div>
+                  <div className="text-xs text-orange-600 font-semibold mt-2">Minimum</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 text-center">
+              <div className="inline-flex items-center gap-2 bg-blue-50 px-6 py-3 rounded-full border border-blue-200">
+                <Shield className="w-5 h-5 text-blue-600" />
+                <span className="text-sm font-semibold text-blue-900">
+                  30-Year Fixed Rate • No Balloon Payments • No Surprises
+                </span>
+              </div>
             </div>
           </div>
 
