@@ -495,9 +495,37 @@ Date: ${formData.signatureDate}
         {/* Down Payment Information */}
         <section>
           <h3 className="text-xl font-semibold text-blue-600 mb-4 pb-2 border-b border-blue-200">Down Payment Information</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <InputField label="Down Payment Amount ($)" name="downPayment" type="number" placeholder="0" />
-            <InputField label="Source of Down Payment" name="sourceOfDownPayment" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="space-y-4">
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <p className="text-sm font-medium text-blue-900 mb-2">Recommended: 25% Down Payment</p>
+                <p className="text-xs text-blue-700">Lower down payments available with adjusted rates</p>
+              </div>
+              <InputField label="Down Payment Amount ($)" name="downPayment" type="number" placeholder="0" />
+              <InputField label="Source of Down Payment" name="sourceOfDownPayment" />
+            </div>
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <h4 className="font-semibold text-gray-900 mb-3">Interest Rates by Down Payment</h4>
+              <div className="space-y-2">
+                <div className="flex justify-between items-center p-2 bg-green-100 rounded">
+                  <span className="font-medium text-gray-900">25% Down Payment</span>
+                  <span className="font-bold text-green-700">8.5% Interest</span>
+                </div>
+                <div className="flex justify-between items-center p-2 bg-white rounded">
+                  <span className="font-medium text-gray-900">20% Down Payment</span>
+                  <span className="font-bold text-gray-700">8.9% Interest</span>
+                </div>
+                <div className="flex justify-between items-center p-2 bg-white rounded">
+                  <span className="font-medium text-gray-900">15% Down Payment</span>
+                  <span className="font-bold text-gray-700">9.5% Interest</span>
+                </div>
+                <div className="flex justify-between items-center p-2 bg-orange-100 rounded">
+                  <span className="font-medium text-gray-900">10% Down Payment</span>
+                  <span className="font-bold text-orange-700">10% Interest</span>
+                </div>
+                <p className="text-xs text-gray-600 mt-3 italic">*10% is the minimum down payment required</p>
+              </div>
+            </div>
           </div>
         </section>
 
