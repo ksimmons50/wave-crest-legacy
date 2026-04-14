@@ -42,7 +42,7 @@ export default function HoldingPage() {
           </div>
 
           {/* Services Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                 <FileText className="w-6 h-6 text-blue-600" />
@@ -52,27 +52,38 @@ export default function HoldingPage() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <Calculator className="w-6 h-6 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Rate Advantages</h3>
-              <p className="text-gray-600">Lower interest rates with higher down payments - from 8.5% to 10%</p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <TrendingUp className="w-6 h-6 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Competitive Rates</h3>
-              <p className="text-gray-600">Fair and transparent financing options</p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
                 <Shield className="w-6 h-6 text-orange-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Secure Process</h3>
               <p className="text-gray-600">Professional and confidential service</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-2 border-green-200">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <Calculator className="w-6 h-6 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Payment Examples</h3>
+              <p className="text-sm text-gray-700 font-semibold mb-3">$260,000 Home - Monthly P&I</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between items-center bg-white/70 px-3 py-2 rounded">
+                  <span className="text-gray-700">25% down (8.5%)</span>
+                  <span className="font-bold text-green-700">$1,499/mo</span>
+                </div>
+                <div className="flex justify-between items-center bg-white/70 px-3 py-2 rounded">
+                  <span className="text-gray-700">20% down (8.9%)</span>
+                  <span className="font-bold text-blue-700">$1,631/mo</span>
+                </div>
+                <div className="flex justify-between items-center bg-white/70 px-3 py-2 rounded">
+                  <span className="text-gray-700">15% down (9.5%)</span>
+                  <span className="font-bold text-purple-700">$1,859/mo</span>
+                </div>
+                <div className="flex justify-between items-center bg-white/70 px-3 py-2 rounded">
+                  <span className="text-gray-700">10% down (10%)</span>
+                  <span className="font-bold text-orange-700">$2,053/mo</span>
+                </div>
+              </div>
+              <p className="text-xs text-gray-600 mt-3 italic">*Higher down payment = lower monthly payment</p>
             </div>
           </div>
 
