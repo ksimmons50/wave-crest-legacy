@@ -486,10 +486,18 @@ Date: ${formData.signatureDate}
             <div className="md:col-span-2">
               <InputField label="Street Address" name="propertyStreetAddress" />
             </div>
-            <InputField label="Down Payment ($)" name="downPayment" type="number" placeholder="0" />
             <InputField label="Loan Amount Requested ($)" name="loanAmountRequested" type="number" placeholder="0" />
             <InputField label="Earnest Rate" name="earnestRate" />
             <InputField label="Type of Loan" name="typeOfLoan" placeholder="e.g., Conventional, FHA, etc." />
+          </div>
+        </section>
+
+        {/* Down Payment Information */}
+        <section>
+          <h3 className="text-xl font-semibold text-blue-600 mb-4 pb-2 border-b border-blue-200">Down Payment Information</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <InputField label="Down Payment Amount ($)" name="downPayment" type="number" placeholder="0" />
+            <InputField label="Source of Down Payment" name="sourceOfDownPayment" />
           </div>
         </section>
 
@@ -497,7 +505,6 @@ Date: ${formData.signatureDate}
         <section>
           <h3 className="text-xl font-semibold text-blue-600 mb-4 pb-2 border-b border-blue-200">Loan Payment & Funds Section</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <InputField label="Source of Down Payment" name="sourceOfDownPayment" />
             <InputField label="Source of Funds" name="sourceOfFunds" />
             <div>
               <label htmlFor="primaryResidence" className="block text-sm font-medium text-gray-700 mb-1">
