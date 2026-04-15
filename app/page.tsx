@@ -557,6 +557,28 @@ export default function LandingPage() {
               </div>
             </div>
           </section>
+
+          {/* Next Steps Section */}
+          <section className="relative py-24 px-6 bg-[#0a0e27]">
+            <div className="absolute inset-0 grain-overlay"></div>
+            <div className="max-w-4xl mx-auto relative z-10">
+              <div className="bg-[#1a1f3a]/50 backdrop-blur-sm border border-amber-500/20 p-10 md:p-12">
+                <h2 className="hero-title text-3xl md:text-4xl font-bold text-[#f5f5f0] mb-6">
+                  Next Steps: What to Expect
+                </h2>
+
+                <div className="space-y-6 body-text text-[#a8a29e] text-lg leading-relaxed">
+                  <p>
+                    After you submit your information, a member of the Wave Crest Legacy team will reach out to learn more about your goals, your timeline, and what type of support you're looking for. This first conversation is simple and pressure-free — it's just an opportunity for us to understand your situation and point you in the right direction.
+                  </p>
+
+                  <p>
+                    If you decide to move forward, we will provide the full application and walk you through each step of the process. Our goal is to make everything clear, transparent, and easy to follow, whether you're exploring owner financing, seeking real estate support, or requesting business documentation services.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
     </div>
   );
 }
