@@ -276,7 +276,7 @@ export default function BuyerIntakeFormPage() {
                     How much do you currently have available for a down payment? *
                   </label>
                   <div className="space-y-3">
-                    {["25% or more", "20%", "15%", "Below 15%", "Not sure"].map((amount) => (
+                    {["25% or more", "20%", "15%", "10%", "Not sure"].map((amount) => (
                       <label key={amount} className="flex items-center gap-3 body-text text-[#f5f5f0]">
                         <input
                           type="radio"
