@@ -325,7 +325,7 @@ export default function AcquisitionsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:ksimmons@wavecrestlegacy.com"
+                href="mailto:info@wavecrestlegacy.com"
                 className="inline-block bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-50 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
               >
                 Contact Us Today
@@ -343,8 +343,8 @@ export default function AcquisitionsPage() {
           <div className="mt-16 text-center">
             <p className="text-gray-600 mb-2">Questions about selling your property?</p>
             <p className="text-lg font-semibold text-gray-900">
-              <a href="mailto:ksimmons@wavecrestlegacy.com" className="text-blue-600 hover:text-blue-700">
-                ksimmons@wavecrestlegacy.com
+              <a href="mailto:info@wavecrestlegacy.com" className="text-blue-600 hover:text-blue-700">
+                info@wavecrestlegacy.com
               </a>
             </p>
             <p className="text-lg font-semibold text-gray-900">

@@ -18,7 +18,7 @@ export const BREEZY_SITE_SETTINGS_TOKEN = "2994f7e13b2a1781c799438cb5b6280200a5d
 // Business information
 export const PROFESSIONAL_NAME = "Wave Crest Legacy Group, LLC";
 export const PROFESSIONAL_PHONE = "+18176463927";
-export const PROFESSIONAL_EMAIL = "ksimmons@wavecrestlegacy.com";
+export const PROFESSIONAL_EMAIL = "info@wavecrestlegacy.com";
 export const PROFESSIONAL_ADDRESS = "8708 Technology Forest Place Ste 175, Houston, TX";
 
 // Company Logos
