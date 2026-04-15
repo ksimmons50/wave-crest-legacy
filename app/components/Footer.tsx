@@ -63,6 +63,12 @@ export default function Footer() {
             Services
           </Link>
           <Link
+            href="/buyer-intake"
+            className="body-text text-[#a8a29e] hover:text-amber-400 transition-colors duration-300"
+          >
+            Buyer Intake
+          </Link>
+          <Link
             href="/contact"
             className="body-text text-[#a8a29e] hover:text-amber-400 transition-colors duration-300"
           >
