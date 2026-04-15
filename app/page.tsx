@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Building2, ArrowRight, Users, Briefcase, HeartHandshake, FileText, Palette, Home as HomeIcon, Target, CheckCircle, Layers, TrendingUp, Anchor } from "lucide-react";
 import { PROFESSIONAL_IMAGES, LOGO_LEGACY_GROUP } from "@/professionalConstants";
 import Link from "next/link";
+import WaveCrestEcosystem from "@/app/components/WaveCrestEcosystem";
 
 export default function LandingPage() {
   const whatWeDo = [
@@ -53,30 +54,6 @@ export default function LandingPage() {
     "Brand-forward identity",
     "Real estate operator experience",
     "Legacy-driven approach",
-  ];
-
-  const ecosystem = [
-    {
-      icon: Layers,
-      name: "Wave Crest Legacy Group",
-      subtitle: "The Foundation",
-      description: "The central hub that provides clarity, structure, and organized systems across every project and entity. We create the frameworks, documentation, and strategic direction that keep everything aligned and moving forward.",
-      href: "/",
-    },
-    {
-      icon: TrendingUp,
-      name: "Wave Crest Legacy Acquisitions",
-      subtitle: "The Engine",
-      description: "Our acquisitions arm identifies opportunities, structures deals, and supports owner-finance pathways that create win-win outcomes. We bring transparency, due diligence, and clean documentation to every transaction.",
-      href: "/acquisitions",
-    },
-    {
-      icon: Anchor,
-      name: "Wave Crest Legacy Holding",
-      subtitle: "The Anchor",
-      description: "Our holding entity maintains long-term assets with clean title, organized records, and disciplined portfolio management. We focus on stability, legacy, and long-term value.",
-      href: "/holding",
-    },
   ];
 
   return (
@@ -169,53 +146,7 @@ export default function LandingPage() {
       </section>
 
       {/* Wave Crest Ecosystem */}
-      <section className="relative py-24 px-6 bg-[#0a0e27]">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-6">
-            <h2 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0] mb-4">
-              The Wave Crest Ecosystem
-            </h2>
-            <p className="body-text text-xl text-amber-400 mb-8">
-              Clarity. Structure. Momentum.
-            </p>
-            <p className="body-text text-lg text-[#a8a29e] max-w-3xl mx-auto leading-relaxed">
-              A simple, intentional framework designed to support long-term stability, clean documentation, and legacy-driven growth.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            {ecosystem.map((entity, index) => {
-              const Icon = entity.icon;
-              return (
-                <Link
-                  key={index}
-                  href={entity.href}
-                  className="group p-8 bg-[#1a1f3a]/50 border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/10"
-                >
-                  <div className="text-center space-y-4">
-                    <Icon className="w-12 h-12 text-amber-400 mx-auto group-hover:scale-110 transition-transform duration-300" />
-                    <div>
-                      <h3 className="hero-title text-xl font-bold text-[#f5f5f0] mb-1">
-                        {entity.name}
-                      </h3>
-                      <p className="body-text text-sm text-amber-400 font-semibold mb-4">
-                        {entity.subtitle}
-                      </p>
-                    </div>
-                    <p className="body-text text-[#a8a29e] leading-relaxed text-sm">
-                      {entity.description}
-                    </p>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-
-          <p className="body-text text-center text-[#a8a29e] max-w-3xl mx-auto mt-16 leading-relaxed">
-            Each entity plays a distinct role — working together to create clarity, structure, and momentum for every client, partner, and project.
-          </p>
-        </div>
-      </section>
+      <WaveCrestEcosystem />
 
       {/* Who We Serve */}
       <section className="relative py-24 px-6 bg-[#0a0e27]">
