@@ -9,7 +9,7 @@ interface EcosystemEntity {
   name: string;
   subtitle: string;
   description: string;
-  microCopy: string;
+  services: string[];
   href: string;
 }
 
@@ -25,7 +25,12 @@ export default function WaveCrestEcosystem() {
       name: "Wave Crest Legacy Group",
       subtitle: "The Foundation",
       description: "The central hub that provides clarity, structure, and systems across every project and entity.",
-      microCopy: "Clarity, structure, and systems that guide every project.",
+      services: [
+        "Business Clarity & Documentation",
+        "Brand Identity & Messaging",
+        "Mentorship & Strategic Guidance",
+        "Investor-Ready Systems"
+      ],
       href: "/",
     },
     {
@@ -33,7 +38,12 @@ export default function WaveCrestEcosystem() {
       name: "Wave Crest Legacy Acquisitions",
       subtitle: "The Engine",
       description: "Identifying opportunities, structuring deals, and supporting owner-finance pathways that create win-win outcomes.",
-      microCopy: "Identifying opportunities and structuring clean, transparent deals.",
+      services: [
+        "Real Estate Due Diligence",
+        "Market Studies & Analysis",
+        "Deal Structuring",
+        "Owner-Finance Pathways"
+      ],
       href: "/acquisitions",
     },
     {
@@ -41,7 +51,12 @@ export default function WaveCrestEcosystem() {
       name: "Wave Crest Legacy Holding",
       subtitle: "The Anchor",
       description: "Long-term asset management with clean title, organized records, and disciplined portfolio stability.",
-      microCopy: "Long-term asset stewardship with clean title and organized records.",
+      services: [
+        "Portfolio Organization",
+        "Clean Title Management",
+        "Asset Stewardship",
+        "Legacy Planning"
+      ],
       href: "/holding",
     },
   ];
@@ -164,7 +179,7 @@ export default function WaveCrestEcosystem() {
                     </div>
 
                     {/* Content */}
-                    <div className="text-center space-y-4">
+                    <div className="text-center space-y-6">
                       <div>
                         <h3 className="hero-title text-2xl md:text-3xl font-bold text-[#f5f5f0] mb-2 tracking-tight">
                           {entity.name}
@@ -174,13 +189,21 @@ export default function WaveCrestEcosystem() {
                         </p>
                       </div>
 
-                      <p className="body-text text-base md:text-lg text-[#f5f5f0]/90 leading-relaxed mb-4 max-w-xl mx-auto">
+                      <p className="body-text text-base md:text-lg text-[#f5f5f0]/90 leading-relaxed mb-6 max-w-xl mx-auto">
                         {entity.description}
                       </p>
 
-                      <p className="body-text text-sm text-[#a8a29e] italic leading-relaxed max-w-lg mx-auto border-t border-amber-500/10 pt-4 mt-4">
-                        {entity.microCopy}
-                      </p>
+                      {/* Services List */}
+                      <div className="border-t border-amber-500/10 pt-6 mt-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-lg mx-auto">
+                          {entity.services.map((service, idx) => (
+                            <div key={idx} className="flex items-center gap-2 text-left">
+                              <div className="w-1.5 h-1.5 bg-amber-400 rounded-full flex-shrink-0" />
+                              <span className="body-text text-sm text-[#a8a29e]">{service}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
                     </div>
 
                     {/* Hover Indicator */}
