@@ -213,7 +213,8 @@ export default function AcquisitionsPage() {
               { down: "25% down", rate: "8.5%" },
               { down: "20% down", rate: "8.9%" },
               { down: "15% down", rate: "9.5%" },
-              { down: "Below 15%", rate: "9.9%" },
+              { down: "10% down", rate: "10%" },
+              { down: "Below 10%", rate: "9.9%" },
             ].map((tier, index) => {
               const isVisible = visibleSections.includes(1);
               const delay = index * 100;
