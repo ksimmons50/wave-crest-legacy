@@ -12,9 +12,9 @@ import {
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "Acquisitions", href: "/acquisitions" },
-  { label: "Holding", href: "/holding" },
-  { label: "Get Started", href: "/credit-questionnaire" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navigation() {
