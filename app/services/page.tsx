@@ -82,6 +82,9 @@ export default function ServicesPage() {
           <h1 className="hero-title text-5xl md:text-6xl font-black text-[#f5f5f0]">
             Services
           </h1>
+          <p className="body-text text-xl text-amber-400">
+            Clarity. Structure. Momentum.
+          </p>
         </div>
       </section>
 

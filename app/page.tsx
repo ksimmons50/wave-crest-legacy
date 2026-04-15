@@ -119,9 +119,12 @@ export default function LandingPage() {
       {/* What We Do */}
       <section className="relative py-24 px-6 bg-[#1a1f3a]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0] text-center mb-20">
+          <h2 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0] text-center mb-8">
             What We Do
           </h2>
+          <p className="body-text text-xl text-amber-400 text-center mb-20">
+            Clarity. Structure. Momentum.
+          </p>
 
           <div className="grid md:grid-cols-2 gap-12">
             {whatWeDo.map((item, index) => {
@@ -170,9 +173,12 @@ export default function LandingPage() {
       {/* Why Wave Crest Works */}
       <section className="relative py-24 px-6 bg-[#1a1f3a]">
         <div className="max-w-4xl mx-auto">
-          <h2 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0] text-center mb-16">
+          <h2 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0] text-center mb-6">
             Why Wave Crest Works
           </h2>
+          <p className="body-text text-lg text-[#a8a29e] text-center mb-16 max-w-2xl mx-auto">
+            We bring clarity, structure, and momentum to every project.
+          </p>
 
           <div className="space-y-6">
             {whyWeWork.map((item, index) => (
@@ -192,7 +198,7 @@ export default function LandingPage() {
             Let's Build Your Next Chapter
           </h2>
           <p className="body-text text-xl text-[#a8a29e] max-w-2xl mx-auto">
-            Book a consultation and let's turn your ideas into organized systems.
+            Book a consultation and experience clarity, structure, and momentum in action.
           </p>
           <div className="pt-4">
             <a

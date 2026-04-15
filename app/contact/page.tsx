@@ -61,7 +61,7 @@ export default function ContactPage() {
             Let's Connect
           </h1>
           <p className="body-text text-xl text-[#a8a29e] max-w-2xl mx-auto">
-            Share what you're working on and we'll get back to you soon.
+            Share what you're working on and let's bring clarity, structure, and momentum to your next chapter.
           </p>
         </div>
       </section>

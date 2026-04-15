@@ -54,7 +54,7 @@ export default function AboutPage() {
             Our Story
           </h2>
           <p className="body-text text-lg text-[#a8a29e] leading-relaxed">
-            Wave Crest helps entrepreneurs, investors, and families create clarity and structure. We work with people who have ideas but need organized systems, who want to move forward but aren't sure where to start, and who value legacy over shortcuts.
+            Wave Crest helps entrepreneurs, investors, and families create clarity and structure. We work with people who have ideas but need organized systems, who want to move forward but aren't sure where to start, and who value legacy over shortcuts. Everything we do is guided by our commitment to clarity, structure, and momentum.
           </p>
         </div>
       </section>
