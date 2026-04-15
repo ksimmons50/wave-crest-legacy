@@ -2,60 +2,80 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Lightbulb, Code, Home, Mic, Users, Building2, ArrowRight, Sparkles, TrendingUp } from "lucide-react";
-import { PROFESSIONAL_IMAGES, LOGO_LEGACY_GROUP } from "@/professionalConstants";
+import { FileText, Search, ClipboardCheck, Hammer, TrendingUp, Building2, ArrowRight, Users, Home, Briefcase, FileCheck, Palette, FileSpreadsheet, Target, ShieldCheck, DollarSign, ArrowDownUp, HeartHandshake } from "lucide-react";
+import { PROFESSIONAL_IMAGES, LOGO_LEGACY_GROUP, LOGO_ACQUISITIONS, LOGO_HOLDING } from "@/professionalConstants";
 
 export default function LandingPage() {
-  const services = [
+  const realEstateServices = [
     {
-      icon: Users,
-      title: "Mentoring",
-      description: "One-on-one guidance to achieve personal and professional excellence",
+      icon: DollarSign,
+      title: "Owner-Finance Structuring",
+      description: "We design compliant, win-win owner-finance solutions that help families achieve homeownership while protecting investor interests.",
       color: "accent1"
     },
     {
-      icon: Code,
-      title: "IT Consulting",
-      description: "Technology solutions and strategic IT planning for modern businesses",
+      icon: FileSpreadsheet,
+      title: "Deal Analysis & Underwriting",
+      description: "We evaluate properties using conservative ARV models, rehab budgets, and risk-adjusted projections.",
       color: "accent2"
     },
     {
-      icon: Home,
-      title: "Real Estate Consulting",
-      description: "Strategic planning, business continuity, and smart home expertise",
+      icon: Search,
+      title: "Due Diligence Support",
+      description: "Title review, comps, neighborhood analysis, contractor verification, and risk scanning.",
       color: "accent3"
     },
     {
-      icon: Mic,
-      title: "Public Speaking",
-      description: "Engaging presentations and keynote speeches that inspire action",
+      icon: Hammer,
+      title: "Rehab Oversight",
+      description: "Scope of work creation, contractor coordination, payment draw structure, and quality control.",
       color: "accent4"
     },
     {
-      icon: Lightbulb,
-      title: "Brainstorming Sessions",
-      description: "Collaborative innovation to unlock breakthrough solutions",
+      icon: TrendingUp,
+      title: "Market Studies & Valuation Support",
+      description: "Houston-focused market insights, rental analysis, and resale positioning.",
       color: "accent5"
     }
   ];
 
-  const entities = [
+  const documentationServices = [
     {
-      name: "Wave Crest Legacy Acquisitions, LLC",
-      description: "We buy houses for cash in Houston - fast, fair, and hassle-free",
-      link: "/acquisitions",
-      icon: Building2,
-      color: "from-blue-600 to-blue-700",
-      image: PROFESSIONAL_IMAGES[1]?.url || ''
+      icon: FileCheck,
+      title: "Standard Operating Procedures"
     },
     {
-      name: "Wave Crest Legacy Holding, LLC",
-      description: "Professional mortgage note holding and management services",
-      link: "/holding",
-      icon: Building2,
-      color: "from-purple-600 to-purple-700",
-      image: PROFESSIONAL_IMAGES[0]?.url || ''
+      icon: Briefcase,
+      title: "Business Plans"
+    },
+    {
+      icon: Target,
+      title: "Pitch Decks"
+    },
+    {
+      icon: FileText,
+      title: "Branded PDFs"
+    },
+    {
+      icon: ClipboardCheck,
+      title: "Process Documentation"
+    },
+    {
+      icon: ArrowDownUp,
+      title: "Workflow Design"
+    },
+    {
+      icon: Palette,
+      title: "Logo-Forward Visual Identity"
     }
+  ];
+
+  const whoWeServe = [
+    { icon: Building2, label: "Real estate investors" },
+    { icon: Home, label: "First-time homebuyers needing flexible financing" },
+    { icon: Users, label: "Entrepreneurs needing documentation" },
+    { icon: Briefcase, label: "Small businesses needing branding" },
+    { icon: HeartHandshake, label: "Families building long-term stability" }
   ];
 
   const colorClasses = {
@@ -154,17 +174,16 @@ export default function LandingPage() {
 
               {/* Label */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm animate-fade-in-up" style={{animationDelay: '0.2s', opacity: 0}}>
-                <Sparkles className="w-4 h-4 text-amber-400" />
-                <span className="text-sm font-medium text-amber-300 body-text tracking-wide">Strategic Business Consulting</span>
+                <Building2 className="w-4 h-4 text-amber-400" />
+                <span className="text-sm font-medium text-amber-300 body-text tracking-wide">Real Estate & Business Consulting</span>
               </div>
 
               {/* Main Heading */}
-              <h1 className="hero-title text-5xl md:text-6xl lg:text-7xl font-black text-[#f5f5f0] animate-fade-in-up" style={{animationDelay: '0.3s', opacity: 0}}>
-                Empowering Excellence
-                <br />
+              <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-black text-[#f5f5f0] animate-fade-in-up leading-tight" style={{animationDelay: '0.3s', opacity: 0}}>
+                Empowering families, investors, and entrepreneurs through{' '}
                 <span className="relative inline-block">
                   <span className="relative z-10 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 bg-clip-text text-transparent">
-                    Through Strategy
+                    clarity, structure, and sustainable real estate solutions
                   </span>
                   <span className="absolute inset-0 animate-shimmer"></span>
                 </span>
@@ -172,7 +191,7 @@ export default function LandingPage() {
 
               {/* Subheading */}
               <p className="text-xl md:text-2xl text-[#a8a29e] body-text leading-relaxed max-w-xl animate-fade-in-up" style={{animationDelay: '0.4s', opacity: 0}}>
-                Empowering visionary leaders through strategic consulting, transformative mentoring, and innovative solutions
+                We document, design, acquire, and develop with purpose — building long-term stability and legacy.
               </p>
 
               {/* CTAs */}
@@ -182,35 +201,17 @@ export default function LandingPage() {
                   className="group relative px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-[#0a0e27] font-bold body-text overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/50 hover:scale-105"
                 >
                   <span className="relative z-10 flex items-center gap-2">
-                    Explore Services
+                    Explore Our Services
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </a>
                 <a
-                  href="#entities"
+                  href="#ecosystem"
                   className="px-8 py-4 border-2 border-[#a8a29e]/30 text-[#f5f5f0] font-bold body-text hover:border-amber-500/50 hover:bg-amber-500/5 transition-all duration-300"
                 >
-                  Our Companies
+                  Our Ecosystem
                 </a>
-              </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-[#a8a29e]/20 animate-fade-in-up" style={{animationDelay: '0.6s', opacity: 0}}>
-                <div>
-                  <div className="text-3xl font-bold text-amber-400 hero-title">5+</div>
-                  <div className="text-sm text-[#a8a29e] body-text">Service Areas</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-amber-400 hero-title">2</div>
-                  <div className="text-sm text-[#a8a29e] body-text">Business Entities</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-amber-400 hero-title flex items-center gap-1">
-                    <TrendingUp className="w-6 h-6" />
-                  </div>
-                  <div className="text-sm text-[#a8a29e] body-text">Growth Focused</div>
-                </div>
               </div>
             </div>
 
@@ -233,8 +234,8 @@ export default function LandingPage() {
 
                   {/* Floating accent */}
                   <div className="absolute bottom-8 left-8 right-8 p-6 bg-[#1a1f3a]/80 backdrop-blur-md border border-amber-500/30 rounded-xl">
-                    <div className="text-sm text-amber-400 font-semibold body-text mb-1">Excellence in Action</div>
-                    <div className="text-lg text-[#f5f5f0] body-text">Strategic solutions for modern challenges</div>
+                    <div className="text-sm text-amber-400 font-semibold body-text mb-1">Houston-Based</div>
+                    <div className="text-lg text-[#f5f5f0] body-text">Building legacy through sustainable real estate</div>
                   </div>
                 </div>
               </div>
@@ -243,24 +244,109 @@ export default function LandingPage() {
         </div>
       </section>
 
-          {/* Services Section */}
-          <section id="services" className="relative py-32 px-6 bg-gradient-to-b from-[#0a0e27] to-[#1a1f3a]">
+          {/* Wave Crest Legacy Ecosystem */}
+          <section id="ecosystem" className="relative py-32 px-6 bg-gradient-to-b from-[#0a0e27] to-[#1a1f3a]">
             <div className="absolute inset-0 grain-overlay"></div>
             <div className="max-w-7xl mx-auto relative z-10">
               <div className="text-center mb-16">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm mb-6">
-                  <span className="text-sm font-medium text-amber-300 body-text tracking-wide">Our Expertise</span>
+                  <Building2 className="w-4 h-4 text-amber-400" />
+                  <span className="text-sm font-medium text-amber-300 body-text tracking-wide">Our Structure</span>
                 </div>
                 <h2 className="hero-title text-5xl md:text-6xl font-black text-[#f5f5f0] mb-6">
-                  Consulting Services
+                  The Wave Crest Legacy Ecosystem
                 </h2>
                 <p className="text-xl text-[#a8a29e] body-text max-w-2xl mx-auto">
-                  Comprehensive solutions tailored to elevate your business
+                  Three integrated entities working together to build sustainable, long-term value
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                {/* Wave Crest Legacy Group */}
+                <div className="group relative p-8 bg-[#1a1f3a]/50 backdrop-blur-sm border border-amber-500/20 hover:bg-[#1a1f3a] transition-all duration-500 hover:scale-105 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-500/0 to-amber-500/0 group-hover:from-amber-500/5 group-hover:to-transparent transition-all duration-500"></div>
+
+                  <div className="relative z-10">
+                    <div className="mb-6">
+                      <Image
+                        src={LOGO_LEGACY_GROUP}
+                        alt="Wave Crest Legacy Group"
+                        width={200}
+                        height={60}
+                        className="h-16 w-auto"
+                      />
+                    </div>
+                    <h3 className="hero-title text-2xl font-bold text-amber-400 mb-4">Wave Crest Legacy Group</h3>
+                    <p className="body-text text-[#a8a29e] leading-relaxed">
+                      Strategic documentation, business clarity, branding, mentorship, and operational support.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Wave Crest Legacy Acquisitions */}
+                <div className="group relative p-8 bg-[#1a1f3a]/50 backdrop-blur-sm border border-sky-500/20 hover:bg-[#1a1f3a] transition-all duration-500 hover:scale-105 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-sky-500/0 to-sky-500/0 group-hover:from-sky-500/5 group-hover:to-transparent transition-all duration-500"></div>
+
+                  <div className="relative z-10">
+                    <div className="mb-6">
+                      <Image
+                        src={LOGO_ACQUISITIONS}
+                        alt="Wave Crest Legacy Acquisitions"
+                        width={200}
+                        height={60}
+                        className="h-16 w-auto"
+                      />
+                    </div>
+                    <h3 className="hero-title text-2xl font-bold text-sky-400 mb-4">Wave Crest Legacy Acquisitions</h3>
+                    <p className="body-text text-[#a8a29e] leading-relaxed">
+                      Real estate acquisitions, rehabs, due diligence, deal analysis, and owner-finance exit strategies.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Wave Crest Legacy Holding */}
+                <div className="group relative p-8 bg-[#1a1f3a]/50 backdrop-blur-sm border border-purple-500/20 hover:bg-[#1a1f3a] transition-all duration-500 hover:scale-105 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-purple-500/0 group-hover:from-purple-500/5 group-hover:to-transparent transition-all duration-500"></div>
+
+                  <div className="relative z-10">
+                    <div className="mb-6">
+                      <Image
+                        src={LOGO_HOLDING}
+                        alt="Wave Crest Legacy Holding"
+                        width={200}
+                        height={60}
+                        className="h-16 w-auto"
+                      />
+                    </div>
+                    <h3 className="hero-title text-2xl font-bold text-purple-400 mb-4">Wave Crest Legacy Holding</h3>
+                    <p className="body-text text-[#a8a29e] leading-relaxed">
+                      Long-term asset management, note servicing, and legacy-building real estate operations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Real Estate Support Services */}
+          <section id="services" className="relative py-32 px-6 bg-[#0a0e27]">
+            <div className="absolute inset-0 grain-overlay"></div>
+            <div className="max-w-7xl mx-auto relative z-10">
+              <div className="text-center mb-16">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm mb-6">
+                  <Home className="w-4 h-4 text-amber-400" />
+                  <span className="text-sm font-medium text-amber-300 body-text tracking-wide">Real Estate Expertise</span>
+                </div>
+                <h2 className="hero-title text-5xl md:text-6xl font-black text-[#f5f5f0] mb-6">
+                  Real Estate Support Services
+                </h2>
+                <p className="text-xl text-[#a8a29e] body-text max-w-2xl mx-auto">
+                  Comprehensive support for investors, from acquisition to exit
                 </p>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {services.map((service, index) => {
+                {realEstateServices.map((service, index) => {
                   const Icon = service.icon;
                   return (
                     <div
@@ -268,7 +354,6 @@ export default function LandingPage() {
                       className={`group relative p-8 bg-[#1a1f3a]/50 backdrop-blur-sm border ${colorClasses[service.color as keyof typeof colorClasses].split(' ')[2]} hover:bg-[#1a1f3a] transition-all duration-500 hover:scale-105 overflow-hidden`}
                       style={{animationDelay: `${index * 0.1}s`}}
                     >
-                      {/* Hover gradient effect */}
                       <div className="absolute inset-0 bg-gradient-to-br from-amber-500/0 to-amber-500/0 group-hover:from-amber-500/5 group-hover:to-transparent transition-all duration-500"></div>
 
                       <div className="relative z-10">
@@ -278,7 +363,6 @@ export default function LandingPage() {
                         <h3 className="hero-title text-2xl font-bold text-[#f5f5f0] mb-4">{service.title}</h3>
                         <p className="body-text text-[#a8a29e] leading-relaxed">{service.description}</p>
 
-                        {/* Decorative corner */}
                         <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-amber-500/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       </div>
                     </div>
@@ -288,65 +372,140 @@ export default function LandingPage() {
             </div>
           </section>
 
-          {/* Entities Section */}
-          <section id="entities" className="relative py-32 px-6 bg-[#0a0e27]">
+          {/* Business Documentation & Branding */}
+          <section className="relative py-32 px-6 bg-gradient-to-b from-[#0a0e27] to-[#1a1f3a]">
             <div className="absolute inset-0 grain-overlay"></div>
             <div className="max-w-7xl mx-auto relative z-10">
               <div className="text-center mb-16">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm mb-6">
-                  <Building2 className="w-4 h-4 text-amber-400" />
-                  <span className="text-sm font-medium text-amber-300 body-text tracking-wide">Our Portfolio</span>
+                  <FileText className="w-4 h-4 text-amber-400" />
+                  <span className="text-sm font-medium text-amber-300 body-text tracking-wide">Professional Clarity</span>
                 </div>
                 <h2 className="hero-title text-5xl md:text-6xl font-black text-[#f5f5f0] mb-6">
-                  Our Companies
+                  Business Documentation & Branding
                 </h2>
                 <p className="text-xl text-[#a8a29e] body-text max-w-2xl mx-auto">
-                  Specialized entities delivering excellence in their domains
+                  Professional, structured, and legacy-focused documentation that brings clarity to your business
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                {entities.map((entity, index) => {
-                  const Icon = entity.icon;
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                {documentationServices.map((service, index) => {
+                  const Icon = service.icon;
                   return (
-                    <Link
+                    <div
                       key={index}
-                      href={entity.link}
-                      className="group"
+                      className="group relative p-6 bg-[#1a1f3a]/50 backdrop-blur-sm border border-amber-500/20 hover:bg-[#1a1f3a] transition-all duration-500 hover:scale-105 overflow-hidden"
                     >
-                      <div className="relative bg-[#1a1f3a]/50 backdrop-blur-sm border border-amber-500/20 overflow-hidden hover:border-amber-500/40 transition-all duration-500 hover:scale-102">
-                        {/* Image */}
-                        <div className="relative h-80 overflow-hidden">
-                          <Image
-                            src={entity.image}
-                            alt={entity.name}
-                            fill
-                            className="object-cover group-hover:scale-110 transition-transform duration-700"
-                          />
-                          <div className={`absolute inset-0 bg-gradient-to-br ${entity.color} opacity-70 group-hover:opacity-60 transition-opacity duration-500`}></div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-amber-500/0 to-amber-500/0 group-hover:from-amber-500/5 group-hover:to-transparent transition-all duration-500"></div>
 
-                          {/* Arrow icon */}
-                          <div className="absolute top-6 right-6 w-12 h-12 bg-[#f5f5f0]/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:bg-amber-500 group-hover:border-amber-500 transition-all duration-300">
-                            <ArrowRight className="w-6 h-6 text-white transform group-hover:translate-x-1 transition-transform duration-300" />
-                          </div>
+                      <div className="relative z-10 text-center">
+                        <div className="w-12 h-12 bg-amber-500/10 text-amber-400 border border-amber-500/30 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                          <Icon className="w-6 h-6" />
                         </div>
-
-                        {/* Content */}
-                        <div className="p-8 bg-gradient-to-b from-[#1a1f3a]/80 to-[#1a1f3a]">
-                          <h3 className="hero-title text-2xl md:text-3xl font-bold text-[#f5f5f0] mb-4 group-hover:text-amber-300 transition-colors duration-300">
-                            {entity.name}
-                          </h3>
-                          <p className="body-text text-[#a8a29e] leading-relaxed">
-                            {entity.description}
-                          </p>
-                        </div>
-
-                        {/* Decorative line */}
-                        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                        <h3 className="body-text font-semibold text-[#f5f5f0]">{service.title}</h3>
                       </div>
-                    </Link>
+                    </div>
                   );
                 })}
+              </div>
+            </div>
+          </section>
+
+          {/* Who We Serve */}
+          <section className="relative py-32 px-6 bg-[#0a0e27]">
+            <div className="absolute inset-0 grain-overlay"></div>
+            <div className="max-w-7xl mx-auto relative z-10">
+              <div className="text-center mb-16">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm mb-6">
+                  <Users className="w-4 h-4 text-amber-400" />
+                  <span className="text-sm font-medium text-amber-300 body-text tracking-wide">Our Community</span>
+                </div>
+                <h2 className="hero-title text-5xl md:text-6xl font-black text-[#f5f5f0] mb-6">
+                  Who We Serve
+                </h2>
+                <p className="text-xl text-[#a8a29e] body-text max-w-2xl mx-auto">
+                  Building partnerships with those committed to long-term value
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                {whoWeServe.map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <div
+                      key={index}
+                      className="group relative p-8 bg-[#1a1f3a]/50 backdrop-blur-sm border border-amber-500/20 hover:bg-[#1a1f3a] transition-all duration-500 hover:scale-105 overflow-hidden"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-amber-500/0 to-amber-500/0 group-hover:from-amber-500/5 group-hover:to-transparent transition-all duration-500"></div>
+
+                      <div className="relative z-10 flex items-center gap-4">
+                        <div className="w-12 h-12 bg-amber-500/10 text-amber-400 border border-amber-500/30 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                          <Icon className="w-6 h-6" />
+                        </div>
+                        <p className="body-text text-[#f5f5f0] font-medium">{item.label}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+
+          {/* Why Owner Finance */}
+          <section className="relative py-32 px-6 bg-gradient-to-b from-[#0a0e27] to-[#1a1f3a]">
+            <div className="absolute inset-0 grain-overlay"></div>
+            <div className="max-w-5xl mx-auto relative z-10">
+              <div className="text-center mb-16">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm mb-6">
+                  <ShieldCheck className="w-4 h-4 text-amber-400" />
+                  <span className="text-sm font-medium text-amber-300 body-text tracking-wide">Investment Strategy</span>
+                </div>
+                <h2 className="hero-title text-5xl md:text-6xl font-black text-[#f5f5f0] mb-6">
+                  Why Owner Finance?
+                </h2>
+              </div>
+
+              <div className="bg-[#1a1f3a]/50 backdrop-blur-sm border border-amber-500/20 p-10 md:p-12">
+                <p className="text-xl text-[#a8a29e] body-text leading-relaxed mb-8">
+                  Owner financing creates a pathway to homeownership for families who need flexible solutions, while building stable, long-term income streams for investors.
+                </p>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-2 h-2 bg-amber-400 rounded-full mt-2"></div>
+                    <p className="body-text text-[#a8a29e] leading-relaxed">
+                      <span className="text-[#f5f5f0] font-semibold">Helps families</span> who need flexible pathways to homeownership
+                    </p>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-2 h-2 bg-amber-400 rounded-full mt-2"></div>
+                    <p className="body-text text-[#a8a29e] leading-relaxed">
+                      <span className="text-[#f5f5f0] font-semibold">Creates stable</span>, long-term income streams
+                    </p>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-2 h-2 bg-amber-400 rounded-full mt-2"></div>
+                    <p className="body-text text-[#a8a29e] leading-relaxed">
+                      <span className="text-[#f5f5f0] font-semibold">Aligns incentives</span> between buyer and seller
+                    </p>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-2 h-2 bg-amber-400 rounded-full mt-2"></div>
+                    <p className="body-text text-[#a8a29e] leading-relaxed">
+                      <span className="text-[#f5f5f0] font-semibold">Supports community</span> stability
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-8 pt-8 border-t border-amber-500/20">
+                  <p className="body-text text-[#a8a29e] text-center italic">
+                    We treat owner financing as an investment strategy, not retail inventory.
+                  </p>
+                </div>
               </div>
             </div>
           </section>
@@ -365,7 +524,7 @@ export default function LandingPage() {
                     Let's Work Together
                   </h2>
                   <p className="text-xl body-text text-[#a8a29e] mb-10 max-w-2xl mx-auto">
-                    Ready to transform your vision into reality? Connect with us today.
+                    Ready to build clarity, structure, and sustainable value? Connect with us today.
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -386,9 +545,12 @@ export default function LandingPage() {
                     </a>
                   </div>
 
-                  <div className="pt-8 border-t border-amber-500/20">
+                  <div className="pt-8 border-t border-amber-500/20 space-y-2">
                     <p className="body-text text-[#a8a29e]">
                       8708 Technology Forest Place #175, Houston, TX
+                    </p>
+                    <p className="body-text text-amber-400 font-medium">
+                      Wave Crest Legacy Group proudly serves the Greater Houston area.
                     </p>
                   </div>
                 </div>
