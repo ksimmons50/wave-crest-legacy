@@ -547,7 +547,7 @@ export default function LandingPage() {
 
                   <div className="pt-8 border-t border-amber-500/20 space-y-2">
                     <p className="body-text text-[#a8a29e]">
-                      8708 Technology Forest Place #175, Houston, TX
+                      8708 Technology Forest Place ste 175, Houston, TX
                     </p>
                     <p className="body-text text-amber-400 font-medium">
                       Wave Crest Legacy Group proudly serves the Greater Houston area.
