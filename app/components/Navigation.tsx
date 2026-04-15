@@ -14,7 +14,7 @@ const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Acquisitions", href: "/acquisitions" },
   { label: "Holding", href: "/holding" },
-  { label: "Credit App", href: "/credit-questionnaire" },
+  { label: "Get Started", href: "/credit-questionnaire" },
 ];
 
 export default function Navigation() {
