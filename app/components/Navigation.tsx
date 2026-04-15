@@ -9,7 +9,6 @@ import {
   PROFESSIONAL_PHONE,
   LOGO_LEGACY_GROUP,
 } from "@/professionalConstants";
-import GoogleTranslate from "./GoogleTranslate";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
@@ -59,22 +58,16 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Right Side Items */}
-          <div className="hidden lg:flex items-center gap-4">
-            {/* Google Translate */}
-            <GoogleTranslate />
-
-            {/* Phone CTA */}
-            {PROFESSIONAL_PHONE && (
-              <a
-                href={`tel:${PROFESSIONAL_PHONE}`}
-                className="flex items-center gap-2 text-[11px] text-background tracking-[0.1em] bg-gradient-to-r from-primary/20 to-primary/20 hover:from-primary/30 hover:to-primary/30 border border-primary/30 hover:border-primary/50 px-5 py-2.5 transition-all duration-300"
-              >
-                <Phone className="w-3.5 h-3.5 text-primary" />
-                <span>{formatPhoneNumber(PROFESSIONAL_PHONE)}</span>
-              </a>
-            )}
-          </div>
+          {/* Phone CTA */}
+          {PROFESSIONAL_PHONE && (
+            <a
+              href={`tel:${PROFESSIONAL_PHONE}`}
+              className="hidden md:flex items-center gap-2 text-[11px] text-background tracking-[0.1em] bg-gradient-to-r from-primary/20 to-primary/20 hover:from-primary/30 hover:to-primary/30 border border-primary/30 hover:border-primary/50 px-5 py-2.5 transition-all duration-300"
+            >
+              <Phone className="w-3.5 h-3.5 text-primary" />
+              <span>{formatPhoneNumber(PROFESSIONAL_PHONE)}</span>
+            </a>
+          )}
 
           {/* Mobile Menu Button */}
           <button
@@ -106,7 +99,7 @@ export default function Navigation() {
       {/* Mobile Menu */}
       <div
         className={`lg:hidden overflow-hidden transition-all duration-500 ${
-          mobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          mobileMenuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="bg-foreground/95 backdrop-blur-xl mt-4 mx-4 rounded-lg border border-border p-6">
@@ -122,11 +115,6 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
-          </div>
-
-          {/* Google Translate for mobile */}
-          <div className="flex justify-center mt-6 pb-4 border-b border-border">
-            <GoogleTranslate />
           </div>
 
           {PROFESSIONAL_PHONE && (
