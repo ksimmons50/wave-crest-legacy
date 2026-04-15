@@ -1,11 +1,65 @@
 'use client';
 
 import React, { useState } from 'react';
-import { CheckCircle, XCircle, Loader2 } from 'lucide-react';
+import { CheckCircle, XCircle, Loader2, Languages } from 'lucide-react';
 import { BREEZY_PROFESSIONAL_TOKEN, LOGO_HOLDING } from '../../professionalConstants';
 import Image from 'next/image';
 
+const translations = {
+  en: {
+    title: 'Home Interest Form',
+    subtitle: "Tell us a bit about what you're looking for, and we'll be in touch.",
+    name: 'Name',
+    phone: 'Phone',
+    email: 'Email',
+    preferredArea: 'Preferred Area',
+    preferredAreaPlaceholder: 'e.g., North Houston, Cypress, Katy',
+    monthlyBudget: 'Monthly Budget',
+    ownerFinancing: 'Are you interested in owner financing?',
+    moveTimeline: 'When are you looking to move?',
+    moveTimelinePlaceholder: 'e.g., Within 3 months, 6-12 months, Just exploring',
+    additionalInfo: 'Tell us a little about your situation',
+    additionalInfoPlaceholder: 'Share any details that might help us serve you better...',
+    optional: 'Optional',
+    required: '*',
+    selectOption: 'Select...',
+    yes: 'Yes',
+    no: 'No',
+    maybe: 'Maybe',
+    disclaimer: 'If you qualify and want to move forward, we will send you the full application.',
+    submit: 'Submit Interest Form',
+    submitting: 'Submitting...',
+    successMessage: "Thank you! We've received your information and will be in touch soon.",
+  },
+  es: {
+    title: 'Formulario de Interés de Vivienda',
+    subtitle: 'Cuéntenos un poco sobre lo que está buscando y nos pondremos en contacto.',
+    name: 'Nombre',
+    phone: 'Teléfono',
+    email: 'Correo Electrónico',
+    preferredArea: 'Área Preferida',
+    preferredAreaPlaceholder: 'ej., Norte de Houston, Cypress, Katy',
+    monthlyBudget: 'Presupuesto Mensual',
+    ownerFinancing: '¿Está interesado en financiamiento del propietario?',
+    moveTimeline: '¿Cuándo está buscando mudarse?',
+    moveTimelinePlaceholder: 'ej., Dentro de 3 meses, 6-12 meses, Solo explorando',
+    additionalInfo: 'Cuéntenos un poco sobre su situación',
+    additionalInfoPlaceholder: 'Comparta cualquier detalle que pueda ayudarnos a servirle mejor...',
+    optional: 'Opcional',
+    required: '*',
+    selectOption: 'Seleccionar...',
+    yes: 'Sí',
+    no: 'No',
+    maybe: 'Tal vez',
+    disclaimer: 'Si califica y desea continuar, le enviaremos la solicitud completa.',
+    submit: 'Enviar Formulario de Interés',
+    submitting: 'Enviando...',
+    successMessage: '¡Gracias! Hemos recibido su información y nos pondremos en contacto pronto.',
+  }
+};
+
 export default function CreditQuestionnaire() {
+  const [language, setLanguage] = useState<'en' | 'es'>('en');
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -20,6 +74,8 @@ export default function CreditQuestionnaire() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState<string>('');
+
+  const t = translations[language];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -114,15 +170,40 @@ ${formData.additionalInfo ? `Additional Information:\n${formData.additionalInfo}
     <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl p-8 my-8">
       {/* Header with Logo */}
       <div className="flex flex-col items-start mb-8 pb-6 border-b-2 border-gray-200">
-        <Image
-          src={LOGO_HOLDING}
-          alt="Wave Crest Legacy Holding, LLC"
-          width={250}
-          height={80}
-          className="h-16 w-auto mb-4"
-        />
-        <h2 className="text-3xl font-bold text-gray-900 mb-2">Home Interest Form</h2>
-        <p className="text-gray-600 mb-4">Tell us a bit about what you're looking for, and we'll be in touch.</p>
+        <div className="flex justify-between items-start w-full mb-4">
+          <Image
+            src={LOGO_HOLDING}
+            alt="Wave Crest Legacy Holding, LLC"
+            width={250}
+            height={80}
+            className="h-16 w-auto"
+          />
+          {/* Language Toggle */}
+          <div className="flex gap-2 bg-gray-100 rounded-lg p-1">
+            <button
+              onClick={() => setLanguage('en')}
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                language === 'en'
+                  ? 'bg-white text-blue-600 shadow-sm'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              English
+            </button>
+            <button
+              onClick={() => setLanguage('es')}
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                language === 'es'
+                  ? 'bg-white text-blue-600 shadow-sm'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              Español
+            </button>
+          </div>
+        </div>
+        <h2 className="text-3xl font-bold text-gray-900 mb-2">{t.title}</h2>
+        <p className="text-gray-600 mb-4">{t.subtitle}</p>
         <div className="space-y-1 text-sm text-gray-500">
           <p>info@wavecrestlegacy.com</p>
           <p>(817) 646-3927</p>
@@ -133,7 +214,7 @@ ${formData.additionalInfo ? `Additional Information:\n${formData.additionalInfo}
         <div className="mb-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-md">
           <div className="flex items-center">
             <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-            <p className="text-green-800 font-medium">Thank you! We've received your information and will be in touch soon.</p>
+            <p className="text-green-800 font-medium">{t.successMessage}</p>
           </div>
         </div>
       )}
@@ -151,7 +232,7 @@ ${formData.additionalInfo ? `Additional Information:\n${formData.additionalInfo}
         {/* Name */}
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-            Name <span className="text-red-500">*</span>
+            {t.name} <span className="text-red-500">{t.required}</span>
           </label>
           <input
             type="text"
@@ -167,7 +248,7 @@ ${formData.additionalInfo ? `Additional Information:\n${formData.additionalInfo}
         {/* Phone */}
         <div>
           <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-            Phone <span className="text-red-500">*</span>
+            {t.phone} <span className="text-red-500">{t.required}</span>
           </label>
           <input
             type="tel"
@@ -183,7 +264,7 @@ ${formData.additionalInfo ? `Additional Information:\n${formData.additionalInfo}
         {/* Email */}
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-            Email <span className="text-red-500">*</span>
+            {t.email} <span className="text-red-500">{t.required}</span>
           </label>
           <input
             type="email"
@@ -199,7 +280,7 @@ ${formData.additionalInfo ? `Additional Information:\n${formData.additionalInfo}
         {/* Preferred Area */}
         <div>
           <label htmlFor="preferredArea" className="block text-sm font-medium text-gray-700 mb-1">
-            Preferred Area <span className="text-red-500">*</span>
+            {t.preferredArea} <span className="text-red-500">{t.required}</span>
           </label>
           <input
             type="text"
@@ -207,7 +288,7 @@ ${formData.additionalInfo ? `Additional Information:\n${formData.additionalInfo}
             name="preferredArea"
             value={formData.preferredArea}
             onChange={handleInputChange}
-            placeholder="e.g., North Houston, Cypress, Katy"
+            placeholder={t.preferredAreaPlaceholder}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             required
           />
@@ -216,7 +297,7 @@ ${formData.additionalInfo ? `Additional Information:\n${formData.additionalInfo}
         {/* Monthly Budget */}
         <div>
           <label htmlFor="monthlyBudget" className="block text-sm font-medium text-gray-700 mb-1">
-            Monthly Budget <span className="text-red-500">*</span>
+            {t.monthlyBudget} <span className="text-red-500">{t.required}</span>
           </label>
           <div className="relative">
             <span className="absolute left-4 top-3.5 text-gray-500">$</span>
@@ -236,7 +317,7 @@ ${formData.additionalInfo ? `Additional Information:\n${formData.additionalInfo}
         {/* Owner Financing Interest */}
         <div>
           <label htmlFor="ownerFinancing" className="block text-sm font-medium text-gray-700 mb-1">
-            Are you interested in owner financing? <span className="text-red-500">*</span>
+            {t.ownerFinancing} <span className="text-red-500">{t.required}</span>
           </label>
           <select
             id="ownerFinancing"
@@ -246,17 +327,17 @@ ${formData.additionalInfo ? `Additional Information:\n${formData.additionalInfo}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             required
           >
-            <option value="">Select...</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-            <option value="Maybe">Maybe</option>
+            <option value="">{t.selectOption}</option>
+            <option value="Yes">{t.yes}</option>
+            <option value="No">{t.no}</option>
+            <option value="Maybe">{t.maybe}</option>
           </select>
         </div>
 
         {/* Move Timeline */}
         <div>
           <label htmlFor="moveTimeline" className="block text-sm font-medium text-gray-700 mb-1">
-            When are you looking to move? <span className="text-red-500">*</span>
+            {t.moveTimeline} <span className="text-red-500">{t.required}</span>
           </label>
           <input
             type="text"
@@ -264,7 +345,7 @@ ${formData.additionalInfo ? `Additional Information:\n${formData.additionalInfo}
             name="moveTimeline"
             value={formData.moveTimeline}
             onChange={handleInputChange}
-            placeholder="e.g., Within 3 months, 6-12 months, Just exploring"
+            placeholder={t.moveTimelinePlaceholder}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             required
           />
@@ -273,7 +354,7 @@ ${formData.additionalInfo ? `Additional Information:\n${formData.additionalInfo}
         {/* Additional Info */}
         <div>
           <label htmlFor="additionalInfo" className="block text-sm font-medium text-gray-700 mb-1">
-            Tell us a little about your situation <span className="text-gray-500">(Optional)</span>
+            {t.additionalInfo} <span className="text-gray-500">({t.optional})</span>
           </label>
           <textarea
             id="additionalInfo"
@@ -281,7 +362,7 @@ ${formData.additionalInfo ? `Additional Information:\n${formData.additionalInfo}
             value={formData.additionalInfo}
             onChange={handleInputChange}
             rows={4}
-            placeholder="Share any details that might help us serve you better..."
+            placeholder={t.additionalInfoPlaceholder}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
@@ -289,7 +370,7 @@ ${formData.additionalInfo ? `Additional Information:\n${formData.additionalInfo}
         {/* Disclaimer */}
         <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
           <p className="text-sm text-gray-700">
-            If you qualify and want to move forward, we will send you the full application.
+            {t.disclaimer}
           </p>
         </div>
 
@@ -301,9 +382,9 @@ ${formData.additionalInfo ? `Additional Information:\n${formData.additionalInfo}
           {isSubmitting ? (
             <span className="flex items-center justify-center">
               <Loader2 className="animate-spin -ml-1 mr-3 h-6 w-6 text-white" />
-              Submitting...
+              {t.submitting}
             </span>
-          ) : 'Submit Interest Form'}
+          ) : t.submit}
         </button>
       </form>
     </div>
