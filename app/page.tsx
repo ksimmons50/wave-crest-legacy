@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { PROFESSIONAL_IMAGES, LOGO_LEGACY_GROUP } from "@/professionalConstants";
-import WaveCrestEcosystem from "@/app/components/WaveCrestEcosystem";
+import { Layers, TrendingUp, Anchor } from "lucide-react";
 
 export default function LandingPage() {
   return (
@@ -52,9 +52,7 @@ export default function LandingPage() {
               <div className="relative bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] p-8 md:p-10 border-2 border-amber-500/30 hover:border-amber-500/70 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/30">
                 {/* Icon */}
                 <div className="flex justify-center mb-5">
-                  <svg className="w-14 h-14 md:w-16 md:h-16 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 6.878V6a2.25 2.25 0 012.25-2.25h7.5A2.25 2.25 0 0118 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 004.5 9v.878m13.5-3A2.25 2.25 0 0119.5 9v.878m0 0a2.246 2.246 0 00-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0121 12v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6c0-.98.626-1.813 1.5-2.122" />
-                  </svg>
+                  <Layers className="w-14 h-14 md:w-16 md:h-16 text-amber-400" strokeWidth={1.5} />
                 </div>
 
                 {/* Content */}
@@ -89,9 +87,7 @@ export default function LandingPage() {
                 <div className="relative bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] p-7 md:p-9 border-2 border-amber-500/30 hover:border-amber-500/70 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/30 h-full">
                   {/* Icon */}
                   <div className="flex justify-center mb-4">
-                    <svg className="w-12 h-12 md:w-14 md:h-14 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
-                    </svg>
+                    <TrendingUp className="w-12 h-12 md:w-14 md:h-14 text-amber-400" strokeWidth={1.5} />
                   </div>
 
                   {/* Content */}
@@ -124,9 +120,7 @@ export default function LandingPage() {
                 <div className="relative bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] p-7 md:p-9 border-2 border-amber-500/30 hover:border-amber-500/70 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/30 h-full">
                   {/* Icon */}
                   <div className="flex justify-center mb-4">
-                    <svg className="w-12 h-12 md:w-14 md:h-14 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-                    </svg>
+                    <Anchor className="w-12 h-12 md:w-14 md:h-14 text-amber-400" strokeWidth={1.5} />
                   </div>
 
                   {/* Content */}
@@ -166,9 +160,6 @@ export default function LandingPage() {
           </p>
         </div>
       </section>
-
-      {/* Wave Crest Ecosystem */}
-      <WaveCrestEcosystem />
 
       {/* Final CTA */}
       <section className="relative py-32 px-6 bg-[#0a0e27]">
