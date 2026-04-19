@@ -66,6 +66,18 @@ export default function LandingPage() {
                   <p className="body-text text-sm md:text-base text-[#f5f5f0]/90 leading-relaxed max-w-md mx-auto">
                     The central hub that provides clarity, structure, and systems across every project and entity.
                   </p>
+
+                  {/* Services List */}
+                  <div className="border-t border-amber-500/10 pt-4 mt-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2 max-w-lg mx-auto">
+                      {["Business Clarity & Documentation", "Brand Identity & Messaging", "Mentorship & Strategic Guidance", "Investor-Ready Systems"].map((service, idx) => (
+                        <div key={idx} className="flex items-center gap-2 text-left">
+                          <div className="w-1.5 h-1.5 bg-amber-400 rounded-full flex-shrink-0" />
+                          <span className="body-text text-xs text-[#a8a29e]">{service}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
 
                 {/* Hover Indicator */}
@@ -101,6 +113,18 @@ export default function LandingPage() {
                     <p className="body-text text-sm text-[#f5f5f0]/90 leading-relaxed">
                       Identifying opportunities, structuring deals, and supporting owner-finance pathways.
                     </p>
+
+                    {/* Services List */}
+                    <div className="border-t border-amber-500/10 pt-4 mt-4">
+                      <div className="grid grid-cols-1 gap-2">
+                        {["Real Estate Due Diligence", "Market Studies & Analysis", "Deal Structuring", "Owner-Finance Pathways"].map((service, idx) => (
+                          <div key={idx} className="flex items-center gap-2 text-left">
+                            <div className="w-1.5 h-1.5 bg-amber-400 rounded-full flex-shrink-0" />
+                            <span className="body-text text-xs text-[#a8a29e]">{service}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
 
                   {/* Hover Indicator */}
@@ -134,6 +158,18 @@ export default function LandingPage() {
                     <p className="body-text text-sm text-[#f5f5f0]/90 leading-relaxed">
                       Long-term asset management with clean title, organized records, and portfolio stability.
                     </p>
+
+                    {/* Services List */}
+                    <div className="border-t border-amber-500/10 pt-4 mt-4">
+                      <div className="grid grid-cols-1 gap-2">
+                        {["Portfolio Organization", "Clean Title Management", "Asset Stewardship", "Legacy Planning"].map((service, idx) => (
+                          <div key={idx} className="flex items-center gap-2 text-left">
+                            <div className="w-1.5 h-1.5 bg-amber-400 rounded-full flex-shrink-0" />
+                            <span className="body-text text-xs text-[#a8a29e]">{service}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
 
                   {/* Hover Indicator */}
