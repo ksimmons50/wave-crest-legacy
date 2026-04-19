@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
+import FloatingChat from "../components/FloatingChat";
 import { LOGO_LEGACY_GROUP } from "@/professionalConstants";
 
 export default function ContactPage() {
@@ -95,6 +96,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      <FloatingChat />
     </div>
   );
 }

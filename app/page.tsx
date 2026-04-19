@@ -28,6 +28,14 @@ export default function LandingPage() {
         .body-text {
           font-family: 'DM Sans', sans-serif;
         }
+
+        /* Hide chat widget on this page */
+        #breezy-chat-widget,
+        .breezy-chat-widget,
+        [id*="breezy-chat"],
+        [class*="breezy-chat"] {
+          display: none !important;
+        }
       `}</style>
 
       {/* Hero Section - Org Chart */}
