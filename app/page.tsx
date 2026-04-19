@@ -6,13 +6,13 @@ import { Layers, TrendingUp, Anchor } from "lucide-react";
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-[#0a0e27]">
+    <div className="min-h-screen bg-[#2E5090]">
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@400;500;700&display=swap');
 
         :root {
-          --primary: #0a0e27;
-          --secondary: #1a1f3a;
+          --primary: #2E5090;
+          --secondary: #3B6BB5;
           --accent-gold: #d4af37;
           --accent-warm: #e8d4b0;
           --text-light: #f5f5f0;
@@ -49,7 +49,7 @@ export default function LandingPage() {
                 document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              <div className="relative bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] p-8 md:p-10 border-2 border-amber-500/30 hover:border-amber-500/70 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/30">
+              <div className="relative bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 md:p-10 border-2 border-amber-500/30 hover:border-amber-500/70 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/30">
                 {/* Icon */}
                 <div className="flex justify-center mb-5">
                   <Layers className="w-14 h-14 md:w-16 md:h-16 text-amber-400" strokeWidth={1.5} />
@@ -96,7 +96,7 @@ export default function LandingPage() {
                 href="/acquisitions"
                 className="group block transition-all duration-500 hover:scale-105"
               >
-                <div className="relative bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] p-7 md:p-9 border-2 border-amber-500/30 hover:border-amber-500/70 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/30 h-full">
+                <div className="relative bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-7 md:p-9 border-2 border-amber-500/30 hover:border-amber-500/70 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/30 h-full">
                   {/* Icon */}
                   <div className="flex justify-center mb-4">
                     <TrendingUp className="w-12 h-12 md:w-14 md:h-14 text-amber-400" strokeWidth={1.5} />
@@ -141,7 +141,7 @@ export default function LandingPage() {
                 href="/holding"
                 className="group block transition-all duration-500 hover:scale-105"
               >
-                <div className="relative bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] p-7 md:p-9 border-2 border-amber-500/30 hover:border-amber-500/70 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/30 h-full">
+                <div className="relative bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-7 md:p-9 border-2 border-amber-500/30 hover:border-amber-500/70 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/30 h-full">
                   {/* Icon */}
                   <div className="flex justify-center mb-4">
                     <Anchor className="w-12 h-12 md:w-14 md:h-14 text-amber-400" strokeWidth={1.5} />
@@ -188,10 +188,10 @@ export default function LandingPage() {
       {/* About Our Company Section */}
       <section id="about" className="relative py-24 md:py-32 px-6 bg-[#f5f5f0]">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="hero-title text-3xl md:text-5xl font-black text-[#0a0e27] tracking-tight">
+          <h2 className="hero-title text-3xl md:text-5xl font-black text-[#2E5090] tracking-tight">
             About Our Company
           </h2>
-          <p className="body-text text-base md:text-lg text-[#0a0e27]/80 leading-relaxed max-w-3xl mx-auto">
+          <p className="body-text text-base md:text-lg text-[#2E5090]/80 leading-relaxed max-w-3xl mx-auto">
             Wave Crest Legacy Group is the umbrella organization that guides and connects our operating divisions: Acquisitions and Holding. We focus on clarity, structure, and long‑term value creation across every project we touch. Our mission is simple — build strong foundations, make intentional decisions, and create momentum that lasts. Through disciplined acquisitions, thoughtful design, and responsible stewardship, we turn properties into long‑term assets and long‑term assets into legacy.
           </p>
         </div>
@@ -209,7 +209,7 @@ export default function LandingPage() {
           <div className="pt-4">
             <a
               href="/contact"
-              className="inline-block px-10 py-5 bg-gradient-to-r from-amber-500 to-amber-600 text-[#0a0e27] font-bold body-text text-lg hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300"
+              className="inline-block px-10 py-5 bg-gradient-to-r from-amber-500 to-amber-600 text-[#2E5090] font-bold body-text text-lg hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300"
             >
               Start Your Consultation
             </a>

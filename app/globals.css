@@ -225,3 +225,29 @@
 nextjs-portal {
   display: none !important;
 }
+
+/* Chat widget styling - Navy theme */
+#breezy-chat-widget,
+#breezy-chat-widget-button,
+.breezy-chat-widget,
+.breezy-chat-button,
+[data-breezy-chat],
+iframe[src*="breezy"] {
+  --chat-primary-color: #0a0e27 !important;
+  --chat-bg-color: #0a0e27 !important;
+  background-color: #0a0e27 !important;
+}
+
+#breezy-chat-widget button,
+#breezy-chat-widget-button button,
+.breezy-chat-widget button,
+.breezy-chat-button button {
+  background-color: #0a0e27 !important;
+  border-color: #0a0e27 !important;
+}
+
+#breezy-chat-widget .chat-bubble,
+.breezy-chat-widget .chat-bubble,
+[data-breezy-chat] .chat-bubble {
+  background-color: #0a0e27 !important;
+}

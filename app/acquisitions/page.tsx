@@ -188,67 +188,13 @@ export default function AcquisitionsPage() {
         </div>
       </section>
 
-      {/* Section 1.5 - Rate Tiers */}
+      {/* Section 2 - Our Approach */}
       <section
         data-section="1"
         className="animate-section relative py-24 px-6 bg-[#1a1f3a]"
         style={{
           opacity: visibleSections.includes(1) ? 1 : 0,
-          transform: visibleSections.includes(1) ? "translateY(0)" : "translateY(40px)",
-          transition: "opacity 1s ease-out, transform 1s ease-out",
-        }}
-      >
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0] mb-6">
-              Our Owner-Finance Rate Structure
-            </h2>
-            <p className="body-text text-sm uppercase tracking-[0.2em] text-amber-400 font-semibold">
-              Transparent. Straightforward. Professional.
-            </p>
-          </div>
-
-          <div className="max-w-2xl mx-auto space-y-4">
-            {[
-              { down: "25% down", rate: "8.5%" },
-              { down: "20% down", rate: "8.9%" },
-              { down: "15% down", rate: "9.5%" },
-              { down: "10% down", rate: "10%" },
-            ].map((tier, index) => {
-              const isVisible = visibleSections.includes(1);
-              const delay = index * 100;
-
-              return (
-                <div
-                  key={index}
-                  className="flex items-center justify-between p-6 bg-gradient-to-br from-[#0a0e27] to-[#0f1629] border border-amber-500/20"
-                  style={{
-                    opacity: isVisible ? 1 : 0,
-                    transform: isVisible ? "translateX(0)" : "translateX(-30px)",
-                    transition: `opacity 0.6s ease-out ${delay}ms, transform 0.6s ease-out ${delay}ms`,
-                  }}
-                >
-                  <span className="body-text text-lg text-[#f5f5f0] font-medium">
-                    {tier.down}
-                  </span>
-                  <div className="flex-1 mx-6 border-b border-dotted border-amber-500/30" />
-                  <span className="hero-title text-2xl font-bold text-amber-400">
-                    {tier.rate}
-                  </span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Section 2 - Our Approach */}
-      <section
-        data-section="2"
-        className="animate-section relative py-24 px-6 bg-[#0a0e27]"
-        style={{
-          opacity: visibleSections.includes(2) ? 1 : 0,
-          transform: visibleSections.includes(2) ? "translateX(0)" : "translateX(60px)",
+          transform: visibleSections.includes(1) ? "translateX(0)" : "translateX(60px)",
           transition: "opacity 1s ease-out, transform 1s ease-out",
         }}
       >
@@ -290,11 +236,11 @@ export default function AcquisitionsPage() {
 
       {/* Section 3 - Ecosystem Connection */}
       <section
-        data-section="3"
-        className="animate-section relative py-24 px-6 bg-[#1a1f3a]"
+        data-section="2"
+        className="animate-section relative py-24 px-6 bg-[#0a0e27]"
         style={{
-          opacity: visibleSections.includes(3) ? 1 : 0,
-          transform: visibleSections.includes(3) ? "translateY(0)" : "translateY(40px)",
+          opacity: visibleSections.includes(2) ? 1 : 0,
+          transform: visibleSections.includes(2) ? "translateY(0)" : "translateY(40px)",
           transition: "opacity 1s ease-out, transform 1s ease-out",
         }}
       >
@@ -309,7 +255,7 @@ export default function AcquisitionsPage() {
             {/* Vertical Connection Line */}
             <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-amber-500 to-transparent hidden md:block"
               style={{
-                opacity: visibleSections.includes(3) ? 1 : 0,
+                opacity: visibleSections.includes(2) ? 1 : 0,
                 transition: "opacity 1.5s ease-out 500ms",
               }}
             />
@@ -325,8 +271,8 @@ export default function AcquisitionsPage() {
                 <ArrowDown
                   className="w-8 h-8 text-amber-400"
                   style={{
-                    opacity: visibleSections.includes(3) ? 1 : 0,
-                    transform: visibleSections.includes(3) ? "translateY(0)" : "translateY(-20px)",
+                    opacity: visibleSections.includes(2) ? 1 : 0,
+                    transform: visibleSections.includes(2) ? "translateY(0)" : "translateY(-20px)",
                     transition: "opacity 1s ease-out 800ms, transform 1s ease-out 800ms",
                   }}
                 />
