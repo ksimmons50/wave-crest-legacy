@@ -36,6 +36,28 @@ export default function AcquisitionsPage() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    // Load the Breezy form script
+    const script = document.createElement('script');
+    script.src = 'https://app.getbreezy.app/embeddable/lead-form-direct.js';
+    script.setAttribute('data-token', 'caf098fe22e8bbcbee5cfd56e06f4978f9d72fe18807cdff77cfb925fb50');
+    script.setAttribute('data-title', "Let's Connect");
+    script.setAttribute('data-subtitle', "Tell us about your acquisition opportunity");
+    script.setAttribute('data-button-text', 'Submit');
+    script.setAttribute('data-button-color', '#d4af37');
+    script.setAttribute('data-fields', 'name,email,phone,type,message');
+    script.setAttribute('data-required', 'name,email,type,message');
+    script.setAttribute('data-type-options', 'Acquisition Opportunity,Owner-Finance Inquiry,Partnership Discussion,General Question');
+    script.setAttribute('data-success-message', "Thank you! We'll be in touch soon.");
+    script.async = true;
+
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   const coreFunctions = [
     {
       icon: Compass,
@@ -127,6 +149,13 @@ export default function AcquisitionsPage() {
           <div className="pt-12">
             <ArrowDown className="w-6 h-6 text-amber-400 mx-auto animate-bounce" />
           </div>
+        </div>
+      </section>
+
+      {/* Let's Connect Form */}
+      <section className="relative py-20 px-6 bg-[#3B6BB5]">
+        <div className="max-w-2xl mx-auto">
+          <div id="breezy-form-container"></div>
         </div>
       </section>
 
