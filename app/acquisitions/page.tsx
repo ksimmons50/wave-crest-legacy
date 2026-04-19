@@ -36,26 +36,6 @@ export default function AcquisitionsPage() {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    // Load the Breezy form script
-    const script = document.createElement('script');
-    script.src = 'https://app.getbreezy.app/embeddable/lead-form-direct.js';
-    script.setAttribute('data-token', 'caf098fe22e8bbcbee5cfd56e06f4978f9d72fe18807cdff77cfb925fb50');
-    script.setAttribute('data-button-text', 'Submit');
-    script.setAttribute('data-button-color', '#d4af37');
-    script.setAttribute('data-fields', 'name,email,phone,type,message');
-    script.setAttribute('data-required', 'name,email,type,message');
-    script.setAttribute('data-type-options', 'Acquisition Opportunity,Owner-Finance Inquiry,Partnership Discussion,General Question');
-    script.setAttribute('data-success-message', "Thank you! We'll be in touch soon.");
-    script.async = true;
-
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   const coreFunctions = [
     {
       icon: Compass,
@@ -108,30 +88,45 @@ export default function AcquisitionsPage() {
         }
       `}</style>
 
-      {/* Let's Connect Section */}
-      <section className="relative py-32 px-6 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <Image
-            src={LOGO_ACQUISITIONS}
-            alt="Wave Crest Legacy Acquisitions"
-            width={300}
-            height={100}
-            className="h-20 w-auto mx-auto mb-8"
-            priority
-          />
-          <h1 className="hero-title text-5xl md:text-6xl font-black text-[#f5f5f0]">
-            Let's Connect
-          </h1>
-          <p className="body-text text-xl text-[#a8a29e] max-w-2xl mx-auto">
-            Share what you're working on and let's bring clarity, structure, and momentum to your next chapter.
-          </p>
-        </div>
-      </section>
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center px-6 py-32 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
+        <div className="max-w-5xl mx-auto text-center space-y-12">
+          {/* Logo */}
+          <div>
+            <Image
+              src={LOGO_ACQUISITIONS}
+              alt="Wave Crest Legacy Acquisitions"
+              width={300}
+              height={100}
+              className="h-20 w-auto mx-auto mb-16"
+              priority
+            />
+          </div>
 
-      {/* Contact Form */}
-      <section className="relative py-20 px-6 bg-[#3B6BB5]">
-        <div className="max-w-2xl mx-auto">
-          <div id="breezy-form-container"></div>
+          {/* Main Heading */}
+          <div className="space-y-6">
+            <h1 className="hero-title text-5xl md:text-7xl font-black text-[#f5f5f0] tracking-tight">
+              Wave Crest Legacy Acquisitions
+            </h1>
+            <p className="hero-title text-2xl md:text-3xl text-amber-400 font-bold">
+              The Engine of the Ecosystem
+            </p>
+          </div>
+
+          {/* Tagline */}
+          <p className="body-text text-sm uppercase tracking-[0.3em] text-[#a8a29e] font-semibold">
+            Clarity. Structure. Momentum.
+          </p>
+
+          {/* Subheading */}
+          <p className="text-xl md:text-2xl text-[#f5f5f0]/80 body-text max-w-3xl mx-auto leading-relaxed">
+            Identifying opportunities, structuring clean deals, and supporting owner-finance pathways that create win-win outcomes.
+          </p>
+
+          {/* Scroll Indicator */}
+          <div className="pt-12">
+            <ArrowDown className="w-6 h-6 text-amber-400 mx-auto animate-bounce" />
+          </div>
         </div>
       </section>
 
