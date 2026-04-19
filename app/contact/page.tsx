@@ -10,12 +10,11 @@ export default function ContactPage() {
     const script = document.createElement('script');
     script.src = 'https://app.getbreezy.app/embeddable/lead-form-direct.js';
     script.setAttribute('data-token', 'caf098fe22e8bbcbee5cfd56e06f4978f9d72fe18807cdff77cfb925fb50');
-    script.setAttribute('data-title', "Let's Connect");
-    script.setAttribute('data-subtitle', "Fill out the form below and we'll get back to you soon.");
     script.setAttribute('data-button-text', 'Submit');
     script.setAttribute('data-button-color', '#d4af37');
-    script.setAttribute('data-fields', 'name,email,phone,message');
-    script.setAttribute('data-required', 'name,email,message');
+    script.setAttribute('data-fields', 'name,email,phone,type,message');
+    script.setAttribute('data-required', 'name,email,type,message');
+    script.setAttribute('data-type-options', 'Acquisition Opportunity,Owner-Finance Inquiry,Partnership Discussion,General Question');
     script.setAttribute('data-success-message', "Thank you! We'll be in touch soon.");
     script.async = true;
 
