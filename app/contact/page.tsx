@@ -1,34 +1,30 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
 import { LOGO_LEGACY_GROUP } from "@/professionalConstants";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    supportType: "",
-    message: "",
-  });
+  useEffect(() => {
+    // Load the Breezy form script
+    const script = document.createElement('script');
+    script.src = 'https://app.getbreezy.app/embeddable/lead-form-direct.js';
+    script.setAttribute('data-token', 'caf098fe22e8bbcbee5cfd56e06f4978f9d72fe18807cdff77cfb925fb50');
+    script.setAttribute('data-title', "Let's Connect");
+    script.setAttribute('data-subtitle', "Fill out the form below and we'll get back to you soon.");
+    script.setAttribute('data-button-text', 'Submit');
+    script.setAttribute('data-button-color', '#d4af37');
+    script.setAttribute('data-fields', 'name,email,phone,message');
+    script.setAttribute('data-required', 'name,email,message');
+    script.setAttribute('data-success-message', "Thank you! We'll be in touch soon.");
+    script.async = true;
 
-  const [submitted, setSubmitted] = useState(false);
+    document.body.appendChild(script);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#2E5090]">
@@ -69,109 +65,7 @@ export default function ContactPage() {
       {/* Contact Form */}
       <section className="relative py-20 px-6 bg-[#3B6BB5]">
         <div className="max-w-2xl mx-auto">
-          {submitted ? (
-            <div className="p-12 bg-[#2E5090]/50 border border-amber-500/20 text-center space-y-4">
-              <h2 className="hero-title text-3xl font-bold text-amber-400">
-                Thank you!
-              </h2>
-              <p className="body-text text-lg text-[#a8a29e]">
-                We'll be in touch soon.
-              </p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-8">
-              {/* Name */}
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block body-text text-[#f5f5f0] mb-2 font-medium"
-                >
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-[#2E5090] border border-amber-500/20 text-[#f5f5f0] body-text focus:outline-none focus:border-amber-500/50 transition-colors"
-                />
-              </div>
-
-              {/* Email */}
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block body-text text-[#f5f5f0] mb-2 font-medium"
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-[#2E5090] border border-amber-500/20 text-[#f5f5f0] body-text focus:outline-none focus:border-amber-500/50 transition-colors"
-                />
-              </div>
-
-              {/* Support Type */}
-              <div>
-                <label
-                  htmlFor="supportType"
-                  className="block body-text text-[#f5f5f0] mb-2 font-medium"
-                >
-                  What type of support are you looking for? (Optional)
-                </label>
-                <select
-                  id="supportType"
-                  name="supportType"
-                  value={formData.supportType}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-[#2E5090] border border-amber-500/20 text-[#f5f5f0] body-text focus:outline-none focus:border-amber-500/50 transition-colors"
-                >
-                  <option value="">Select an option</option>
-                  <option value="business-clarity">Business clarity</option>
-                  <option value="branding">Branding</option>
-                  <option value="real-estate">Real estate support</option>
-                  <option value="mentorship">Mentorship</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              {/* Message */}
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block body-text text-[#f5f5f0] mb-2 font-medium"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={6}
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-[#2E5090] border border-amber-500/20 text-[#f5f5f0] body-text focus:outline-none focus:border-amber-500/50 transition-colors resize-none"
-                />
-              </div>
-
-              {/* Submit Button */}
-              <div className="pt-4">
-                <button
-                  type="submit"
-                  className="w-full px-10 py-5 bg-gradient-to-r from-amber-500 to-amber-600 text-[#2E5090] font-bold body-text text-lg hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300"
-                >
-                  Send Message
-                </button>
-              </div>
-            </form>
-          )}
+          <div id="breezy-form-container"></div>
         </div>
       </section>
 
