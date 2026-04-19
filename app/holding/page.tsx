@@ -89,7 +89,7 @@ export default function HoldingPage() {
       `}</style>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center px-6 py-32 bg-gradient-to-b from-[#0a0e27] to-[#1a1f3a]">
+      <section className="relative min-h-screen flex items-center px-6 py-32 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
         <div className="max-w-5xl mx-auto text-center space-y-12">
           {/* Logo */}
           <div>
@@ -354,7 +354,7 @@ export default function HoldingPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative py-32 px-6 bg-gradient-to-b from-[#0a0e27] to-[#1a1f3a]">
+      <section className="relative py-32 px-6 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0]">
             Protect What You're Building

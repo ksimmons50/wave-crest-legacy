@@ -198,7 +198,7 @@ export default function LandingPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative py-32 px-6 bg-[#0a0e27]">
+      <section className="relative py-32 px-6 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0]">
             Let's Build Your Next Chapter
