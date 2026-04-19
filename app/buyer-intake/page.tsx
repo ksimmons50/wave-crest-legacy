@@ -117,7 +117,7 @@ export default function BuyerIntakeFormPage() {
       `}</style>
 
       {/* Hero Section */}
-      <section className="relative py-24 px-6 bg-gradient-to-b from-[#0a0e27] to-[#1a1f3a]">
+      <section className="relative py-24 px-6 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div>
             <Image
