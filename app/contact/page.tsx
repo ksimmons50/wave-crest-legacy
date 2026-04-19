@@ -42,30 +42,31 @@ export default function ContactPage() {
         }
       `}</style>
 
-      {/* Header */}
-      <section className="relative py-32 px-6 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <Image
-            src={LOGO_LEGACY_GROUP}
-            alt="Wave Crest Legacy Group"
-            width={300}
-            height={100}
-            className="h-20 w-auto mx-auto mb-8"
-            priority
-          />
-          <h1 className="hero-title text-5xl md:text-6xl font-black text-[#f5f5f0]">
-            Let's Connect
-          </h1>
-          <p className="body-text text-xl text-[#a8a29e] max-w-2xl mx-auto">
-            Share what you're working on and let's bring clarity, structure, and momentum to your next chapter.
-          </p>
-        </div>
-      </section>
+      {/* Let's Connect - Combined Header and Form */}
+      <section className="relative py-16 px-6 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
+        <div className="max-w-4xl mx-auto">
+          {/* Header */}
+          <div className="text-center space-y-6 mb-12">
+            <Image
+              src={LOGO_LEGACY_GROUP}
+              alt="Wave Crest Legacy Group"
+              width={300}
+              height={100}
+              className="h-16 w-auto mx-auto"
+              priority
+            />
+            <h1 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0]">
+              Let's Connect
+            </h1>
+            <p className="body-text text-lg text-[#a8a29e] max-w-2xl mx-auto">
+              Share what you're working on and let's bring clarity, structure, and momentum to your next chapter.
+            </p>
+          </div>
 
-      {/* Contact Form */}
-      <section className="relative py-20 px-6 bg-[#3B6BB5]">
-        <div className="max-w-2xl mx-auto">
-          <div id="breezy-form-container"></div>
+          {/* Form */}
+          <div className="max-w-2xl mx-auto">
+            <div id="breezy-form-container"></div>
+          </div>
         </div>
       </section>
 
