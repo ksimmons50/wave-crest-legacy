@@ -73,7 +73,7 @@ export default function HoldingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0a0e27]">
+    <div className="min-h-screen bg-[#2E5090]">
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@400;500;700&display=swap');
 
@@ -135,7 +135,7 @@ export default function HoldingPage() {
       {/* Section 1 - What We Manage */}
       <section
         data-section="0"
-        className="animate-section relative py-24 px-6 bg-[#0a0e27]"
+        className="animate-section relative py-24 px-6 bg-[#2E5090]"
         style={{
           opacity: visibleSections.includes(0) ? 1 : 0,
           transform: visibleSections.includes(0) ? "translateY(0)" : "translateY(40px)",
@@ -161,7 +161,7 @@ export default function HoldingPage() {
               return (
                 <div
                   key={index}
-                  className="p-8 bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] border border-amber-500/20 hover:border-amber-500/40 transition-all duration-500 hover:shadow-xl hover:shadow-amber-500/10"
+                  className="p-8 bg-gradient-to-br from-[#3B6BB5] to-[#254680] border border-amber-500/20 hover:border-amber-500/40 transition-all duration-500 hover:shadow-xl hover:shadow-amber-500/10"
                   style={{
                     opacity: isVisible ? 1 : 0,
                     transform: isVisible ? "translateY(0)" : "translateY(30px)",
@@ -193,7 +193,7 @@ export default function HoldingPage() {
       {/* Section 1.5 - Rate Tiers */}
       <section
         data-section="1"
-        className="animate-section relative py-24 px-6 bg-[#1a1f3a]"
+        className="animate-section relative py-24 px-6 bg-[#3B6BB5]"
         style={{
           opacity: visibleSections.includes(1) ? 1 : 0,
           transform: visibleSections.includes(1) ? "translateY(0)" : "translateY(40px)",
@@ -223,7 +223,7 @@ export default function HoldingPage() {
               return (
                 <div
                   key={index}
-                  className="flex items-center justify-between p-6 bg-gradient-to-br from-[#0a0e27] to-[#0f1629] border border-amber-500/20"
+                  className="flex items-center justify-between p-6 bg-gradient-to-br from-[#2E5090] to-[#254680] border border-amber-500/20"
                   style={{
                     opacity: isVisible ? 1 : 0,
                     transform: isVisible ? "translateX(0)" : "translateX(-30px)",
@@ -247,7 +247,7 @@ export default function HoldingPage() {
       {/* Section 2 - Our Approach */}
       <section
         data-section="2"
-        className="animate-section relative py-24 px-6 bg-[#0a0e27]"
+        className="animate-section relative py-24 px-6 bg-[#2E5090]"
         style={{
           opacity: visibleSections.includes(2) ? 1 : 0,
           transform: visibleSections.includes(2) ? "translateX(0)" : "translateX(-60px)",
@@ -272,7 +272,7 @@ export default function HoldingPage() {
               return (
                 <div
                   key={index}
-                  className="p-6 bg-gradient-to-br from-[#0a0e27] to-[#0f1629] border border-amber-500/20 text-center"
+                  className="p-6 bg-gradient-to-br from-[#2E5090] to-[#254680] border border-amber-500/20 text-center"
                   style={{
                     opacity: isVisible ? 1 : 0,
                     transform: isVisible ? "scale(1)" : "scale(0.9)",
@@ -293,7 +293,7 @@ export default function HoldingPage() {
       {/* Section 3 - Ecosystem Connection */}
       <section
         data-section="3"
-        className="animate-section relative py-24 px-6 bg-[#1a1f3a]"
+        className="animate-section relative py-24 px-6 bg-[#3B6BB5]"
         style={{
           opacity: visibleSections.includes(3) ? 1 : 0,
           transform: visibleSections.includes(3) ? "translateY(0)" : "translateY(40px)",
@@ -319,7 +319,7 @@ export default function HoldingPage() {
             <div className="relative space-y-12">
               <Link
                 href="/acquisitions"
-                className="block bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] p-8 border border-amber-500/20 hover:border-amber-500/60 transition-all duration-500 hover:shadow-xl hover:shadow-amber-500/20 text-center group"
+                className="block bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 border border-amber-500/20 hover:border-amber-500/60 transition-all duration-500 hover:shadow-xl hover:shadow-amber-500/20 text-center group"
               >
                 <p className="body-text text-sm uppercase tracking-[0.2em] text-amber-400 font-semibold mb-2">
                   Receives From
@@ -343,7 +343,7 @@ export default function HoldingPage() {
                 />
               </div>
 
-              <div className="bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] p-10 border border-amber-500/20 text-center">
+              <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-10 border border-amber-500/20 text-center">
                 <p className="body-text text-lg md:text-xl text-[#f5f5f0]/90 leading-relaxed">
                   Wave Crest Legacy Holding is the anchor that preserves the value created by Acquisitions — ensuring every asset is managed with clarity and stability.
                 </p>
@@ -365,7 +365,7 @@ export default function HoldingPage() {
           <div className="pt-4">
             <a
               href="/contact"
-              className="inline-block px-10 py-5 bg-gradient-to-r from-amber-500 to-amber-600 text-[#0a0e27] font-bold body-text text-lg hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300"
+              className="inline-block px-10 py-5 bg-gradient-to-r from-amber-500 to-amber-600 text-[#2E5090] font-bold body-text text-lg hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300"
             >
               Start Your Consultation
             </a>

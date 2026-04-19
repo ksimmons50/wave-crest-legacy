@@ -65,7 +65,7 @@ export default function BuyerIntakeFormPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0e27]">
+    <div className="min-h-screen bg-[#2E5090]">
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@400;500;700&display=swap');
 
@@ -149,11 +149,11 @@ export default function BuyerIntakeFormPage() {
       </section>
 
       {/* Form Section */}
-      <section className="relative py-16 px-6 bg-[#0a0e27]">
+      <section className="relative py-16 px-6 bg-[#2E5090]">
         <div className="max-w-4xl mx-auto">
           <form onSubmit={handleSubmit} className="space-y-16">
             {/* Section 1 - Personal Information */}
-            <div className="bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] p-8 md:p-12 border border-amber-500/20">
+            <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 md:p-12 border border-amber-500/20">
               <h2 className="hero-title text-3xl md:text-4xl font-bold text-[#f5f5f0] mb-8 pb-4 border-b border-amber-500/20">
                 Section 1 — Personal Information
               </h2>
@@ -200,7 +200,7 @@ export default function BuyerIntakeFormPage() {
             </div>
 
             {/* Section 2 - Property Interest */}
-            <div className="bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] p-8 md:p-12 border border-amber-500/20">
+            <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 md:p-12 border border-amber-500/20">
               <h2 className="hero-title text-3xl md:text-4xl font-bold text-[#f5f5f0] mb-8 pb-4 border-b border-amber-500/20">
                 Section 2 — Property Interest
               </h2>
@@ -266,7 +266,7 @@ export default function BuyerIntakeFormPage() {
             </div>
 
             {/* Section 3 - Down Payment Readiness */}
-            <div className="bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] p-8 md:p-12 border border-amber-500/20">
+            <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 md:p-12 border border-amber-500/20">
               <h2 className="hero-title text-3xl md:text-4xl font-bold text-[#f5f5f0] mb-8 pb-4 border-b border-amber-500/20">
                 Section 3 — Down Payment Readiness
               </h2>
@@ -313,7 +313,7 @@ export default function BuyerIntakeFormPage() {
             </div>
 
             {/* Section 4 - Income & Employment */}
-            <div className="bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] p-8 md:p-12 border border-amber-500/20">
+            <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 md:p-12 border border-amber-500/20">
               <h2 className="hero-title text-3xl md:text-4xl font-bold text-[#f5f5f0] mb-8 pb-4 border-b border-amber-500/20">
                 Section 4 — Income & Employment
               </h2>
@@ -374,7 +374,7 @@ export default function BuyerIntakeFormPage() {
             </div>
 
             {/* Section 5 - Financial Documentation */}
-            <div className="bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] p-8 md:p-12 border border-amber-500/20">
+            <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 md:p-12 border border-amber-500/20">
               <h2 className="hero-title text-3xl md:text-4xl font-bold text-[#f5f5f0] mb-8 pb-4 border-b border-amber-500/20">
                 Section 5 — Financial Documentation
               </h2>
@@ -404,7 +404,7 @@ export default function BuyerIntakeFormPage() {
             </div>
 
             {/* Section 6 - Monthly Payment Comfort Zone */}
-            <div className="bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] p-8 md:p-12 border border-amber-500/20">
+            <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 md:p-12 border border-amber-500/20">
               <h2 className="hero-title text-3xl md:text-4xl font-bold text-[#f5f5f0] mb-8 pb-4 border-b border-amber-500/20">
                 Section 6 — Monthly Payment Comfort Zone
               </h2>
@@ -430,7 +430,7 @@ export default function BuyerIntakeFormPage() {
             </div>
 
             {/* Section 7 - Credit & History */}
-            <div className="bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] p-8 md:p-12 border border-amber-500/20">
+            <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 md:p-12 border border-amber-500/20">
               <h2 className="hero-title text-3xl md:text-4xl font-bold text-[#f5f5f0] mb-8 pb-4 border-b border-amber-500/20">
                 Section 7 — Credit & History
               </h2>
@@ -489,7 +489,7 @@ export default function BuyerIntakeFormPage() {
             </div>
 
             {/* Section 8 - Property Condition Expectations */}
-            <div className="bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] p-8 md:p-12 border border-amber-500/20">
+            <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 md:p-12 border border-amber-500/20">
               <h2 className="hero-title text-3xl md:text-4xl font-bold text-[#f5f5f0] mb-8 pb-4 border-b border-amber-500/20">
                 Section 8 — Property Condition Expectations
               </h2>
@@ -515,7 +515,7 @@ export default function BuyerIntakeFormPage() {
             </div>
 
             {/* Section 9 - Timeline */}
-            <div className="bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] p-8 md:p-12 border border-amber-500/20">
+            <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 md:p-12 border border-amber-500/20">
               <h2 className="hero-title text-3xl md:text-4xl font-bold text-[#f5f5f0] mb-8 pb-4 border-b border-amber-500/20">
                 Section 9 — Timeline
               </h2>
@@ -541,7 +541,7 @@ export default function BuyerIntakeFormPage() {
             </div>
 
             {/* Section 10 - Additional Notes */}
-            <div className="bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] p-8 md:p-12 border border-amber-500/20">
+            <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 md:p-12 border border-amber-500/20">
               <h2 className="hero-title text-3xl md:text-4xl font-bold text-[#f5f5f0] mb-8 pb-4 border-b border-amber-500/20">
                 Section 10 — Additional Notes
               </h2>
@@ -562,7 +562,7 @@ export default function BuyerIntakeFormPage() {
             <div className="text-center pt-8">
               <button
                 type="submit"
-                className="inline-block px-12 py-6 bg-gradient-to-r from-amber-500 to-amber-600 text-[#0a0e27] font-bold body-text text-xl hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300"
+                className="inline-block px-12 py-6 bg-gradient-to-r from-amber-500 to-amber-600 text-[#2E5090] font-bold body-text text-xl hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300"
               >
                 Submit Your Application
               </button>

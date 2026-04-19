@@ -93,7 +93,7 @@ export default function BuyerCriteriaPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0a0e27]">
+    <div className="min-h-screen bg-[#2E5090]">
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@400;500;700&display=swap');
 
@@ -141,7 +141,7 @@ export default function BuyerCriteriaPage() {
       {/* Section 1 - Down Payment & Rate Structure */}
       <section
         data-section="0"
-        className="animate-section relative py-24 px-6 bg-[#0a0e27]"
+        className="animate-section relative py-24 px-6 bg-[#2E5090]"
         style={{
           opacity: visibleSections.includes(0) ? 1 : 0,
           transform: visibleSections.includes(0) ? "translateY(0)" : "translateY(40px)",
@@ -169,7 +169,7 @@ export default function BuyerCriteriaPage() {
               return (
                 <div
                   key={index}
-                  className="flex items-center justify-between p-6 bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] border border-amber-500/20"
+                  className="flex items-center justify-between p-6 bg-gradient-to-br from-[#3B6BB5] to-[#254680] border border-amber-500/20"
                   style={{
                     opacity: isVisible ? 1 : 0,
                     transform: isVisible ? "translateX(0)" : "translateX(-30px)",
@@ -197,7 +197,7 @@ export default function BuyerCriteriaPage() {
       {/* Section 2 - Required Documentation */}
       <section
         data-section="1"
-        className="animate-section relative py-24 px-6 bg-[#1a1f3a]"
+        className="animate-section relative py-24 px-6 bg-[#3B6BB5]"
         style={{
           opacity: visibleSections.includes(1) ? 1 : 0,
           transform: visibleSections.includes(1) ? "translateY(0)" : "translateY(40px)",
@@ -225,7 +225,7 @@ export default function BuyerCriteriaPage() {
               return (
                 <div
                   key={index}
-                  className="flex items-start gap-4 p-5 bg-gradient-to-br from-[#0a0e27] to-[#0f1629] border border-amber-500/20"
+                  className="flex items-start gap-4 p-5 bg-gradient-to-br from-[#2E5090] to-[#254680] border border-amber-500/20"
                   style={{
                     opacity: isVisible ? 1 : 0,
                     transform: isVisible ? "translateX(0)" : "translateX(-20px)",
@@ -244,7 +244,7 @@ export default function BuyerCriteriaPage() {
       {/* Section 3 - Income & Affordability */}
       <section
         data-section="2"
-        className="animate-section relative py-24 px-6 bg-[#0a0e27]"
+        className="animate-section relative py-24 px-6 bg-[#2E5090]"
         style={{
           opacity: visibleSections.includes(2) ? 1 : 0,
           transform: visibleSections.includes(2) ? "translateY(0)" : "translateY(40px)",
@@ -269,7 +269,7 @@ export default function BuyerCriteriaPage() {
               return (
                 <div
                   key={index}
-                  className="flex items-start gap-4 p-5 bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] border border-amber-500/20"
+                  className="flex items-start gap-4 p-5 bg-gradient-to-br from-[#3B6BB5] to-[#254680] border border-amber-500/20"
                   style={{
                     opacity: isVisible ? 1 : 0,
                     transform: isVisible ? "scale(1)" : "scale(0.95)",
@@ -292,7 +292,7 @@ export default function BuyerCriteriaPage() {
       {/* Section 4 - Closing Timeline */}
       <section
         data-section="3"
-        className="animate-section relative py-24 px-6 bg-[#1a1f3a]"
+        className="animate-section relative py-24 px-6 bg-[#3B6BB5]"
         style={{
           opacity: visibleSections.includes(3) ? 1 : 0,
           transform: visibleSections.includes(3) ? "translateY(0)" : "translateY(40px)",
@@ -321,7 +321,7 @@ export default function BuyerCriteriaPage() {
       {/* Section 5 - Property Condition */}
       <section
         data-section="4"
-        className="animate-section relative py-24 px-6 bg-[#0a0e27]"
+        className="animate-section relative py-24 px-6 bg-[#2E5090]"
         style={{
           opacity: visibleSections.includes(4) ? 1 : 0,
           transform: visibleSections.includes(4) ? "translateY(0)" : "translateY(40px)",
@@ -355,7 +355,7 @@ export default function BuyerCriteriaPage() {
       {/* Section 6 - Servicing & Payments */}
       <section
         data-section="5"
-        className="animate-section relative py-24 px-6 bg-[#1a1f3a]"
+        className="animate-section relative py-24 px-6 bg-[#3B6BB5]"
         style={{
           opacity: visibleSections.includes(5) ? 1 : 0,
           transform: visibleSections.includes(5) ? "translateY(0)" : "translateY(40px)",
@@ -386,7 +386,7 @@ export default function BuyerCriteriaPage() {
               return (
                 <div
                   key={index}
-                  className="p-6 bg-gradient-to-br from-[#0a0e27] to-[#0f1629] border border-amber-500/20 text-center"
+                  className="p-6 bg-gradient-to-br from-[#2E5090] to-[#254680] border border-amber-500/20 text-center"
                   style={{
                     opacity: isVisible ? 1 : 0,
                     transform: isVisible ? "scale(1)" : "scale(0.9)",
@@ -405,7 +405,7 @@ export default function BuyerCriteriaPage() {
       {/* Section 7 & 8 - Responsibilities & What Wave Crest Provides */}
       <section
         data-section="6"
-        className="animate-section relative py-24 px-6 bg-[#0a0e27]"
+        className="animate-section relative py-24 px-6 bg-[#2E5090]"
         style={{
           opacity: visibleSections.includes(6) ? 1 : 0,
           transform: visibleSections.includes(6) ? "translateY(0)" : "translateY(40px)",
@@ -423,7 +423,7 @@ export default function BuyerCriteriaPage() {
                 {buyerResponsibilities.map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-4 p-5 bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] border border-amber-500/20"
+                    className="flex items-start gap-4 p-5 bg-gradient-to-br from-[#3B6BB5] to-[#254680] border border-amber-500/20"
                   >
                     <CheckCircle className="w-6 h-6 text-amber-400 flex-shrink-0 mt-0.5" />
                     <span className="body-text text-[#f5f5f0]">{item}</span>
@@ -441,7 +441,7 @@ export default function BuyerCriteriaPage() {
                 {waveCrestProvides.map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-4 p-5 bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] border border-amber-500/20"
+                    className="flex items-start gap-4 p-5 bg-gradient-to-br from-[#3B6BB5] to-[#254680] border border-amber-500/20"
                   >
                     <Shield className="w-6 h-6 text-amber-400 flex-shrink-0 mt-0.5" />
                     <span className="body-text text-[#f5f5f0]">{item}</span>
@@ -456,7 +456,7 @@ export default function BuyerCriteriaPage() {
       {/* Section 9 - What Wave Crest Does NOT Do */}
       <section
         data-section="7"
-        className="animate-section relative py-24 px-6 bg-[#1a1f3a]"
+        className="animate-section relative py-24 px-6 bg-[#3B6BB5]"
         style={{
           opacity: visibleSections.includes(7) ? 1 : 0,
           transform: visibleSections.includes(7) ? "translateY(0)" : "translateY(40px)",
@@ -478,7 +478,7 @@ export default function BuyerCriteriaPage() {
               return (
                 <div
                   key={index}
-                  className="flex items-start gap-4 p-5 bg-gradient-to-br from-[#0a0e27] to-[#0f1629] border border-red-500/20"
+                  className="flex items-start gap-4 p-5 bg-gradient-to-br from-[#2E5090] to-[#254680] border border-red-500/20"
                   style={{
                     opacity: isVisible ? 1 : 0,
                     transform: isVisible ? "translateX(0)" : "translateX(-20px)",
@@ -497,7 +497,7 @@ export default function BuyerCriteriaPage() {
       {/* Section 10 - Ready Checklist */}
       <section
         data-section="8"
-        className="animate-section relative py-24 px-6 bg-[#0a0e27]"
+        className="animate-section relative py-24 px-6 bg-[#2E5090]"
         style={{
           opacity: visibleSections.includes(8) ? 1 : 0,
           transform: visibleSections.includes(8) ? "translateY(0)" : "translateY(40px)",
@@ -525,7 +525,7 @@ export default function BuyerCriteriaPage() {
               return (
                 <div
                   key={index}
-                  className="flex items-start gap-4 p-5 bg-gradient-to-br from-[#1a1f3a] to-[#0f1629] border border-amber-500/20"
+                  className="flex items-start gap-4 p-5 bg-gradient-to-br from-[#3B6BB5] to-[#254680] border border-amber-500/20"
                   style={{
                     opacity: isVisible ? 1 : 0,
                     transform: isVisible ? "translateX(0)" : "translateX(-20px)",
@@ -553,7 +553,7 @@ export default function BuyerCriteriaPage() {
           <div className="pt-4">
             <a
               href="/contact"
-              className="inline-block px-10 py-5 bg-gradient-to-r from-amber-500 to-amber-600 text-[#0a0e27] font-bold body-text text-lg hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300"
+              className="inline-block px-10 py-5 bg-gradient-to-r from-amber-500 to-amber-600 text-[#2E5090] font-bold body-text text-lg hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300"
             >
               Apply Now
             </a>

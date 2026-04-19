@@ -31,7 +31,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0e27]">
+    <div className="min-h-screen bg-[#2E5090]">
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@400;500;700&display=swap');
 
@@ -67,10 +67,10 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form */}
-      <section className="relative py-20 px-6 bg-[#1a1f3a]">
+      <section className="relative py-20 px-6 bg-[#3B6BB5]">
         <div className="max-w-2xl mx-auto">
           {submitted ? (
-            <div className="p-12 bg-[#0a0e27]/50 border border-amber-500/20 text-center space-y-4">
+            <div className="p-12 bg-[#2E5090]/50 border border-amber-500/20 text-center space-y-4">
               <h2 className="hero-title text-3xl font-bold text-amber-400">
                 Thank you!
               </h2>
@@ -95,7 +95,7 @@ export default function ContactPage() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-[#0a0e27] border border-amber-500/20 text-[#f5f5f0] body-text focus:outline-none focus:border-amber-500/50 transition-colors"
+                  className="w-full px-4 py-3 bg-[#2E5090] border border-amber-500/20 text-[#f5f5f0] body-text focus:outline-none focus:border-amber-500/50 transition-colors"
                 />
               </div>
 
@@ -114,7 +114,7 @@ export default function ContactPage() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-[#0a0e27] border border-amber-500/20 text-[#f5f5f0] body-text focus:outline-none focus:border-amber-500/50 transition-colors"
+                  className="w-full px-4 py-3 bg-[#2E5090] border border-amber-500/20 text-[#f5f5f0] body-text focus:outline-none focus:border-amber-500/50 transition-colors"
                 />
               </div>
 
@@ -131,7 +131,7 @@ export default function ContactPage() {
                   name="supportType"
                   value={formData.supportType}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-[#0a0e27] border border-amber-500/20 text-[#f5f5f0] body-text focus:outline-none focus:border-amber-500/50 transition-colors"
+                  className="w-full px-4 py-3 bg-[#2E5090] border border-amber-500/20 text-[#f5f5f0] body-text focus:outline-none focus:border-amber-500/50 transition-colors"
                 >
                   <option value="">Select an option</option>
                   <option value="business-clarity">Business clarity</option>
@@ -157,7 +157,7 @@ export default function ContactPage() {
                   rows={6}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-[#0a0e27] border border-amber-500/20 text-[#f5f5f0] body-text focus:outline-none focus:border-amber-500/50 transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-[#2E5090] border border-amber-500/20 text-[#f5f5f0] body-text focus:outline-none focus:border-amber-500/50 transition-colors resize-none"
                 />
               </div>
 
@@ -165,7 +165,7 @@ export default function ContactPage() {
               <div className="pt-4">
                 <button
                   type="submit"
-                  className="w-full px-10 py-5 bg-gradient-to-r from-amber-500 to-amber-600 text-[#0a0e27] font-bold body-text text-lg hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300"
+                  className="w-full px-10 py-5 bg-gradient-to-r from-amber-500 to-amber-600 text-[#2E5090] font-bold body-text text-lg hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300"
                 >
                   Send Message
                 </button>
@@ -176,7 +176,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Info */}
-      <section className="relative py-20 px-6 bg-[#0a0e27] mb-20">
+      <section className="relative py-20 px-6 bg-[#2E5090] mb-20">
         <div className="max-w-2xl mx-auto text-center space-y-6">
           <h2 className="hero-title text-2xl font-bold text-amber-400">
             Or reach us directly

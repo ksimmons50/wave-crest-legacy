@@ -53,7 +53,7 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0a0e27]">
+    <div className="min-h-screen bg-[#2E5090]">
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@400;500;700&display=swap');
 
@@ -92,7 +92,7 @@ export default function ServicesPage() {
       <div className="max-w-5xl mx-auto px-6 pb-32">
         {services.map((service, index) => {
           const Icon = service.icon;
-          const bgClass = index % 2 === 0 ? "bg-[#1a1f3a]" : "bg-[#0a0e27]";
+          const bgClass = index % 2 === 0 ? "bg-[#3B6BB5]" : "bg-[#2E5090]";
 
           return (
             <section
@@ -129,7 +129,7 @@ export default function ServicesPage() {
       </div>
 
       {/* CTA */}
-      <section className="relative py-20 px-6 bg-[#1a1f3a]">
+      <section className="relative py-20 px-6 bg-[#3B6BB5]">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h2 className="hero-title text-3xl md:text-4xl font-bold text-[#f5f5f0]">
             Ready to get started?
@@ -140,7 +140,7 @@ export default function ServicesPage() {
           <div className="pt-4">
             <a
               href="/contact"
-              className="inline-block px-10 py-5 bg-gradient-to-r from-amber-500 to-amber-600 text-[#0a0e27] font-bold body-text text-lg hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300"
+              className="inline-block px-10 py-5 bg-gradient-to-r from-amber-500 to-amber-600 text-[#2E5090] font-bold body-text text-lg hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300"
             >
               Start Your Consultation
             </a>

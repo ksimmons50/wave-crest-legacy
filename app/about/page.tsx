@@ -15,7 +15,7 @@ export default function AboutPage() {
   const values = ["Clarity", "Structure", "Legacy", "Integrity"];
 
   return (
-    <div className="min-h-screen bg-[#0a0e27]">
+    <div className="min-h-screen bg-[#2E5090]">
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@400;500;700&display=swap');
 
@@ -48,7 +48,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story */}
-      <section className="relative py-20 px-6 bg-[#1a1f3a]">
+      <section className="relative py-20 px-6 bg-[#3B6BB5]">
         <div className="max-w-4xl mx-auto space-y-6">
           <h2 className="hero-title text-3xl md:text-4xl font-bold text-amber-400 mb-6">
             Our Story
@@ -60,7 +60,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Mission */}
-      <section className="relative py-20 px-6 bg-[#0a0e27]">
+      <section className="relative py-20 px-6 bg-[#2E5090]">
         <div className="max-w-4xl mx-auto space-y-6">
           <h2 className="hero-title text-3xl md:text-4xl font-bold text-amber-400 mb-6">
             Our Mission
@@ -72,7 +72,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Approach */}
-      <section className="relative py-20 px-6 bg-[#1a1f3a]">
+      <section className="relative py-20 px-6 bg-[#3B6BB5]">
         <div className="max-w-4xl mx-auto">
           <h2 className="hero-title text-3xl md:text-4xl font-bold text-amber-400 mb-12">
             Our Approach
@@ -89,7 +89,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Values */}
-      <section className="relative py-20 px-6 bg-[#0a0e27] mb-20">
+      <section className="relative py-20 px-6 bg-[#2E5090] mb-20">
         <div className="max-w-4xl mx-auto">
           <h2 className="hero-title text-3xl md:text-4xl font-bold text-amber-400 mb-12">
             Our Values
@@ -98,7 +98,7 @@ export default function AboutPage() {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="p-6 bg-[#1a1f3a]/50 border border-amber-500/20 text-center"
+                className="p-6 bg-[#3B6BB5]/50 border border-amber-500/20 text-center"
               >
                 <p className="hero-title text-xl font-bold text-[#f5f5f0]">{value}</p>
               </div>
