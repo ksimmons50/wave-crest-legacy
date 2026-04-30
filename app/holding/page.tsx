@@ -199,6 +199,7 @@ export default function HoldingPage() {
               </thead>
               <tbody>
                 {[
+                  { down: "25% or more", rate: "8.5%" },
                   { down: "20% down", rate: "8.9%" },
                   { down: "15% down", rate: "9.5%" },
                   { down: "Below 15%", rate: "9.9%" },
