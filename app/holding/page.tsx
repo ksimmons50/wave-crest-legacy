@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Shield, Lock, Home, ClipboardCheck, FolderCheck, ArrowUp } from "lucide-react";
-import { LOGO_HOLDING } from "@/professionalConstants";
+import { Users, Cog, TrendingUp, Shield, MessageCircle, Home } from "lucide-react";
+import { LOGO_HOLDING, PROFESSIONAL_IMAGES } from "@/professionalConstants";
 
 export default function HoldingPage() {
   const [visibleSections, setVisibleSections] = useState<number[]>([]);
@@ -36,124 +36,77 @@ export default function HoldingPage() {
     return () => observer.disconnect();
   }, []);
 
-  const coreFunctions = [
-    {
-      icon: Home,
-      title: "Long-Term Asset Holding",
-      description: "Strategic stewardship of properties and portfolios with a legacy mindset.",
-    },
-    {
-      icon: ClipboardCheck,
-      title: "Clean Title Management",
-      description: "Organized, compliant records that ensure clarity and confidence.",
-    },
-    {
-      icon: FolderCheck,
-      title: "Organized Documentation",
-      description: "Investor-ready systems that support transparency and growth.",
-    },
-    {
-      icon: Shield,
-      title: "Portfolio Stability",
-      description: "Disciplined oversight focused on long-term value and risk management.",
-    },
-    {
-      icon: Lock,
-      title: "Legacy-Driven Oversight",
-      description: "Intentional planning that protects and grows what you're building.",
-    },
-  ];
-
-  const principles = [
-    "Stewardship",
-    "Documentation Discipline",
-    "Risk Management",
-    "Long-Term Alignment",
-    "Intentional Growth",
-  ];
-
   return (
-    <div className="min-h-screen bg-[#2E5090]">
+    <div className="min-h-screen bg-white">
       <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
-        .hero-title {
-          font-family: 'Playfair Display', serif;
-          letter-spacing: -0.02em;
-          line-height: 1.1;
+        .heading-font {
+          font-family: 'Space Grotesk', sans-serif;
+          letter-spacing: -0.03em;
         }
 
-        .body-text {
-          font-family: 'DM Sans', sans-serif;
+        .body-font {
+          font-family: 'Inter', sans-serif;
         }
       `}</style>
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center px-6 py-32 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
-        <div className="max-w-5xl mx-auto text-center space-y-12">
-          {/* Logo */}
-          <div>
-            <Image
-              src={LOGO_HOLDING}
-              alt="Wave Crest Legacy Holding"
-              width={300}
-              height={100}
-              className="h-20 w-auto mx-auto mb-16"
-              priority
-            />
-          </div>
+      {/* SECTION 1 — HERO */}
+      <section className="relative min-h-screen flex items-center justify-center px-6 py-24 bg-gradient-to-br from-slate-50 via-white to-slate-100 overflow-hidden">
+        <div className="absolute inset-0 opacity-40">
+          <svg className="absolute top-20 left-20 text-slate-200" width="400" height="400" viewBox="0 0 200 200">
+            <rect x="20" y="20" width="60" height="60" fill="none" stroke="currentColor" strokeWidth="1"/>
+            <rect x="100" y="100" width="80" height="80" fill="none" stroke="currentColor" strokeWidth="1"/>
+            <circle cx="150" cy="50" r="30" fill="none" stroke="currentColor" strokeWidth="1"/>
+          </svg>
+        </div>
 
-          {/* Main Heading */}
-          <div className="space-y-6">
-            <h1 className="hero-title text-5xl md:text-7xl font-black text-[#f5f5f0] tracking-tight">
-              Wave Crest Legacy Holding
-            </h1>
-            <p className="hero-title text-2xl md:text-3xl text-amber-400 font-bold">
-              The Anchor of the Ecosystem
-            </p>
-          </div>
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <h1 className="heading-font text-6xl md:text-8xl font-black text-slate-900 mb-8 leading-tight">
+            Long‑Term Stewardship.<br/>Stable Growth.
+          </h1>
 
-          {/* Tagline */}
-          <p className="body-text text-sm uppercase tracking-[0.3em] text-[#a8a29e] font-semibold">
-            Clarity. Structure. Momentum.
+          <p className="body-font text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto font-light">
+            We manage and hold assets with a focus on durability, resident experience, and predictable returns.
           </p>
-
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl text-[#f5f5f0]/80 body-text max-w-3xl mx-auto leading-relaxed">
-            Long-term asset stewardship with clean title, organized records, and disciplined portfolio stability.
-          </p>
-
-          {/* Scroll Indicator */}
-          <div className="pt-12">
-            <svg className="w-6 h-6 text-amber-400 mx-auto animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </div>
         </div>
       </section>
 
-      {/* Section 1 - What We Manage */}
+      {/* SECTION 2 — OUR PHILOSOPHY */}
       <section
         data-section="0"
-        className="animate-section relative py-24 px-6 bg-[#2E5090]"
+        className="animate-section py-32 px-6 bg-white"
         style={{
           opacity: visibleSections.includes(0) ? 1 : 0,
           transform: visibleSections.includes(0) ? "translateY(0)" : "translateY(40px)",
           transition: "opacity 1s ease-out, transform 1s ease-out",
         }}
       >
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0] mb-6">
-              What We Manage
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="heading-font text-5xl md:text-6xl font-bold text-slate-900 mb-4">
+              Our Philosophy
             </h2>
-            <p className="body-text text-lg md:text-xl text-[#a8a29e] max-w-3xl mx-auto leading-relaxed">
-              We maintain long-term assets with precision, organization, and a legacy-driven mindset.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {coreFunctions.map((item, index) => {
+          <div className="grid md:grid-cols-3 gap-12">
+            {[
+              {
+                icon: Users,
+                title: "Resident‑First Experience",
+                description: "Clean, safe, well‑maintained homes",
+              },
+              {
+                icon: Cog,
+                title: "Operational Excellence",
+                description: "Efficient systems, proactive maintenance",
+              },
+              {
+                icon: TrendingUp,
+                title: "Long‑Term Value",
+                description: "Strategic improvements that increase equity and stability",
+              },
+            ].map((item, index) => {
               const Icon = item.icon;
               const isVisible = visibleSections.includes(0);
               const delay = index * 150;
@@ -161,26 +114,18 @@ export default function HoldingPage() {
               return (
                 <div
                   key={index}
-                  className="p-8 bg-gradient-to-br from-[#3B6BB5] to-[#254680] border border-amber-500/20 hover:border-amber-500/40 transition-all duration-500 hover:shadow-xl hover:shadow-amber-500/10"
+                  className="bg-white p-12 shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100"
                   style={{
                     opacity: isVisible ? 1 : 0,
                     transform: isVisible ? "translateY(0)" : "translateY(30px)",
                     transition: `opacity 0.8s ease-out ${delay}ms, transform 0.8s ease-out ${delay}ms`,
                   }}
                 >
-                  <Icon
-                    className="w-12 h-12 text-amber-400 mb-4"
-                    strokeWidth={1.5}
-                    style={{
-                      strokeDasharray: isVisible ? "none" : "1000",
-                      strokeDashoffset: isVisible ? "0" : "1000",
-                      transition: `stroke-dashoffset 2s ease-out ${delay + 400}ms`,
-                    }}
-                  />
-                  <h3 className="hero-title text-xl font-bold text-[#f5f5f0] mb-3">
+                  <Icon className="w-14 h-14 text-slate-900 mb-6" strokeWidth={1.5} />
+                  <h3 className="heading-font text-2xl font-bold text-slate-900 mb-4">
                     {item.title}
                   </h3>
-                  <p className="body-text text-[#a8a29e] leading-relaxed">
+                  <p className="body-font text-slate-600 leading-relaxed text-lg">
                     {item.description}
                   </p>
                 </div>
@@ -190,186 +135,170 @@ export default function HoldingPage() {
         </div>
       </section>
 
-      {/* Section 1.5 - Rate Tiers */}
+      {/* SECTION 3 — OWNER-FINANCE PROGRAM */}
       <section
         data-section="1"
-        className="animate-section relative py-24 px-6 bg-[#3B6BB5]"
+        className="animate-section py-32 px-6 bg-slate-50"
         style={{
           opacity: visibleSections.includes(1) ? 1 : 0,
           transform: visibleSections.includes(1) ? "translateY(0)" : "translateY(40px)",
           transition: "opacity 1s ease-out, transform 1s ease-out",
         }}
       >
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0] mb-6">
-              Our Owner-Finance Rate Structure
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="heading-font text-5xl md:text-6xl font-bold text-slate-900 mb-4">
+              Owner‑Finance Program
             </h2>
-            <p className="body-text text-sm uppercase tracking-[0.2em] text-amber-400 font-semibold">
-              Transparent. Straightforward. Professional.
-            </p>
           </div>
 
-          <div className="max-w-2xl mx-auto space-y-4">
-            {[
-              { down: "25% down", rate: "8.5%" },
-              { down: "20% down", rate: "8.9%" },
-              { down: "15% down", rate: "9.5%" },
-              { down: "10% down", rate: "10%" },
-            ].map((tier, index) => {
-              const isVisible = visibleSections.includes(1);
-              const delay = index * 100;
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Left Column - Explanation */}
+            <div className="space-y-6">
+              <p className="body-font text-xl text-slate-700 leading-relaxed">
+                We provide owner‑finance opportunities for qualified buyers seeking a stable path to homeownership. Our terms are transparent, fair, and structured for long‑term success.
+              </p>
+            </div>
 
-              return (
-                <div
-                  key={index}
-                  className="flex items-center justify-between p-6 bg-gradient-to-br from-[#2E5090] to-[#254680] border border-amber-500/20"
-                  style={{
-                    opacity: isVisible ? 1 : 0,
-                    transform: isVisible ? "translateX(0)" : "translateX(-30px)",
-                    transition: `opacity 0.6s ease-out ${delay}ms, transform 0.6s ease-out ${delay}ms`,
-                  }}
-                >
-                  <span className="body-text text-lg text-[#f5f5f0] font-medium">
-                    {tier.down}
-                  </span>
-                  <div className="flex-1 mx-6 border-b border-dotted border-amber-500/30" />
-                  <span className="hero-title text-2xl font-bold text-amber-400">
-                    {tier.rate}
-                  </span>
-                </div>
-              );
-            })}
+            {/* Right Column - Graphic */}
+            <div className="relative h-[400px] bg-slate-200 shadow-xl overflow-hidden flex items-center justify-center">
+              <Shield className="w-40 h-40 text-slate-400" strokeWidth={1} />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Section 2 - Our Approach */}
+      {/* SECTION 4 — INTEREST RATE TABLE */}
       <section
         data-section="2"
-        className="animate-section relative py-24 px-6 bg-[#2E5090]"
+        className="animate-section py-32 px-6 bg-white"
         style={{
           opacity: visibleSections.includes(2) ? 1 : 0,
-          transform: visibleSections.includes(2) ? "translateX(0)" : "translateX(-60px)",
+          transform: visibleSections.includes(2) ? "translateY(0)" : "translateY(40px)",
           transition: "opacity 1s ease-out, transform 1s ease-out",
         }}
       >
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0] mb-6">
-              Our Approach
+            <h2 className="heading-font text-5xl md:text-6xl font-bold text-slate-900 mb-4">
+              Owner‑Finance Rate Structure
             </h2>
-            <p className="body-text text-lg md:text-xl text-[#a8a29e] max-w-3xl mx-auto leading-relaxed">
-              We focus on stability, clarity, and long-term value — ensuring every asset supports the legacy you're building.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {principles.map((principle, index) => {
-              const isVisible = visibleSections.includes(1);
-              const delay = index * 100;
-
-              return (
-                <div
-                  key={index}
-                  className="p-6 bg-gradient-to-br from-[#2E5090] to-[#254680] border border-amber-500/20 text-center"
-                  style={{
-                    opacity: isVisible ? 1 : 0,
-                    transform: isVisible ? "scale(1)" : "scale(0.9)",
-                    transition: `opacity 0.6s ease-out ${delay}ms, transform 0.6s ease-out ${delay}ms`,
-                  }}
-                >
-                  <div className="w-2 h-2 bg-amber-400 rounded-full mx-auto mb-4" />
-                  <p className="body-text text-[#f5f5f0] font-semibold text-lg">
-                    {principle}
-                  </p>
-                </div>
-              );
-            })}
+          <div className="bg-white shadow-2xl border border-slate-200 overflow-hidden">
+            <table className="w-full">
+              <thead>
+                <tr className="bg-slate-900">
+                  <th className="px-8 py-6 text-left heading-font text-xl font-bold text-white">
+                    Down Payment
+                  </th>
+                  <th className="px-8 py-6 text-left heading-font text-xl font-bold text-white">
+                    Interest Rate
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { down: "20% down", rate: "8.9%" },
+                  { down: "15% down", rate: "9.5%" },
+                  { down: "Below 15%", rate: "9.9%" },
+                ].map((row, index) => (
+                  <tr
+                    key={index}
+                    className={`border-b border-slate-200 hover:bg-slate-50 transition-colors ${
+                      index % 2 === 0 ? "bg-white" : "bg-slate-50"
+                    }`}
+                  >
+                    <td className="px-8 py-6 body-font text-lg text-slate-700 font-medium">
+                      {row.down}
+                    </td>
+                    <td className="px-8 py-6 heading-font text-2xl text-slate-900 font-bold">
+                      {row.rate}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
+
+          <p className="body-font text-sm text-slate-500 mt-8 text-center max-w-3xl mx-auto">
+            Rates apply to standard owner‑finance structures and may vary based on property type and buyer profile.
+          </p>
         </div>
       </section>
 
-      {/* Section 3 - Ecosystem Connection */}
+      {/* SECTION 5 — RESIDENT EXPERIENCE */}
       <section
         data-section="3"
-        className="animate-section relative py-24 px-6 bg-[#3B6BB5]"
+        className="animate-section py-32 px-6 bg-slate-50"
         style={{
           opacity: visibleSections.includes(3) ? 1 : 0,
           transform: visibleSections.includes(3) ? "translateY(0)" : "translateY(40px)",
           transition: "opacity 1s ease-out, transform 1s ease-out",
         }}
       >
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0] mb-6">
-              How Holding Fits Into the Ecosystem
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="heading-font text-5xl md:text-6xl font-bold text-slate-900 mb-4">
+              Resident Experience
             </h2>
           </div>
 
-          <div className="relative">
-            {/* Vertical Connection Line */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-amber-500 to-transparent hidden md:block"
-              style={{
-                opacity: visibleSections.includes(2) ? 1 : 0,
-                transition: "opacity 1.5s ease-out 500ms",
-              }}
-            />
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Left Column - Bullet List */}
+            <div className="space-y-6">
+              {[
+                { icon: Cog, text: "Responsive maintenance" },
+                { icon: Home, text: "Clean, safe homes" },
+                { icon: MessageCircle, text: "Transparent communication" },
+              ].map((item, index) => {
+                const Icon = item.icon;
+                const isVisible = visibleSections.includes(3);
+                const delay = index * 100;
 
-            <div className="relative space-y-12">
-              <Link
-                href="/acquisitions"
-                className="block bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 border border-amber-500/20 hover:border-amber-500/60 transition-all duration-500 hover:shadow-xl hover:shadow-amber-500/20 text-center group"
-              >
-                <p className="body-text text-sm uppercase tracking-[0.2em] text-amber-400 font-semibold mb-2">
-                  Receives From
-                </p>
-                <p className="hero-title text-2xl font-bold text-[#f5f5f0] group-hover:text-amber-400 transition-colors">
-                  Wave Crest Legacy Acquisitions
-                </p>
-                <p className="body-text text-[#a8a29e] mt-2">
-                  The Engine of the Ecosystem
-                </p>
-              </Link>
+                return (
+                  <div
+                    key={index}
+                    className="flex items-start gap-5"
+                    style={{
+                      opacity: isVisible ? 1 : 0,
+                      transform: isVisible ? "translateX(0)" : "translateX(-30px)",
+                      transition: `opacity 0.6s ease-out ${delay}ms, transform 0.6s ease-out ${delay}ms`,
+                    }}
+                  >
+                    <Icon className="w-7 h-7 text-slate-900 flex-shrink-0 mt-1" strokeWidth={1.5} />
+                    <span className="body-font text-xl text-slate-700 font-medium">{item.text}</span>
+                  </div>
+                );
+              })}
+            </div>
 
-              <div className="flex justify-center">
-                <ArrowUp
-                  className="w-8 h-8 text-amber-400 rotate-180"
-                  style={{
-                    opacity: visibleSections.includes(3) ? 1 : 0,
-                    transform: visibleSections.includes(3) ? "translateY(0)" : "translateY(-20px)",
-                    transition: "opacity 1s ease-out 800ms, transform 1s ease-out 800ms",
-                  }}
-                />
-              </div>
-
-              <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-10 border border-amber-500/20 text-center">
-                <p className="body-text text-lg md:text-xl text-[#f5f5f0]/90 leading-relaxed">
-                  Wave Crest Legacy Holding is the anchor that preserves the value created by Acquisitions — ensuring every asset is managed with clarity and stability.
-                </p>
-              </div>
+            {/* Right Column - Image */}
+            <div className="relative h-[500px] bg-slate-200 shadow-xl overflow-hidden">
+              <Image
+                src={PROFESSIONAL_IMAGES[1]?.url || "/placeholder.jpg"}
+                alt="Home interior"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="relative py-32 px-6 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0]">
-            Protect What You're Building
+      {/* SECTION 6 — CTA */}
+      <section className="py-32 px-6 bg-slate-900">
+        <div className="max-w-4xl mx-auto text-center space-y-10">
+          <h2 className="heading-font text-5xl md:text-6xl font-bold text-white">
+            Interested in Owner‑Finance Opportunities?
           </h2>
-          <p className="body-text text-xl text-[#a8a29e] max-w-2xl mx-auto">
-            Let's manage your assets with intention and discipline.
-          </p>
-          <div className="pt-4">
-            <a
-              href="/lets-connect"
-              className="inline-block px-10 py-5 bg-gradient-to-r from-amber-500 to-amber-600 text-[#2E5090] font-bold body-text text-lg hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300"
-            >
-              Start Your Consultation
-            </a>
-          </div>
+
+          <Link
+            href="/lets-connect"
+            className="inline-block px-14 py-6 bg-white text-slate-900 body-font font-bold text-lg hover:bg-slate-100 transition-all duration-300 shadow-2xl"
+          >
+            View Available Homes
+          </Link>
         </div>
       </section>
     </div>
