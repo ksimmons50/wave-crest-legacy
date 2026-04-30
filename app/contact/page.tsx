@@ -69,34 +69,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      {/* Contact Info */}
-      <section className="relative py-20 px-6 bg-[#2E5090] mb-20">
-        <div className="max-w-2xl mx-auto text-center space-y-6">
-          <h2 className="hero-title text-2xl font-bold text-amber-400">
-            Or reach us directly
-          </h2>
-          <div className="space-y-3 body-text text-[#a8a29e]">
-            <p>
-              <a
-                href="mailto:info@wavecrestlegacy.com"
-                className="text-amber-400 hover:text-amber-300 transition-colors"
-              >
-                info@wavecrestlegacy.com
-              </a>
-            </p>
-            <p>
-              <a
-                href="tel:+18176463927"
-                className="text-amber-400 hover:text-amber-300 transition-colors"
-              >
-                (817) 646-3927
-              </a>
-            </p>
-            <p className="pt-4">8708 Technology Forest Place Ste 175, Houston, TX</p>
-          </div>
-        </div>
-      </section>
       <FloatingChat />
     </div>
   );
