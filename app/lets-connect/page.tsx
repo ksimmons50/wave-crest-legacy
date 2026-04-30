@@ -1,8 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import { LOGO_LEGACY_GROUP } from "@/professionalConstants";
-
 export default function LetsConnectPage() {
   return (
     <div className="min-h-screen bg-[#2E5090] flex items-center justify-center px-6 py-16">
@@ -23,18 +20,6 @@ export default function LetsConnectPage() {
       {/* Contact Card */}
       <div className="max-w-2xl mx-auto">
         <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-12 md:p-16 border-2 border-amber-500/30 shadow-2xl">
-          {/* Logo */}
-          <div className="text-center mb-8">
-            <Image
-              src={LOGO_LEGACY_GROUP}
-              alt="Wave Crest Legacy Group"
-              width={300}
-              height={100}
-              className="h-16 w-auto mx-auto"
-              priority
-            />
-          </div>
-
           {/* Header */}
           <div className="text-center space-y-4 mb-10">
             <h1 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0]">
