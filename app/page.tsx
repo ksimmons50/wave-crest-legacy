@@ -30,7 +30,7 @@ export default function LandingPage() {
       `}</style>
 
       {/* SECTION 1 — HERO */}
-      <section className="relative min-h-screen flex items-center justify-center px-6 py-32 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
+      <section className="relative min-h-screen flex items-center justify-center px-6 py-24 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
         <div className="max-w-5xl mx-auto text-center space-y-8">
           <h1 className="hero-title text-5xl md:text-7xl font-black text-[#f5f5f0] tracking-tight">
             Wave Crest Legacy Group
@@ -50,7 +50,7 @@ export default function LandingPage() {
       </section>
 
       {/* SECTION 2 — THE ECOSYSTEM */}
-      <section className="relative py-32 px-6 bg-[#2E5090]">
+      <section className="relative py-24 px-6 bg-[#2E5090]">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-20">
@@ -131,7 +131,7 @@ export default function LandingPage() {
       </section>
 
       {/* SECTION 3 — ABOUT */}
-      <section className="relative py-32 px-6 bg-[#f5f5f0]">
+      <section className="relative py-24 px-6 bg-[#f5f5f0]">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h2 className="hero-title text-4xl md:text-5xl font-black text-[#2E5090] tracking-tight">
             About Our Company
@@ -143,7 +143,7 @@ export default function LandingPage() {
       </section>
 
       {/* SECTION 4 — CTA */}
-      <section className="relative py-32 px-6 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
+      <section className="relative py-24 px-6 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0]">
             Let's Build Your Next Chapter
