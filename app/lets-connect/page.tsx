@@ -45,6 +45,19 @@ export default function LetsConnectPage() {
               </a>
             </div>
 
+            {/* Phone */}
+            <div className="text-center p-6 bg-[#2E5090]/50 border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300">
+              <p className="text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold mb-2">
+                Phone
+              </p>
+              <a
+                href="tel:+18176463927"
+                className="text-xl md:text-2xl text-[#f5f5f0] hover:text-amber-400 transition-colors"
+              >
+                (817) 646-3927
+              </a>
+            </div>
+
             {/* Address */}
             <div className="text-center p-6 bg-[#2E5090]/50 border border-amber-500/20">
               <p className="text-xs uppercase tracking-[0.2em] text-amber-400 font-semibold mb-2">
