@@ -1,10 +1,31 @@
 "use client";
 
+import { useEffect } from "react";
 import Image from "next/image";
 import { PROFESSIONAL_IMAGES, LOGO_LEGACY_GROUP } from "@/professionalConstants";
 import { Layers, TrendingUp, Anchor } from "lucide-react";
 
 export default function LandingPage() {
+  useEffect(() => {
+    // Load the Breezy form script
+    const script = document.createElement('script');
+    script.src = 'https://app.getbreezy.app/embeddable/lead-form-direct.js';
+    script.setAttribute('data-token', 'caf098fe22e8bbcbee5cfd56e06f4978f9d72fe18807cdff77cfb925fb50');
+    script.setAttribute('data-button-text', 'Submit');
+    script.setAttribute('data-button-color', '#d4af37');
+    script.setAttribute('data-fields', 'name,email,phone,type,message');
+    script.setAttribute('data-required', 'name,email,type,message');
+    script.setAttribute('data-type-options', 'Acquisition Opportunity,Owner-Finance Inquiry,Partnership Discussion,General Question');
+    script.setAttribute('data-success-message', "Thank you! We'll be in touch soon.");
+    script.async = true;
+
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#2E5090]">
       <style jsx global>{`
@@ -29,6 +50,13 @@ export default function LandingPage() {
           font-family: 'DM Sans', sans-serif;
         }
       `}</style>
+
+      {/* Contact Form Section */}
+      <section className="relative min-h-screen flex items-center justify-center py-24 px-6 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
+        <div className="w-full max-w-3xl mx-auto">
+          <div id="breezy-form-container"></div>
+        </div>
+      </section>
 
       {/* Hero Section - Org Chart */}
       <section className="relative min-h-screen flex items-center px-6 py-24 md:py-32">
