@@ -64,11 +64,11 @@ export default function LandingPage() {
             {/* Bottom Row — Acquisitions & Holding */}
             <div className="grid md:grid-cols-2 gap-8 w-full max-w-4xl">
               {/* Acquisitions Box */}
-              <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 border-2 border-amber-500/30 h-full flex flex-col">
+              <Link href="/acquisitions" className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 border-2 border-amber-500/30 h-full flex flex-col hover:border-amber-500/60 transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/20 cursor-pointer group">
                 <div className="flex justify-center mb-6">
-                  <TrendingUp className="w-16 h-16 text-amber-400" strokeWidth={1.5} />
+                  <TrendingUp className="w-16 h-16 text-amber-400 group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                 </div>
-                <h3 className="hero-title text-2xl font-bold text-[#f5f5f0] text-center mb-3">
+                <h3 className="hero-title text-2xl font-bold text-[#f5f5f0] text-center mb-3 group-hover:text-amber-400 transition-colors">
                   Wave Crest Legacy Acquisitions
                 </h3>
                 <p className="body-text text-sm uppercase tracking-[0.2em] text-amber-400 font-semibold text-center mb-6">
@@ -82,14 +82,14 @@ export default function LandingPage() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </Link>
 
               {/* Holding Box */}
-              <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 border-2 border-amber-500/30 h-full flex flex-col">
+              <Link href="/holding" className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 border-2 border-amber-500/30 h-full flex flex-col hover:border-amber-500/60 transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/20 cursor-pointer group">
                 <div className="flex justify-center mb-6">
-                  <Anchor className="w-16 h-16 text-amber-400" strokeWidth={1.5} />
+                  <Anchor className="w-16 h-16 text-amber-400 group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                 </div>
-                <h3 className="hero-title text-2xl font-bold text-[#f5f5f0] text-center mb-3">
+                <h3 className="hero-title text-2xl font-bold text-[#f5f5f0] text-center mb-3 group-hover:text-amber-400 transition-colors">
                   Wave Crest Legacy Holding
                 </h3>
                 <p className="body-text text-sm uppercase tracking-[0.2em] text-amber-400 font-semibold text-center mb-6">
@@ -103,7 +103,7 @@ export default function LandingPage() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>

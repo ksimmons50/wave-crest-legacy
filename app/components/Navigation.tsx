@@ -12,6 +12,8 @@ import {
 
 const NAV_LINKS = [
 { label: "Home", href: "/" },
+{ label: "Acquisitions", href: "/acquisitions" },
+{ label: "Holding", href: "/holding" },
 { label: "About", href: "/about" },
 { label: "Services", href: "/services" },
 { label: "Let's Connect", href: "/lets-connect" }];
