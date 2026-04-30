@@ -41,7 +41,7 @@ export default function ContactPage() {
       `}</style>
 
       {/* Full Page Form */}
-      <section className="relative min-h-screen flex items-center justify-center pt-32 pb-24 px-6 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
+      <section className="relative min-h-screen flex items-center justify-center py-24 px-6 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
         <div className="w-full max-w-3xl mx-auto">
           <div id="breezy-form-container"></div>
         </div>

@@ -5,7 +5,7 @@ import { LOGO_LEGACY_GROUP } from "@/professionalConstants";
 
 export default function LetsConnectPage() {
   return (
-    <div className="min-h-screen bg-[#2E5090] flex items-center justify-center px-6 pt-32 pb-16">
+    <div className="min-h-screen bg-[#2E5090] flex items-center justify-center px-6 py-16">
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@400;500;700&display=swap');
 
