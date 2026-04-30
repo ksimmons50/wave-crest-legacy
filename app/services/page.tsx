@@ -147,50 +147,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="relative py-16 px-6 bg-[#2E5090] border-t border-amber-500/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center space-y-8">
-            {/* Company Name & Tagline */}
-            <div>
-              <h3 className="hero-title text-2xl md:text-3xl font-bold text-[#f5f5f0] mb-2">
-                Wave Crest Legacy Group
-              </h3>
-              <p className="body-text text-sm uppercase tracking-[0.2em] text-amber-400 font-semibold">
-                Clarity. Structure. Momentum.
-              </p>
-            </div>
-
-            {/* Navigation Links */}
-            <nav className="flex justify-center gap-8">
-              <a href="/" className="body-text text-sm text-[#f5f5f0]/70 hover:text-amber-400 transition-colors">
-                Home
-              </a>
-              <a href="/about" className="body-text text-sm text-[#f5f5f0]/70 hover:text-amber-400 transition-colors">
-                About
-              </a>
-              <a href="/services" className="body-text text-sm text-[#f5f5f0]/70 hover:text-amber-400 transition-colors">
-                Services
-              </a>
-              <a href="/lets-connect" className="body-text text-sm text-[#f5f5f0]/70 hover:text-amber-400 transition-colors">
-                Contact
-              </a>
-            </nav>
-
-            {/* Copyright & Powered by */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-              <p className="body-text text-sm text-[#a8a29e]">
-                © 2026 Wave Crest Legacy Group, LLC
-              </p>
-              <div className="flex items-center gap-2 px-4 py-2 bg-white rounded">
-                <span className="body-text text-xs text-gray-600">Powered by</span>
-                <span className="body-text text-xs font-bold text-gray-900 tracking-wider">BREEZY</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
