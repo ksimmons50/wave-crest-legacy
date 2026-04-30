@@ -85,19 +85,6 @@ export default function LetsConnectPage() {
               </p>
             </div>
           </div>
-
-          {/* Or Fill Out Form */}
-          <div className="mt-10 pt-8 border-t border-amber-500/20 text-center">
-            <p className="body-text text-[#a8a29e] mb-4">
-              Prefer to share more details about your project?
-            </p>
-            <a
-              href="/contact-form"
-              className="inline-block px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-[#2E5090] font-bold body-text hover:shadow-xl hover:shadow-amber-500/30 transition-all duration-300"
-            >
-              Fill Out Our Form
-            </a>
-          </div>
         </div>
       </div>
     </div>
