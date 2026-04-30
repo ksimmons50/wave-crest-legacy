@@ -56,7 +56,7 @@ export default function ContactPage() {
               priority
             />
             <h1 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0]">
-              Let's Connect
+              Get In Touch
             </h1>
             <p className="body-text text-lg text-[#a8a29e] max-w-2xl mx-auto">
               Share what you're working on and let's bring clarity, structure, and momentum to your next chapter.
