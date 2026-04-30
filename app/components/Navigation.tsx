@@ -30,12 +30,8 @@ export default function Navigation() {
   }, []);
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled 
-          ? "bg-foreground/95 backdrop-blur-xl py-4" 
-          : "bg-gradient-to-b from-foreground/80 to-transparent py-6"
-      }`}
+    <nav
+      className={`relative z-50 transition-all duration-500 bg-foreground/95 backdrop-blur-xl py-4`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center">
