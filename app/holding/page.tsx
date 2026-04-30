@@ -89,7 +89,7 @@ export default function HoldingPage() {
       `}</style>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center px-6 py-32 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
+      <section className="relative min-h-screen flex items-center px-6 pt-40 pb-32 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
         <div className="max-w-5xl mx-auto text-center space-y-12">
           {/* Logo */}
           <div>
