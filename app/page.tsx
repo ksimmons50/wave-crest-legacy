@@ -160,10 +160,21 @@ export default function LandingPage() {
       </section>
 
       {/* SECTION 5 — FOOTER */}
-      <footer className="relative py-12 px-6 bg-[#2E5090] border-t border-amber-500/20">
+      <footer className="relative py-16 px-6 bg-[#2E5090] border-t border-amber-500/20">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <nav className="flex gap-8">
+          <div className="text-center space-y-8">
+            {/* Company Name & Tagline */}
+            <div>
+              <h3 className="hero-title text-2xl md:text-3xl font-bold text-[#f5f5f0] mb-2">
+                Wave Crest Legacy Group
+              </h3>
+              <p className="body-text text-sm uppercase tracking-[0.2em] text-amber-400 font-semibold">
+                Clarity. Structure. Momentum.
+              </p>
+            </div>
+
+            {/* Navigation Links */}
+            <nav className="flex justify-center gap-8">
               <Link href="/" className="body-text text-sm text-[#f5f5f0]/70 hover:text-amber-400 transition-colors">
                 Home
               </Link>
@@ -177,6 +188,8 @@ export default function LandingPage() {
                 Contact
               </Link>
             </nav>
+
+            {/* Copyright */}
             <p className="body-text text-sm text-[#a8a29e]">
               © 2026 Wave Crest Legacy Group, LLC
             </p>
