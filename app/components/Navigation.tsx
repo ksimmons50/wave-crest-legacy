@@ -91,39 +91,6 @@ export default function Navigation() {
           </button>
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      <div
-        className={`lg:hidden overflow-hidden transition-all duration-500 ${
-          mobileMenuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <div className="bg-foreground/95 backdrop-blur-xl mt-4 mx-4 rounded-lg border border-border p-6">
-          <div className="space-y-1">
-            {NAV_LINKS.map((link, index) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="block py-3 text-sm font-light text-background/70 hover:text-primary uppercase tracking-[0.15em] text-center transition-colors duration-300"
-                onClick={() => setMobileMenuOpen(false)}
-                style={{ animationDelay: `${index * 50}ms` }}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-
-          {PROFESSIONAL_PHONE && (
-            <a
-              href={`tel:${PROFESSIONAL_PHONE}`}
-              className="flex items-center justify-center gap-2 mt-6 text-sm text-background tracking-[0.1em] bg-gradient-to-r from-primary/20 to-primary/20 border border-primary/30 py-4 rounded transition-all duration-300"
-            >
-              <Phone className="w-4 h-4 text-primary" />
-              <span>{formatPhoneNumber(PROFESSIONAL_PHONE)}</span>
-            </a>
-          )}
-        </div>
-      </div>
     </nav>
   );
 }
