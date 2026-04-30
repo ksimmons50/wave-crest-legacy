@@ -14,7 +14,7 @@ const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Contact", href: "/contact" },
+  { label: "Let's Connect", href: "/lets-connect" },
 ];
 
 export default function Navigation() {
