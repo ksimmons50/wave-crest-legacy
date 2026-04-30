@@ -51,79 +51,74 @@ export default function LandingPage() {
 
       {/* SECTION 2 — THE ECOSYSTEM */}
       <section className="relative py-24 px-6 bg-[#2E5090]">
-        <div className="max-w-7xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-20">
-            <h2 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0] mb-4">
-              The Wave Crest Ecosystem
-            </h2>
-            <p className="body-text text-xl text-[#a8a29e]">
-              Three divisions. One unified system.
-            </p>
-          </div>
-
-          {/* Three Equal Columns */}
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Column 1 — Wave Crest Legacy Group */}
-            <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 border-2 border-amber-500/30 h-full flex flex-col">
-              <div className="flex justify-center mb-6">
-                <Layers className="w-16 h-16 text-amber-400" strokeWidth={1.5} />
-              </div>
-              <h3 className="hero-title text-2xl font-bold text-[#f5f5f0] text-center mb-3">
-                Wave Crest Legacy Group
-              </h3>
-              <p className="body-text text-sm uppercase tracking-[0.2em] text-amber-400 font-semibold text-center mb-6">
-                The Foundation
-              </p>
-              <div className="space-y-3 flex-grow">
-                {["Business Clarity & Documentation", "Brand Identity & Messaging", "Mentorship & Strategic Guidance", "Investor‑Ready Systems"].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 bg-amber-400 rounded-full flex-shrink-0 mt-2" />
-                    <span className="body-text text-sm text-[#f5f5f0]/90 leading-relaxed">{item}</span>
-                  </div>
-                ))}
+        <div className="max-w-6xl mx-auto">
+          {/* Pyramid Layout */}
+          <div className="flex flex-col items-center gap-8">
+            {/* Top Box — Wave Crest Legacy Group */}
+            <div className="w-full max-w-md">
+              <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 border-2 border-amber-500/30 h-full flex flex-col">
+                <div className="flex justify-center mb-6">
+                  <Layers className="w-16 h-16 text-amber-400" strokeWidth={1.5} />
+                </div>
+                <h3 className="hero-title text-2xl font-bold text-[#f5f5f0] text-center mb-3">
+                  Wave Crest Legacy Group
+                </h3>
+                <p className="body-text text-sm uppercase tracking-[0.2em] text-amber-400 font-semibold text-center mb-6">
+                  The Foundation
+                </p>
+                <div className="space-y-3 flex-grow">
+                  {["Business Clarity & Documentation", "Brand Identity & Messaging", "Mentorship & Strategic Guidance", "Investor‑Ready Systems"].map((item, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 bg-amber-400 rounded-full flex-shrink-0 mt-2" />
+                      <span className="body-text text-sm text-[#f5f5f0]/90 leading-relaxed">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
-            {/* Column 2 — Wave Crest Legacy Acquisitions */}
-            <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 border-2 border-amber-500/30 h-full flex flex-col">
-              <div className="flex justify-center mb-6">
-                <TrendingUp className="w-16 h-16 text-amber-400" strokeWidth={1.5} />
+            {/* Bottom Row — Acquisitions & Holding */}
+            <div className="grid md:grid-cols-2 gap-8 w-full max-w-4xl">
+              {/* Acquisitions Box */}
+              <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 border-2 border-amber-500/30 h-full flex flex-col">
+                <div className="flex justify-center mb-6">
+                  <TrendingUp className="w-16 h-16 text-amber-400" strokeWidth={1.5} />
+                </div>
+                <h3 className="hero-title text-2xl font-bold text-[#f5f5f0] text-center mb-3">
+                  Wave Crest Legacy Acquisitions
+                </h3>
+                <p className="body-text text-sm uppercase tracking-[0.2em] text-amber-400 font-semibold text-center mb-6">
+                  The Engine
+                </p>
+                <div className="space-y-3 flex-grow">
+                  {["Real Estate Due Diligence", "Market Studies & Analysis", "Deal Structuring", "Owner‑Finance Pathways"].map((item, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 bg-amber-400 rounded-full flex-shrink-0 mt-2" />
+                      <span className="body-text text-sm text-[#f5f5f0]/90 leading-relaxed">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <h3 className="hero-title text-2xl font-bold text-[#f5f5f0] text-center mb-3">
-                Wave Crest Legacy Acquisitions
-              </h3>
-              <p className="body-text text-sm uppercase tracking-[0.2em] text-amber-400 font-semibold text-center mb-6">
-                The Engine
-              </p>
-              <div className="space-y-3 flex-grow">
-                {["Real Estate Due Diligence", "Market Studies & Analysis", "Deal Structuring", "Owner‑Finance Pathways"].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 bg-amber-400 rounded-full flex-shrink-0 mt-2" />
-                    <span className="body-text text-sm text-[#f5f5f0]/90 leading-relaxed">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
 
-            {/* Column 3 — Wave Crest Legacy Holding */}
-            <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 border-2 border-amber-500/30 h-full flex flex-col">
-              <div className="flex justify-center mb-6">
-                <Anchor className="w-16 h-16 text-amber-400" strokeWidth={1.5} />
-              </div>
-              <h3 className="hero-title text-2xl font-bold text-[#f5f5f0] text-center mb-3">
-                Wave Crest Legacy Holding
-              </h3>
-              <p className="body-text text-sm uppercase tracking-[0.2em] text-amber-400 font-semibold text-center mb-6">
-                The Anchor
-              </p>
-              <div className="space-y-3 flex-grow">
-                {["Portfolio Organization", "Clean Title Management", "Asset Stewardship", "Legacy Planning"].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 bg-amber-400 rounded-full flex-shrink-0 mt-2" />
-                    <span className="body-text text-sm text-[#f5f5f0]/90 leading-relaxed">{item}</span>
-                  </div>
-                ))}
+              {/* Holding Box */}
+              <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-8 border-2 border-amber-500/30 h-full flex flex-col">
+                <div className="flex justify-center mb-6">
+                  <Anchor className="w-16 h-16 text-amber-400" strokeWidth={1.5} />
+                </div>
+                <h3 className="hero-title text-2xl font-bold text-[#f5f5f0] text-center mb-3">
+                  Wave Crest Legacy Holding
+                </h3>
+                <p className="body-text text-sm uppercase tracking-[0.2em] text-amber-400 font-semibold text-center mb-6">
+                  The Anchor
+                </p>
+                <div className="space-y-3 flex-grow">
+                  {["Portfolio Organization", "Clean Title Management", "Asset Stewardship", "Legacy Planning"].map((item, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 bg-amber-400 rounded-full flex-shrink-0 mt-2" />
+                      <span className="body-text text-sm text-[#f5f5f0]/90 leading-relaxed">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -189,10 +184,16 @@ export default function LandingPage() {
               </Link>
             </nav>
 
-            {/* Copyright */}
-            <p className="body-text text-sm text-[#a8a29e]">
-              © 2026 Wave Crest Legacy Group, LLC
-            </p>
+            {/* Copyright & Powered by */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+              <p className="body-text text-sm text-[#a8a29e]">
+                © 2026 Wave Crest Legacy Group, LLC
+              </p>
+              <div className="flex items-center gap-2 px-4 py-2 bg-white rounded">
+                <span className="body-text text-xs text-gray-600">Powered by</span>
+                <span className="body-text text-xs font-bold text-gray-900 tracking-wider">BREEZY</span>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
