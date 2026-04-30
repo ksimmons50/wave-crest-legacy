@@ -40,20 +40,8 @@ export default function ContactFormPage() {
         }
       `}</style>
 
-      {/* Header Section */}
-      <section className="relative py-16 px-6 bg-[#2E5090]">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0] mb-4">
-            Get in Touch
-          </h1>
-          <p className="body-text text-lg text-[#a8a29e]">
-            Fill out the form below and we'll get back to you soon.
-          </p>
-        </div>
-      </section>
-
       {/* Form Section */}
-      <section className="relative py-12 px-6">
+      <section className="relative pt-24 pb-12 px-6">
         <div className="max-w-3xl mx-auto">
           <div id="breezy-form-container"></div>
         </div>
