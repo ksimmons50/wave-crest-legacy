@@ -89,35 +89,35 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Sections */}
-      <div className="max-w-5xl mx-auto px-6 pb-32">
+      <div className="max-w-6xl mx-auto">
         {services.map((service, index) => {
           const Icon = service.icon;
-          const bgClass = index % 2 === 0 ? "bg-[#3B6BB5]" : "bg-[#2E5090]";
+          const bgClass = index % 2 === 0 ? "bg-[#3B6BB5]/50" : "bg-[#2E5090]/50";
 
           return (
             <section
               key={index}
-              className={`relative py-20 -mx-6 px-6 ${bgClass}`}
+              className={`relative py-24 px-6 md:px-12 ${bgClass}`}
             >
-              <div className="max-w-5xl mx-auto">
-                <div className="flex items-start gap-4 mb-6">
-                  <Icon className="w-10 h-10 text-amber-400 flex-shrink-0" />
+              <div className="max-w-4xl mx-auto">
+                <div className="flex items-start gap-6 mb-6">
+                  <Icon className="w-12 h-12 text-amber-400 flex-shrink-0" />
                   <h2 className="hero-title text-3xl md:text-4xl font-bold text-amber-400">
                     {service.title}
                   </h2>
                 </div>
 
-                <p className="body-text text-lg text-[#a8a29e] leading-relaxed mb-8 max-w-3xl">
+                <p className="body-text text-lg text-[#f5f5f0]/80 leading-relaxed mb-8 max-w-3xl">
                   {service.description}
                 </p>
 
-                <ul className="space-y-3">
+                <ul className="space-y-4">
                   {service.bullets.map((bullet, bulletIndex) => (
                     <li
                       key={bulletIndex}
                       className="flex items-start gap-3 body-text text-[#f5f5f0]"
                     >
-                      <span className="w-1.5 h-1.5 bg-amber-400 rounded-full mt-2.5 flex-shrink-0" />
+                      <span className="w-2 h-2 bg-amber-400 rounded-full mt-2 flex-shrink-0" />
                       {bullet}
                     </li>
                   ))}
