@@ -29,29 +29,13 @@ export default function LandingPage() {
         }
       `}</style>
 
-      {/* SECTION 1 — HERO */}
+      {/* SECTION 1 — HERO WITH ECOSYSTEM */}
       <section className="relative min-h-screen flex items-center justify-center px-6 py-24 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
-        <div className="max-w-5xl mx-auto text-center space-y-8">
-          <h1 className="hero-title text-5xl md:text-7xl font-black text-[#f5f5f0] tracking-tight">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="hero-title text-5xl md:text-7xl font-black text-[#f5f5f0] tracking-tight mb-16">
             Wave Crest Legacy Group
           </h1>
-          <p className="body-text text-xl md:text-2xl text-amber-400 font-semibold uppercase tracking-[0.2em]">
-            Clarity. Structure. Momentum.
-          </p>
-          <div className="pt-6">
-            <Link
-              href="/contact"
-              className="inline-block px-10 py-5 bg-gradient-to-r from-amber-500 to-amber-600 text-[#2E5090] font-bold body-text text-lg hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300"
-            >
-              Start Your Consultation
-            </Link>
-          </div>
-        </div>
-      </section>
 
-      {/* SECTION 2 — THE ECOSYSTEM */}
-      <section className="relative py-24 px-6 bg-[#2E5090]">
-        <div className="max-w-6xl mx-auto">
           {/* Pyramid Layout */}
           <div className="flex flex-col items-center gap-8">
             {/* Top Box — Wave Crest Legacy Group */}
@@ -125,7 +109,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* SECTION 3 — ABOUT */}
+      {/* SECTION 2 — ABOUT */}
       <section className="relative py-24 px-6 bg-[#f5f5f0]">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h2 className="hero-title text-4xl md:text-5xl font-black text-[#2E5090] tracking-tight">
@@ -137,7 +121,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* SECTION 4 — CTA */}
+      {/* SECTION 3 — CTA */}
       <section className="relative py-24 px-6 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0]">
@@ -154,7 +138,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* SECTION 5 — FOOTER */}
+      {/* SECTION 4 — FOOTER */}
       <footer className="relative py-16 px-6 bg-[#2E5090] border-t border-amber-500/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-8">
