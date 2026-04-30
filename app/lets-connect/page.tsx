@@ -92,7 +92,7 @@ export default function LetsConnectPage() {
               Prefer to share more details about your project?
             </p>
             <a
-              href="/contact"
+              href="/lets-connect"
               className="inline-block px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-[#2E5090] font-bold body-text hover:shadow-xl hover:shadow-amber-500/30 transition-all duration-300"
             >
               Fill Out Our Form

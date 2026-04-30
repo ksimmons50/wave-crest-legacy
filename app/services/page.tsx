@@ -139,7 +139,7 @@ export default function ServicesPage() {
           </p>
           <div className="pt-4">
             <a
-              href="/contact"
+              href="/lets-connect"
               className="inline-block px-10 py-5 bg-gradient-to-r from-amber-500 to-amber-600 text-[#2E5090] font-bold body-text text-lg hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300"
             >
               Start Your Consultation
