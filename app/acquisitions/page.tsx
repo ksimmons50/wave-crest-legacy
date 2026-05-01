@@ -269,7 +269,7 @@ export default function AcquisitionsPage() {
           <div className="pt-4">
             <Link
               href="/lets-connect"
-              className="inline-block px-14 py-6 bg-gradient-to-r from-amber-500 to-amber-600 text-[#2E5090] body-font font-bold text-lg hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300"
+              className="inline-block px-14 py-6 bg-gradient-to-r from-amber-500 to-amber-600 text-[#2E5090] body-text font-bold text-lg hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300"
             >
               Start the Process
             </Link>
