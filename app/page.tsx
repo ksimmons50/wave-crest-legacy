@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Layers, TrendingUp, Anchor } from "lucide-react";
+import { Layers, TrendingUp, Anchor, FileCheck, Home, Handshake } from "lucide-react";
 
 export default function LandingPage() {
   return (
@@ -121,7 +121,72 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* SECTION 3 — CTA */}
+      {/* SECTION 3 — FLEXIBLE OWNERSHIP PATHWAYS */}
+      <section className="relative py-24 px-6 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0] tracking-tight mb-4">
+              Flexible Ownership Pathways
+            </h2>
+            <p className="body-text text-lg text-[#f5f5f0]/90 leading-relaxed">
+              Helping residents move from renting to owning with clarity and confidence.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* Card 1 — Lease-Option (L/O) */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/10">
+              <div className="flex justify-center mb-6">
+                <div className="relative">
+                  <FileCheck className="w-14 h-14 text-amber-400" strokeWidth={1.5} />
+                </div>
+              </div>
+              <h3 className="hero-title text-2xl font-bold text-[#f5f5f0] text-center mb-4">
+                Lease-Option (L/O)
+              </h3>
+              <p className="body-text text-base text-[#f5f5f0]/80 leading-relaxed text-center">
+                Lease today, lock in your purchase terms, and buy within 12–24 months.
+              </p>
+            </div>
+
+            {/* Card 2 — Rent-to-Own (RTO) */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/10">
+              <div className="flex justify-center mb-6">
+                <div className="relative">
+                  <Home className="w-14 h-14 text-amber-400" strokeWidth={1.5} />
+                </div>
+              </div>
+              <h3 className="hero-title text-2xl font-bold text-[#f5f5f0] text-center mb-4">
+                Rent-to-Own (RTO)
+              </h3>
+              <p className="body-text text-base text-[#f5f5f0]/80 leading-relaxed text-center">
+                Rent while building toward ownership. Includes option fee and a clear purchase timeline.
+              </p>
+            </div>
+
+            {/* Card 3 — Support & Guidance */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/10">
+              <div className="flex justify-center mb-6">
+                <div className="relative">
+                  <Handshake className="w-14 h-14 text-amber-400" strokeWidth={1.5} />
+                </div>
+              </div>
+              <h3 className="hero-title text-2xl font-bold text-[#f5f5f0] text-center mb-4">
+                Support & Guidance
+              </h3>
+              <p className="body-text text-base text-[#f5f5f0]/80 leading-relaxed text-center">
+                We help residents understand their path, prepare for financing, and transition smoothly.
+              </p>
+            </div>
+          </div>
+
+          <p className="body-text text-sm text-center text-[#f5f5f0]/60 italic">
+            Available on select Wave Crest homes. Program details vary by property.
+          </p>
+        </div>
+      </section>
+
+      {/* SECTION 4 — CTA */}
       <section className="relative py-24 px-6 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="hero-title text-4xl md:text-5xl font-black text-[#f5f5f0]">
