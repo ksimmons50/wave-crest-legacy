@@ -1,6 +1,6 @@
 "use client";
 
-import RealReviews from "@/app/components/RealReviews";
+import Testimonials from "@/app/components/Testimonials";
 import { REVIEWS } from "./content/home";
 
 export default function Reviews() {
@@ -16,7 +16,7 @@ export default function Reviews() {
           </h2>
           <div className="w-16 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent mx-auto mt-8" />
         </div>
-        <RealReviews />
+        <Testimonials showHeader={false} />
       </div>
     </section>
   );
