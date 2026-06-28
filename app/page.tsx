@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Layers, TrendingUp, Anchor, FileCheck, Home, Handshake, ArrowRight } from "lucide-react";
 import Testimonials from "./components/Testimonials";
+import ApplyButton from "./components/ApplyButton";
 import { PROFESSIONAL_TAGLINE, PROFESSIONAL_IMAGES } from "../professionalConstants";
 
 const HERO_IMAGE = PROFESSIONAL_IMAGES[1]?.url || PROFESSIONAL_IMAGES[0]?.url;
@@ -227,7 +228,25 @@ export default function LandingPage() {
             ))}
           </div>
 
-          <p className="body-text text-center text-sm italic text-[#f5f5f0]/75">
+          <div className="mx-auto max-w-2xl rounded-lg border border-amber-500/30 bg-white/5 p-8 text-center backdrop-blur-sm">
+            <h3 className="hero-title mb-3 text-2xl font-bold text-[#f5f5f0]">
+              Ready to Apply?
+            </h3>
+            <p className="body-text mb-6 text-base leading-relaxed text-[#f5f5f0]/85">
+              Start your application for our owner-finance and rent-to-own / lease-option programs.
+              Applications are completed securely through RentSpree, including credit and background
+              checks and income verification.
+            </p>
+            <ApplyButton
+              label="Start Your Application"
+              className="body-text inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 px-10 py-5 text-lg font-bold text-[#1f3a6b] transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/30"
+            />
+            <p className="body-text mt-5 text-xs text-[#f5f5f0]/60">
+              Secure application powered by RentSpree.
+            </p>
+          </div>
+
+          <p className="body-text mt-12 text-center text-sm italic text-[#f5f5f0]/75">
             Available on select Wave Crest homes. Program details vary by property.
           </p>
         </div>

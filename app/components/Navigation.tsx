@@ -3,11 +3,12 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Phone } from "lucide-react";
+import { Phone, FileText } from "lucide-react";
 import { formatPhoneNumber } from "@/app/utils/phoneUtils";
 import {
   PROFESSIONAL_PHONE,
-  LOGO_LEGACY_GROUP } from
+  LOGO_LEGACY_GROUP,
+  RENTSPREE_APPLY_URL } from
 "@/professionalConstants";
 
 const NAV_LINKS = [
@@ -58,16 +59,27 @@ export default function Navigation() {
             )}
           </div>
 
-          {/* Phone CTA */}
-          {PROFESSIONAL_PHONE &&
-          <a
-            href={`tel:${PROFESSIONAL_PHONE}`}
-            className="hidden md:flex items-center gap-2 text-[11px] text-background tracking-[0.1em] bg-gradient-to-r from-primary/20 to-primary/20 hover:from-primary/30 hover:to-primary/30 border border-primary/30 hover:border-primary/50 px-5 py-2.5 transition-all duration-300">
-            
-              <Phone className="w-3.5 h-3.5 text-primary" />
-              <span>{formatPhoneNumber(PROFESSIONAL_PHONE)}</span>
+          {/* CTAs */}
+          <div className="hidden md:flex items-center gap-3">
+            {PROFESSIONAL_PHONE &&
+            <a
+              href={`tel:${PROFESSIONAL_PHONE}`}
+              className="flex items-center gap-2 text-[11px] text-background tracking-[0.1em] bg-gradient-to-r from-primary/20 to-primary/20 hover:from-primary/30 hover:to-primary/30 border border-primary/30 hover:border-primary/50 px-5 py-2.5 transition-all duration-300">
+              
+                <Phone className="w-3.5 h-3.5 text-primary" />
+                <span>{formatPhoneNumber(PROFESSIONAL_PHONE)}</span>
+              </a>
+            }
+            <a
+              href={RENTSPREE_APPLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#1f3a6b] bg-gradient-to-r from-amber-500 to-amber-600 hover:shadow-lg hover:shadow-amber-500/30 px-5 py-2.5 transition-all duration-300">
+              
+              <FileText className="w-3.5 h-3.5" />
+              <span>Apply Now</span>
             </a>
-          }
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -126,6 +138,16 @@ export default function Navigation() {
               <span>{formatPhoneNumber(PROFESSIONAL_PHONE)}</span>
             </a>
           )}
+          <a
+            href={RENTSPREE_APPLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileMenuOpen(false)}
+            className="flex items-center justify-center gap-2 mt-3 text-sm font-semibold uppercase tracking-[0.15em] text-[#1f3a6b] bg-gradient-to-r from-amber-500 to-amber-600 py-4 rounded transition-all duration-300"
+          >
+            <FileText className="w-4 h-4" />
+            <span>Apply Now</span>
+          </a>
         </div>
       </div>
     </nav>

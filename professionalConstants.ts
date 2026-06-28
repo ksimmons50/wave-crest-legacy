@@ -28,6 +28,12 @@ export const LOGO_HOLDING = "/brand/logo-holding.png";
 
 export const PROFESSIONAL_TAGLINE = "Empowering families, investors, and entrepreneurs through clarity, structure, and sustainable real estate solutions";
 
+// RentSpree ApplyLink — the public application URL from your RentSpree dashboard.
+// Applicants complete the application, credit/background check, and income
+// verification securely on RentSpree. Replace the placeholder below with your
+// real ApplyLink URL (RentSpree dashboard → ApplyLink → Copy link).
+export const RENTSPREE_APPLY_URL = "https://apply.rentspree.com/REPLACE-WITH-YOUR-APPLYLINK";
+
 export const PROFESSIONAL_SOCIAL_LINKS = {
   facebook: '',
   instagram: '',
