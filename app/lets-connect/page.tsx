@@ -3,20 +3,6 @@
 export default function LetsConnectPage() {
   return (
     <div className="min-h-screen bg-[#2E5090] flex items-center justify-center px-6 py-16">
-      <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@400;500;700&display=swap');
-
-        .hero-title {
-          font-family: 'Playfair Display', serif;
-          letter-spacing: -0.02em;
-          line-height: 1.1;
-        }
-
-        .body-text {
-          font-family: 'DM Sans', sans-serif;
-        }
-      `}</style>
-
       {/* Contact Card */}
       <div className="max-w-2xl mx-auto">
         <div className="bg-gradient-to-br from-[#3B6BB5] to-[#254680] p-12 md:p-16 border-2 border-amber-500/30 shadow-2xl">

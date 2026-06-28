@@ -25,20 +25,6 @@ export default function ContactFormPage() {
 
   return (
     <div className="min-h-screen bg-[#f5f5f0]">
-      <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@400;500;700&display=swap');
-
-        .hero-title {
-          font-family: 'Playfair Display', serif;
-          letter-spacing: -0.02em;
-          line-height: 1.1;
-        }
-
-        .body-text {
-          font-family: 'DM Sans', sans-serif;
-        }
-      `}</style>
-
       {/* Form Section */}
       <section className="relative pt-24 pb-12 px-6">
         <div className="max-w-3xl mx-auto">
