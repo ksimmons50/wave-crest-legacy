@@ -51,10 +51,10 @@ export const PROFESSIONAL_IMAGES: ProfessionalImage[] = [
     description: "House keys handover",
   },
   {
-    url: "/photos/architects-inspecting.webp",
-    width: 1920,
-    height: 1282,
-    description: "Architects inspecting building",
+    url: "/photos/residential-inspection.png",
+    width: 1024,
+    height: 1024,
+    description: "Residential home inspection",
   },
   {
     url: "/photos/badge.png",
