@@ -66,9 +66,16 @@ export async function POST(req: Request) {
 
           try {
             const resend = new Resend(apiKey);
+            // Once you verify your domain in Resend, set LEAD_FROM_EMAIL to an
+            // address on that domain (e.g. "Wave Crest Chat <leads@wavecrestlegacy.com>").
+            // Until then we fall back to Resend's shared sandbox sender, which only
+            // delivers to the Resend account owner's email.
+            const fromAddress =
+              process.env.LEAD_FROM_EMAIL || "Wave Crest Chat <onboarding@resend.dev>";
             await resend.emails.send({
-              from: "Wave Crest Chat <onboarding@resend.dev>",
+              from: fromAddress,
               to: PROFESSIONAL_EMAIL,
+              replyTo: email ?? undefined,
               subject: `New website chat lead: ${name}`,
               text: [
                 `You have a new lead from the website chat assistant.`,
