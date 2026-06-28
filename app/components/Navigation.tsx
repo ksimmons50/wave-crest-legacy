@@ -38,8 +38,10 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/">
-            <Image src="https://breezy-sites.s3.amazonaws.com/site_images/caf098fe22e8bbcbee5cfd56e06f4978f9d72fe18807cdff77cfb925fb50/c14db388c429db6f926203aace613bee5635f8e5e60c0074cedd142b88be_optimized.webp" alt="Wave Crest Legacy Group" width={180} height={60} className="h-10 w-auto object-contain" />
+          <Link href="/" className="flex items-center">
+            <span className="inline-flex items-center justify-center bg-background rounded-md px-3 py-2">
+              <Image src={LOGO_LEGACY_GROUP} alt="Wave Crest Legacy Group" width={160} height={120} className="h-10 w-auto object-contain" priority />
+            </span>
           </Link>
 
           {/* Desktop Links */}
