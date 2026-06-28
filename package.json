@@ -14,12 +14,16 @@
     "clean": "rm -rf .next node_modules/.cache && echo 'Cleaned Next.js cache files'"
   },
   "dependencies": {
+    "@ai-sdk/react": "^3.0.216",
     "@fingerprintjs/fingerprintjs": "^5.0.1",
+    "ai": "^6.0.214",
     "framer-motion": "^12.23.22",
     "lucide-react": "^0.545.0",
     "next": "16.1.1",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "resend": "^6.16.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@babel/generator": "^7.25.9",

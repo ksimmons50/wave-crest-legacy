@@ -1,9 +1,40 @@
 import Link from "next/link";
 import { Layers, TrendingUp, Anchor, FileCheck, Home, Handshake, ArrowRight } from "lucide-react";
-import RealReviews from "./components/RealReviews";
+import Testimonials from "./components/Testimonials";
 import { PROFESSIONAL_TAGLINE, PROFESSIONAL_IMAGES } from "../professionalConstants";
 
 const HERO_IMAGE = PROFESSIONAL_IMAGES[1]?.url || PROFESSIONAL_IMAGES[0]?.url;
+
+const CLIENT_TESTIMONIALS = [
+  {
+    id: "1",
+    name: "Marcus & Tanya Bell",
+    location: "Spring, TX",
+    rating: 5,
+    text: "We thought owning a home was years away. Wave Crest's rent-to-own pathway gave us a clear timeline and the guidance to actually get there. We close next spring.",
+  },
+  {
+    id: "2",
+    name: "Denise Caldwell",
+    location: "The Woodlands, TX",
+    rating: 5,
+    text: "The team walked me through the lease-option terms in plain English. No pressure, no confusion — just real structure and honesty. I finally feel in control of my future.",
+  },
+  {
+    id: "3",
+    name: "Robert Nguyen",
+    location: "Houston, TX",
+    rating: 5,
+    text: "As an investor, their due diligence and deal structuring are top-notch. Clean titles, organized portfolios, and a long-term mindset. Exactly the partner I was looking for.",
+  },
+  {
+    id: "4",
+    name: "Alicia Fuentes",
+    location: "Conroe, TX",
+    rating: 5,
+    text: "From our first consultation they focused on clarity and a plan that fit my family. The owner-finance option made all the difference. Truly grateful for their support.",
+  },
+];
 
 const DIVISIONS = [
   {
@@ -213,7 +244,7 @@ export default function LandingPage() {
               Real stories from families, investors, and entrepreneurs we&apos;ve helped build their next chapter.
             </p>
           </div>
-          <RealReviews minHeight="500px" />
+          <Testimonials testimonials={CLIENT_TESTIMONIALS} showHeader={false} />
         </div>
       </section>
 
