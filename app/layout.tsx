@@ -37,6 +37,9 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
+const OG_IMAGE_URL: string =
+  PROFESSIONAL_IMAGES[1]?.url ?? PROFESSIONAL_IMAGES[0]?.url ?? "/photos/keys-handshake.webp";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://wavecrestlegacy.com"),
   title: {
@@ -62,7 +65,7 @@ export const metadata: Metadata = {
     siteName: PROFESSIONAL_NAME,
     images: [
       {
-        url: PROFESSIONAL_IMAGES[1]?.url || PROFESSIONAL_IMAGES[0]?.url,
+        url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
         alt: PROFESSIONAL_NAME,
@@ -73,7 +76,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${PROFESSIONAL_NAME} | Real Estate, Acquisitions & Legacy Planning`,
     description: PROFESSIONAL_TAGLINE,
-    images: [PROFESSIONAL_IMAGES[1]?.url || PROFESSIONAL_IMAGES[0]?.url],
+    images: [OG_IMAGE_URL],
   },
 };
 
