@@ -54,20 +54,6 @@ export default function ServicesPage() {
 
   return (
     <div className="min-h-screen bg-[#2E5090]">
-      <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@400;500;700&display=swap');
-
-        .hero-title {
-          font-family: 'Playfair Display', serif;
-          letter-spacing: -0.02em;
-          line-height: 1.1;
-        }
-
-        .body-text {
-          font-family: 'DM Sans', sans-serif;
-        }
-      `}</style>
-
       {/* Header */}
       <section className="relative py-32 px-6 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
         <div className="max-w-4xl mx-auto text-center space-y-8">

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Users, Cog, TrendingUp, Shield, MessageCircle, Home, ArrowDown } from "lucide-react";
 import { LOGO_HOLDING, PROFESSIONAL_IMAGES } from "@/professionalConstants";
+import ApplyButton from "@/app/components/ApplyButton";
 
 export default function HoldingPage() {
   const [visibleSections, setVisibleSections] = useState<number[]>([]);
@@ -38,20 +39,6 @@ export default function HoldingPage() {
 
   return (
     <div className="min-h-screen bg-[#2E5090]">
-      <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@400;500;700&display=swap');
-
-        .hero-title {
-          font-family: 'Playfair Display', serif;
-          letter-spacing: -0.02em;
-          line-height: 1.1;
-        }
-
-        .body-text {
-          font-family: 'DM Sans', sans-serif;
-        }
-      `}</style>
-
       {/* SECTION 1 — HERO */}
       <section className="relative min-h-screen flex items-center justify-center px-6 py-32 bg-gradient-to-b from-[#2E5090] to-[#3B6BB5]">
         <div className="max-w-5xl mx-auto text-center space-y-12">
@@ -155,6 +142,13 @@ export default function HoldingPage() {
               <p className="body-text text-xl text-[#f5f5f0] leading-relaxed">
                 We provide owner‑finance opportunities for qualified buyers seeking a stable path to homeownership. Our terms are transparent, fair, and structured for long‑term success.
               </p>
+              <p className="body-text text-base text-[#f5f5f0]/75 leading-relaxed">
+                Ready to get started? Applications for our owner‑finance and rent‑to‑own / lease‑option programs are completed securely through RentSpree, including credit and background checks and income verification.
+              </p>
+              <ApplyButton
+                label="Apply for Owner Financing"
+                className="body-text inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 px-8 py-4 text-base font-bold text-[#2E5090] transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/30"
+              />
             </div>
 
             {/* Right Column - Graphic */}
@@ -292,14 +286,22 @@ export default function HoldingPage() {
             Interested in Owner‑Finance Opportunities?
           </h2>
 
-          <div className="pt-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+            <ApplyButton
+              label="Start Your Application"
+              className="inline-flex items-center justify-center gap-2 px-14 py-6 bg-gradient-to-r from-amber-500 to-amber-600 text-[#2E5090] body-text font-bold text-lg hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300"
+            />
             <Link
               href="/lets-connect"
-              className="inline-block px-14 py-6 bg-gradient-to-r from-amber-500 to-amber-600 text-[#2E5090] body-text font-bold text-lg hover:shadow-2xl hover:shadow-amber-500/30 transition-all duration-300"
+              className="inline-block px-14 py-6 border border-amber-500/50 text-[#f5f5f0] body-text font-bold text-lg hover:bg-white/5 transition-all duration-300"
             >
               View Available Homes
             </Link>
           </div>
+
+          <p className="body-text text-sm text-[#f5f5f0]/60">
+            Secure application powered by RentSpree, including credit and income verification.
+          </p>
         </div>
       </section>
     </div>

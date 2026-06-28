@@ -22,11 +22,16 @@ export const PROFESSIONAL_EMAIL = "info@wavecrestlegacy.com";
 export const PROFESSIONAL_ADDRESS = "8708 Technology Forest Place Ste 175, Houston, TX";
 
 // Company Logos
-export const LOGO_LEGACY_GROUP = "https://breezy-sites.s3.amazonaws.com/site_images/caf098fe22e8bbcbee5cfd56e06f4978f9d72fe18807cdff77cfb925fb50/7b54a4f3e20880d8bc10c2ba3fa0bf28b5178757814a12406297a60b03cd.png";
-export const LOGO_ACQUISITIONS = "https://breezy-sites.s3.amazonaws.com/site_images/caf098fe22e8bbcbee5cfd56e06f4978f9d72fe18807cdff77cfb925fb50/7f46065e03ba672e12c613037b093de508c4301b9139575e11d42b945852.png";
-export const LOGO_HOLDING = "https://breezy-sites.s3.amazonaws.com/site_images/caf098fe22e8bbcbee5cfd56e06f4978f9d72fe18807cdff77cfb925fb50/e811d23589f1a76d3c0400022d93b345d4d84b3e93c82fa1ac3c7637a34c.png";
+export const LOGO_LEGACY_GROUP = "/brand/logo-legacy-group.png";
+export const LOGO_ACQUISITIONS = "/brand/logo-acquisitions.png";
+export const LOGO_HOLDING = "/brand/logo-holding.png";
 
 export const PROFESSIONAL_TAGLINE = "Empowering families, investors, and entrepreneurs through clarity, structure, and sustainable real estate solutions";
+
+// RentSpree ApplyLink — the public application URL from your RentSpree dashboard.
+// Applicants complete the application, credit/background check, and income
+// verification securely on RentSpree.
+export const RENTSPREE_APPLY_URL = "https://apply.link/lXBgUVc";
 
 export const PROFESSIONAL_SOCIAL_LINKS = {
   facebook: '',
@@ -39,28 +44,28 @@ export const PROFESSIONAL_SOCIAL_LINKS = {
 // Professional images
 export const PROFESSIONAL_IMAGES: ProfessionalImage[] = [
   {
-    url: "https://breezy-sites.s3.amazonaws.com/site_images/caf098fe22e8bbcbee5cfd56e06f4978f9d72fe18807cdff77cfb925fb50/e789498ce362721aeda9ff314307ee11ffd9fb9b22e95bf767e6f2aa884c_optimized.webp",
+    url: "/photos/keys-handshake.webp",
     width: 1920,
     height: 2880,
     description: "Keys handshake",
   },
   {
-    url: "https://breezy-sites.s3.amazonaws.com/site_images/caf098fe22e8bbcbee5cfd56e06f4978f9d72fe18807cdff77cfb925fb50/d1dbc2769b177904ae6947b6d8f37e0a6d63e2959022e70bad48f18348a0_optimized.webp",
+    url: "/photos/house-keys-handover.webp",
     width: 1920,
     height: 1280,
     description: "House keys handover",
   },
   {
-    url: "https://breezy-sites.s3.amazonaws.com/site_images/caf098fe22e8bbcbee5cfd56e06f4978f9d72fe18807cdff77cfb925fb50/b6e1dbe91b6134146a78b3ec5cebded850e270d5d58e520587d8db841066_optimized.webp",
-    width: 1920,
-    height: 1282,
-    description: "Architects inspecting building",
+    url: "/photos/residential-inspection.png",
+    width: 1024,
+    height: 1024,
+    description: "Residential home inspection",
   },
   {
-    url: "https://breezy-sites.s3.amazonaws.com/site_images/caf098fe22e8bbcbee5cfd56e06f4978f9d72fe18807cdff77cfb925fb50/9c35510d3e881067f95522213375daeea35ddc26008e4e5d31bd1d114744.png",
+    url: "/photos/badge.png",
     width: 422,
     height: 422,
-    description: "Processing description…",
+    description: "Wave Crest Legacy Group badge",
   },
 ];
 

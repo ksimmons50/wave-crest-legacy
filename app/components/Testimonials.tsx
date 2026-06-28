@@ -21,6 +21,7 @@ interface TestimonialsProps {
   autoPlay?: boolean;
   autoPlayInterval?: number;
   placeholder?: boolean;
+  showHeader?: boolean;
 }
 
 const DEFAULT_TESTIMONIALS: Testimonial[] = [
@@ -81,7 +82,8 @@ export default function Testimonials({
   className = "",
   autoPlay = true,
   autoPlayInterval = 5000,
-  placeholder = false
+  placeholder = false,
+  showHeader = true
 }: TestimonialsProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -244,16 +246,18 @@ export default function Testimonials({
 
   return (
     <div className={className}>
-      <div className="text-center mb-16">
-        <div className="inline-block mb-4">
-          <div className="flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full">
-            <Star className="w-5 h-5 text-blue-600 fill-blue-600" />
-            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">Client Reviews</span>
+      {showHeader && (
+        <div className="text-center mb-16">
+          <div className="inline-block mb-4">
+            <div className="flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full">
+              <Star className="w-5 h-5 text-blue-600 fill-blue-600" />
+              <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">Client Reviews</span>
+            </div>
           </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">{title}</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">{title}</h2>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
-      </div>
+      )}
 
       {/* Carousel */}
       <div className="relative max-w-5xl mx-auto px-4 sm:px-12">
